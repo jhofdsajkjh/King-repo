@@ -2225,3 +2225,15 @@ ModuleNotFoundError: No module named 'plugins.browser'
 2026-06-08 10:52:58,336 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d56a65bb4a8c441b92f5e0f253
 2026-06-08 10:52:58,339 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d56a65bb4a8c441b92f5e0f253 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='全面全部 update' media=0
 2026-06-08 10:52:59,591 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (11 chars)
+2026-06-08 11:05:22,126 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1213.1s api_calls=16 response=1979 chars
+2026-06-08 11:05:22,390 WARNING gateway.run: FOOTER_CHECK: response_time=1213.13 api_calls=16 model=astron-code-latest input_toks=4154010 output_toks=27979
+2026-06-08 11:05:22,890 WARNING gateway.run: FOOTER_OUT: text='⏱1213.1s · astron-code-latest · 3267% · 🔁16'
+2026-06-08 11:05:22,896 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 11:05:23,012 INFO gateway.platforms.base: [Feishu] Sending response (2061 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 11:06:39,241 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d575529cca4c293162fb95d5e1
+2026-06-08 11:06:39,248 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d575529cca4c293162fb95d5e1 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='hermes激活MCP跟CLI，然后你自己GitHub结合自己进化配置好需要的，就内置自动了' media=0
+2026-06-08 11:06:40,565 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (46 chars)
+2026-06-08 11:06:41,464 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='hermes激活MCP跟CLI，然后你自己GitHub结合自己进化配置好需要的，就内置自动了'
+2026-06-08 11:07:30,334 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5751d98c80c2d573614b99ad3
+2026-06-08 11:07:30,341 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5751d98c80c2d573614b99ad3 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='立即执行' media=0
+2026-06-08 11:07:30,952 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (4 chars)
