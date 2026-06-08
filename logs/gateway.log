@@ -2614,3 +2614,21 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 18:22:06,137 WARNING gateway.run: FOOTER_OUT: text='⏱888.6s · astron-code-latest · 12045% · 🔁10'
 2026-06-08 18:22:06,143 WARNING gateway.run: FOOTER_WRITTEN: markers injected
 2026-06-08 18:22:06,190 INFO gateway.platforms.base: [Feishu] Sending response (1478 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 18:44:11,260 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5d816a4ca8c4cdf1f512f1939
+2026-06-08 18:44:11,264 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5d816a4ca8c4cdf1f512f1939 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='我已经按你说的在命令界面配置了 GitHub token ，你看看有没有' media=0
+2026-06-08 18:44:12,460 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (36 chars)
+2026-06-08 18:44:13,081 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='我已经按你说的在命令界面配置了 GitHub token ，你看看有没有'
+2026-06-08 18:55:21,633 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=668.6s api_calls=6 response=1353 chars
+2026-06-08 18:55:21,846 WARNING gateway.run: FOOTER_CHECK: response_time=668.55 api_calls=6 model=astron-code-latest input_toks=15731987 output_toks=88403
+2026-06-08 18:55:22,290 WARNING gateway.run: FOOTER_OUT: text='⏱668.6s · astron-code-latest · 12360% · 🔁6'
+2026-06-08 18:55:22,293 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 18:55:22,331 INFO gateway.platforms.base: [Feishu] Sending response (1434 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 18:58:49,612 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5e484084b0c036f6c8e48c157
+2026-06-08 18:58:49,619 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5e484084b0c036f6c8e48c157 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='# 将 token 写入 hermes 用户环境\necho \'export GITHUB_TOKEN="***"\' >> ~/.bashrc\nsource ~/.ba' media=0
+2026-06-08 18:58:50,807 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (124 chars)
+2026-06-08 18:58:51,440 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='# 将 token 写入 hermes 用户环境 echo \'export GITHUB_TOKEN=***
+2026-06-08 18:59:26,501 INFO gateway.platforms.feishu: Feishu button resolved 1 approval(s) for session agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (choice=always, user=路工)
+2026-06-08 18:59:43,469 INFO gateway.platforms.feishu: Feishu button resolved 1 approval(s) for session agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (choice=always, user=路工)
+2026-06-08 19:00:07,619 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5e45a43080c29e85291d97dd0
+2026-06-08 19:00:07,710 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5e45a43080c29e85291d97dd0 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='# Ubuntu/Debian\napt update && apt install -y gh\n# 或使用官方脚本\ncurl -fsSL https://cli.github.com/packages/githubcli-archive-k' media=0
+2026-06-08 19:00:08,354 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (490 chars)

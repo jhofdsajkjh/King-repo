@@ -1,28 +1,23 @@
 {
   "rule_ids": [
-    "curl_pipe_shell"
+    "credential_in_text"
   ],
   "severity": "HIGH",
-  "command_redacted": "curl -s https://api.github.com/search/repositories?q=autonomous+ai+agent+languag...",
+  "command_redacted": "cd /opt/data && git remote set-url origin https://hermes:[REDACTED:GitHub PAT]@g...",
   "findings": [
     {
-      "rule_id": "curl_pipe_shell",
+      "rule_id": "credential_in_text",
       "severity": "HIGH",
-      "title": "Pipe to interpreter: curl | python3",
-      "description": "Command pipes output from 'curl' directly to interpreter 'python3'. Downloaded content will be executed without inspection.\n  Safer: tirith run https://api.github.com/search/repositories?q=autonomous+ai+agent+language:python&sort=stars&order=desc  — or: vet https://api.github.com/search/repositories?q=autonomous+ai+agent+language:python&sort=stars&order=desc  (https://getvet.sh)",
+      "title": "GitHub PAT detected",
+      "description": "A credential matching a known provider pattern was found in the input. Credentials should not appear in commands or pasted text.",
       "evidence": [
         {
-          "type": "command_pattern",
-          "pattern": "pipe to interpreter",
-          "matched": "curl -s https://api.github.com/search/repositories?q=autonomous+ai+agent+language:python&sort=[REDACTED]&order=[REDACTED] | python3 -c \"import sys,json; d=[REDACTED]; [print(f\\\"{r['name']}: {r['html_url']} (⭐{r['stargazers_count']})\\\") for r in d.get('items',[])[:5]]\""
-        },
-        {
-          "type": "url",
-          "raw": "https://api.github.com/search/repositories?q=autonomous+ai+agent+language:python&sort=stars&order=desc"
+          "type": "text",
+          "detail": "Matched GitHub PAT pattern"
         }
       ],
-      "mitre_id": "T1059.004"
+      "mitre_id": "T1552"
     }
   ],
-  "timestamp": "2026-06-07T13:07:55.133091090+00:00"
+  "timestamp": "2026-06-08T10:59:38.779498146+00:00"
 }

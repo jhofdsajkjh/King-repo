@@ -1,0 +1,5 @@
+[credential]
+	helper = store
+[user]
+	name = Hermes Agent
+	email = hermes@apex.local
