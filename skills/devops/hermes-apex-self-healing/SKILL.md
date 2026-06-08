@@ -221,5 +221,6 @@ hermes config set self_heal.tool_call_loop_threshold=3
 
 | 版本 | 变更内容 |
 |------|---------|
+| v2.1 (2026-06-08) | 增加 hernandez42/APEX 信号协议集成、phi-daemon.py 网络节点、%Ψ_ASI/PHI_APEX 公式 |
 | v2.0 (2026-06-08) | 增加 context_usage 检测、session_hash 审计、task_status 自闭环 |
 | v1.0 (2026-06-07) | 初始版本：诊断/隔离/恢复/审计基础框架 |
