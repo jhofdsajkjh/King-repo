@@ -2650,3 +2650,10 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 19:19:15,897 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5e1dffccacc310f298e1ffe23
 2026-06-08 19:19:15,902 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5e1dffccacc310f298e1ffe23 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='启动 clash' media=0
 2026-06-08 19:19:16,519 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (8 chars)
+2026-06-08 19:50:38,593 ERROR gateway.run: Agent idle for 1805s (timeout 1800s) in session agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c | last_activity=executing tool: process | iteration=4/90 | tool=process
+2026-06-08 19:50:43,973 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1896.9s api_calls=4 response=312 chars
+2026-06-08 19:50:44,202 WARNING gateway.run: FOOTER_CHECK: response_time=1896.85 api_calls=4 model=None input_toks=0 output_toks=0
+2026-06-08 19:50:44,646 WARNING gateway.run: FOOTER_OUT: text='⏱1896.9s · 0% · 🔁4'
+2026-06-08 19:50:44,649 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 19:50:44,652 INFO gateway.run: Skipping transcript persistence for failed request in session 20260608_173755_604cd2 to prevent session growth loop.
+2026-06-08 19:50:44,664 INFO gateway.platforms.base: [Feishu] Sending response (369 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
