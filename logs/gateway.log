@@ -2571,3 +2571,12 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 16:24:44,514 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d538a755be0c104d9ea67c3788 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='123 按顺序执行' media=0
 2026-06-08 16:24:45,124 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (9 chars)
 2026-06-08 16:24:45,910 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='123 按顺序执行'
+2026-06-08 16:45:20,739 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1234.8s api_calls=14 response=1107 chars
+2026-06-08 16:45:21,110 WARNING gateway.run: FOOTER_CHECK: response_time=1234.83 api_calls=14 model=astron-code-latest input_toks=13384360 output_toks=80102
+2026-06-08 16:45:21,650 WARNING gateway.run: FOOTER_OUT: text='⏱1234.8s · astron-code-latest · 10519% · 🔁14'
+2026-06-08 16:45:21,655 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 16:45:21,754 INFO gateway.platforms.base: [Feishu] Sending response (1190 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 16:51:11,332 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5c69294cb0c0598d520587eb1
+2026-06-08 16:51:11,339 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5c69294cb0c0598d520587eb1 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='你记得写入hermes的md及五层，三层并持续进化代入循环' media=0
+2026-06-08 16:51:12,630 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (29 chars)
+2026-06-08 16:51:13,414 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='你记得写入hermes的md及五层，三层并持续进化代入循环'

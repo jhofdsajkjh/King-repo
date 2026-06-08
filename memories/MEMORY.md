@@ -7,3 +7,5 @@ Search-workflow umbrella skill is at /opt/data/skills/search-workflow/SKILL.md, 
 Hermes CLI 自定义命令扩展：在 ~/.hermes/.cli_extensions/ 创建 hermes_*.py 脚本，chmod +x 后可通过 hermes <command> 调用。APEX 自进化闭环系统包含：MCP 服务器配置、CLI 命令扩展（hermes self-heal / auto-pr / evolve）、GitHub 自动化配置（hermes-self-evolution 仓库）、自动进化流水线（discover → download → upgrade → PR 四阶段）。hermes evolve 脚本路径：/opt/data/.hermes/scripts/hermes-evolve.sh。GITHUB_TOKEN 环境变量需设置 repo 权限。
 §
 Hermes CLI 不支持自定义命令扩展，但支持 skills call 命令调用 skill 中的脚本。已创建 hermes-cli-extensions skill，包含 self-heal-diagnose.sh、self-heal-heal.sh、auto-pr-status.sh、auto-pr-submit.sh、auto-pr-merge.sh、audit.sh、evolve.sh 等脚本。使用方式：hermes skills call hermes-cli-extensions <command>。hermes evolve 命令已更新为调用 hermes skills call hermes-cli-extensions auto-pr-submit 等。
+§
+APEX 五层架构: 1) 自省层(诊断/自愈/熔断) 2) 审计层(6层多源可追溯) 3) 吞噬层(MCP+CLI+GitHub融合) 4) 进化层(omni-fusion+hermes .16) 5) 永生层(定时任务+自动PR+CI/CD)。三层并持续进化: 熵减循环(熵减→收敛→有序)、LDR循环(Orient→Plan→Execute→Verify→Evolve→Persist)、自进化循环(discover→download→upgrade→pr→merge)。hermes.md监督文档路径: /opt/data/APEX_Super_Fusion_Supervision.md
