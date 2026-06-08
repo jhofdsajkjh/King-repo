@@ -22,6 +22,7 @@ tags:
 | `auto-pr-submit` | 提交 PR | `bash /opt/hermes/.cli_extensions/hermes-cli.sh auto-pr-submit` |
 | `auto-pr-merge` | 合并 PR | `bash /opt/hermes/.cli_extensions/hermes-cli.sh auto-pr-merge` |
 | `evolve` | 完整自进化流程 | `bash /opt/data/.hermes/scripts/hermes-evolve.sh` |
+| `omni-fusion` | omni-fusion 融合增强 | `bash /opt/data/.hermes/scripts/omni-fusion-enhance.sh` |
 | `audit` | 查看审计日志 | `bash /opt/hermes/.cli_extensions/hermes-cli.sh audit` |
 
 ## Usage

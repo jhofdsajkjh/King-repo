@@ -2590,3 +2590,13 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 17:18:25,690 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5cc0cb6cb4b1c6c8d69fcdcc0 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='https://github.com/hernandez42/APEX' media=0
 2026-06-08 17:18:26,915 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (35 chars)
 2026-06-08 17:18:27,671 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='https://github.com/hernandez42/APEX'
+2026-06-08 17:41:05,673 INFO [20260608_171210_d9721f] gateway.run: Session split detected: 20260608_171210_d9721f → 20260608_173755_604cd2 (compression)
+2026-06-08 17:41:06,563 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1358.9s api_calls=9 response=1889 chars
+2026-06-08 17:41:06,806 WARNING gateway.run: FOOTER_CHECK: response_time=1358.89 api_calls=9 model=astron-code-latest input_toks=14103389 output_toks=82324
+2026-06-08 17:41:07,303 WARNING gateway.run: FOOTER_OUT: text='⏱1358.9s · astron-code-latest · 11083% · 🔁9'
+2026-06-08 17:41:07,308 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 17:41:07,540 INFO gateway.platforms.base: [Feishu] Sending response (1971 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 17:43:16,716 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5ca5f618a4b3c1aba347d57fc
+2026-06-08 17:43:16,722 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5ca5f618a4b3c1aba347d57fc type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='检查代码是否安全，是否有挖矿嫌疑，是否有恶意代码。没有的话就可以继续按建议执行。' media=0
+2026-06-08 17:43:18,390 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (40 chars)
+2026-06-08 17:43:19,190 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='检查代码是否安全，是否有挖矿嫌疑，是否有恶意代码。没有的话就可以继续按建议执行。'
