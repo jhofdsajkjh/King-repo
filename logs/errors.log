@@ -2467,3 +2467,5 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 15:55:30,696 WARNING gateway.run: FOOTER_CHECK: response_time=140.84 api_calls=3 model=astron-code-latest input_toks=11212285 output_toks=76182
 2026-06-08 15:55:31,144 WARNING gateway.run: FOOTER_OUT: text='⏱140.8s · astron-code-latest · 8819% · 🔁3'
 2026-06-08 15:55:31,146 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 15:57:37,508 ERROR Lark: handle message failed, message_type: event, message_id: 9a0b0a21-8347-4b90-8164-dee712aa935d, trace_id: 1ab27e89386f1c2cdeedcfaa1f0cab4b, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
+2026-06-08 15:59:45,266 ERROR Lark: handle message failed, message_type: event, message_id: 7eb21cde-7e5d-4bd7-a93f-9742f6f0c8e5, trace_id: a0d9fb269a9a30039dc52a7f6600a009, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
