@@ -2222,3 +2222,6 @@ ModuleNotFoundError: No module named 'plugins.browser'
 2026-06-08 10:46:47,120 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d569fad4c84c007fc90e574aea
 2026-06-08 10:46:47,126 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d569fad4c84c007fc90e574aea type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='立即执行' media=0
 2026-06-08 10:46:47,733 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (4 chars)
+2026-06-08 10:52:58,336 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d56a65bb4a8c441b92f5e0f253
+2026-06-08 10:52:58,339 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d56a65bb4a8c441b92f5e0f253 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='全面全部 update' media=0
+2026-06-08 10:52:59,591 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (11 chars)

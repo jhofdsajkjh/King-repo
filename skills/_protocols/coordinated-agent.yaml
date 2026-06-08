@@ -84,6 +84,28 @@ agent_protocol:
       - "hash_traceable"
     report_on_completion: true
 
+  # 任务自闭环（新增）
+  task_status:
+    enabled: true
+    states:
+      - "pending"
+      - "in_progress"
+      - "completed"
+      - "failed"
+      - "cancelled"
+    default_state: "pending"
+    on_state_change:
+      - "audit"
+      - "notify"
+
+  success_condition:
+    enabled: true
+    default: "all_tasks_completed"
+    validation_fields:
+      - "all_required_outputs_generated"
+      - "entropy_reduction_target_met"
+      - "no_loop_detected"
+
 # === 协同流程 ===
 coordinated_workflow:
   phase_1: "角色声明"

@@ -1,17 +1,20 @@
+version: skillopt-v2
 APEX_version: 自然吞噬版-v2.0
-generated_at: '2026-06-08T10:00:00Z'
+generated_at: '2026-06-08T02:59:24.160685'
 engine_mission: 从模型随机输出到确定性、可审计、可量产的闭环工程交付
-total_skills: 37
 skills:
   apex-realized:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: apex-realized
       version: 1.0.0
+      title: Realizes APEX-AGI concepts (Multi-Agent, Self-Heal) using Hermes native
+        tools.
       description: Realizes APEX-AGI concepts (Multi-Agent, Self-Heal) using Hermes
         native tools.
       author: Hermes
       license: MIT
+      category: null
       tags:
       - multi-agent
       - self-heal
@@ -21,58 +24,98 @@ skills:
       tools:
       - feishu
       - terminal
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.168124'
+    status: skillopt_v2_mapped
+    hash_signature: b1cd9bb3b0968521010470b0910e3d32c423e5b6f6e693ddb3b6730a7ac56fed
   apple:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: apple
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.168715'
+    status: skillopt_v2_mapped
+    hash_signature: e2c1653fe064b014b7e9247f53c43ee4cb70a1686586f6e0f9c300cff26f11c0
   auto-pr-submitter:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: auto-pr-submitter
       version: 1.0
+      title: Auto PR Submitter - Automated Pull Request Generation
       description: 技能更新后自动生成 PR，触发 CI/CD 验证，用户审核后合并
       author: 未知
-      license: 未定义
+      license: MIT
+      category: devops
       tags:
       - github
       - pr
@@ -82,312 +125,533 @@ skills:
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.174332'
+    status: skillopt_v2_mapped
+    hash_signature: 5cc59d3339ecbaba925c97b1bcb587af9c4f83fedba8c7751450606303cfc11f
   autonomous-ai-agents:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: autonomous-ai-agents
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.174847'
+    status: skillopt_v2_mapped
+    hash_signature: a97dc6b15335efcbeeed445414b5395f54bb2828ef2bad6436ce0eff6f8fa5aa
   creative:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: creative
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.175178'
+    status: skillopt_v2_mapped
+    hash_signature: 3b017138175f217313322d2788bb2b59a756b92ba30c2d31ebfbfb4b6c3c5802
   data-science:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: data-science
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.175485'
+    status: skillopt_v2_mapped
+    hash_signature: 02ea3d7835b20358375a2030fe371f910c1b19705c4b19edaf6eb0d010dc9b3e
   devops:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: devops
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.175927'
+    status: skillopt_v2_mapped
+    hash_signature: e0ec49c3a2b97338e6154648c0fe04d9f27d0d93f5f6ec305d87adb6fdf4be09
   diagramming:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: diagramming
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.176220'
+    status: skillopt_v2_mapped
+    hash_signature: ea795ccf3deccf74fc2ce7ffa78459b3d71ab461d928ecefa574a5c7ec4955d4
   dogfood:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: dogfood
       version: 1.0.0
+      title: Systematic exploratory QA testing of web applications — find bugs, capture
+        evidence, and generate structured reports
       description: Systematic exploratory QA testing of web applications — find bugs,
         capture evidence, and generate structured reports
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.181848'
+    status: skillopt_v2_mapped
+    hash_signature: 7654c2f5cd84e2d930c3f1d43b69ee46f789f6970a6f7c87dff7041aca42051c
   domain:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: domain
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.182462'
+    status: skillopt_v2_mapped
+    hash_signature: 64c2f3c71bd1fcadc967962f13a3e5e03ead24c400dbddb815d0235f5f2129d1
   email:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: email
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.182804'
+    status: skillopt_v2_mapped
+    hash_signature: d55b99efba68c4d57a901b891ddbaa9d1d8ad6c52dd62390b00204efc3170441
   feeds:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: feeds
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.183091'
+    status: skillopt_v2_mapped
+    hash_signature: 207e03147c42bbcfede1f98159ba133513009b0d0765f4602eb09b22e7e5e4f0
   gaming:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: gaming
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.183419'
+    status: skillopt_v2_mapped
+    hash_signature: e58064ef8bfcda1603bae15d81a64391b7615ef1b7e7d874100216bc7937c560
   gateway-runtime-footer:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: gateway-runtime-footer
       version: 1.0
+      title: Fixing and Debugging Hermes Gateway Runtime Footer
       description: Capture the workflow for fixing footer display issues in Hermes
         gateway, including code changes, logging, and verification.
       author: 未知
-      license: 未定义
+      license: MIT
+      category: gateway
       tags:
       - debugging
       - footer
@@ -396,86 +660,146 @@ skills:
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.188772'
+    status: skillopt_v2_mapped
+    hash_signature: c92f8dd714e3588267f163b3d088976df464b8ab747ae31d3165ca033fb3bba7
   gifs:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: gifs
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.189455'
+    status: skillopt_v2_mapped
+    hash_signature: 5e367cb4fb8587074b6418749f4eea103f79d37842dd6b88f189524aeeaf0494
   github:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: github
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.189766'
+    status: skillopt_v2_mapped
+    hash_signature: aea85016c1ec0c25487f5fc1a3aad9e545bf2bda98f28a375945114a9920f5fb
   github-skill-hunter:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: github-skill-hunter
       version: 1.0
+      title: GitHub Skill Hunter - Trending AI Agent & Skill Discovery
       description: 自动搜索 GitHub 上的趋势 AI Agent 项目、技能和工具，发现最新最佳实践
       author: 未知
-      license: 未定义
+      license: MIT
+      category: research
       tags:
       - github
       - search
@@ -485,538 +809,1020 @@ skills:
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.194879'
+    status: skillopt_v2_mapped
+    hash_signature: 9b4d4b2f832fecfbad289db1497354e102e7317577920f789eb62e2447bb8b2f
   hashpool-evo-skill:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: hashpool-evo-skill
-      version: 1.0.0
+      version: 2.0.0
+      title: APEX 引擎的自适应哈希池缓存清洗范式
       description: APEX 引擎的自适应哈希池缓存清洗范式
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.197324'
+    status: skillopt_v2_mapped
+    hash_signature: 0b9d6aad44cb2016a627e6b59b142ad4bdd15b5e60a3deb0ae34b447cc56554e
+  hermes-self-heal:
+    api_version: skillopt-v2
+    core:
+      name: hermes-self-heal
+      version: 2.0.0
+      title: 未定义
+      description: 未定义
+      author: 未知
+      license: MIT
+      category: null
+      tags: []
+    interface:
+      type: skill
+      tools:
+      - memory
+      - todo
+      inputs:
+      - task
+      - context
+      - config
+      outputs:
+      - message
+      - file
+      - media
+      - skill_result
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+      self_heal_enabled: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.198352'
+    status: skillopt_v2_mapped
+    hash_signature: 08e8edf991931d934a1f52df4a6164edbe1c9e4f5d9a99f592bf1e13f71be5b2
   inference-sh:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: inference-sh
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.198747'
+    status: skillopt_v2_mapped
+    hash_signature: e1c1c2d4ed3ac6c8096a5cf31304e927a8692fc64c6e41fdfe2784b5c41e0bd6
   leisure:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: leisure
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.199924'
+    status: skillopt_v2_mapped
+    hash_signature: a2ab434dd96c789106c4e4efc43480b2851d53e77b0197bbd376bbc971478244
   mcp:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: mcp
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.200656'
+    status: skillopt_v2_mapped
+    hash_signature: 7c5c4ba60297f1adc7a83b8b86eeb7c355f6846ca0b2a04f88f94e98a978a21e
   media:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: media
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.201107'
+    status: skillopt_v2_mapped
+    hash_signature: 5fbf5fe3cf5130cccf09ad8a4756c543922faca46f38483ff40d215047a22595
   mlops:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: mlops
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.201458'
+    status: skillopt_v2_mapped
+    hash_signature: ea976f539b77219abd160968b6b74b485fdc2093c1775ba6def0c6f8c7811842
   note-taking:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: note-taking
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.201820'
+    status: skillopt_v2_mapped
+    hash_signature: 4f6deeb8404160686a272ec9f9263eb46e2b7e35484191001ab8227d3a750f9c
   openclaw-imports:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: openclaw-imports
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.202123'
+    status: skillopt_v2_mapped
+    hash_signature: 1176275bc2f6f6f0ed5c51a742691a34b06997b74648461ba1b3572e094b8e03
   productivity:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: productivity
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.202632'
+    status: skillopt_v2_mapped
+    hash_signature: 98b0b1c2ccbcf7401715f7d0dd31323d5b9da6d76f88b133eb6da1bd305b3237
   red-teaming:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: red-teaming
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.202952'
+    status: skillopt_v2_mapped
+    hash_signature: 1f4701e16246c0dbf43f434139880d3cfc930e52806a137cd22e6f5e59fccf97
   research:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: research
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.203239'
+    status: skillopt_v2_mapped
+    hash_signature: 5f8368d643022c015855422d0a88d1968b456809d58389653f8fc970701b8870
   search:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: search
       version: 1.0.0
+      title: 规范化检索增强框架：SkillBank驱动+Select-Read-Act三段范式，替代大模型随机搜索
       description: 规范化检索增强框架：SkillBank驱动+Select-Read-Act三段范式，替代大模型随机搜索
       author: 小马
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.211955'
+    status: skillopt_v2_mapped
+    hash_signature: 6ad21f9d2ea182f9fe66f7791944c3bfa4eb4281c1609ca95e82a89c65e6a413
   search-workflow:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: search-workflow
-      version: 1.0.0
+      version: 2.0.0
+      title: Consolidated search utilities and frameworks.
       description: Consolidated search utilities and frameworks.
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.215456'
+    status: skillopt_v2_mapped
+    hash_signature: 4b61f7a6827888ed424ba297ff108ccac88a604eb4acdb4328980bff0855063b
   self-evolution-cycle:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: self-evolution-cycle
-      version: 1.0
-      description: 完整的自进化循环：GitHub 搜索 → Web 抓取 → PR 提交 → 模式更新
+      version: 2.0
+      title: APEX Self Evolution Cycle - Native Ingestion Evolution Engine
+      description: 完整的自进化循环：GitHub 搜索 → Web 抓取 → PR 提交 → 模式更新 → APEX 工程化终态升维
       author: 未知
-      license: 未定义
+      license: MIT
+      category: autonomous-ai-agents
       tags:
       - self-improvement
       - autonomous
       - evolution
       - learning-loop
+      - apex
+      - skillopt
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.225011'
+    status: skillopt_v2_mapped
+    hash_signature: 878be1fae5f082e0ce6b1c905485ec2d0fa682945812a780876ba819c203d138
   smart-home:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: smart-home
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.226392'
+    status: skillopt_v2_mapped
+    hash_signature: b624ff9839dfc859ecdc6cdcc3f4b37229c998f0f35486980e3087afcddb1c40
   social-media:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: social-media
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.226843'
+    status: skillopt_v2_mapped
+    hash_signature: 9ecc2cee57a29d2f81779464fd97c1f8ac388ac3b226064040fa36401d93955f
   software-development:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: software-development
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.227142'
+    status: skillopt_v2_mapped
+    hash_signature: ece0d48a336b2a09e111564c59b64ba3343edcf35033e326b79b314e84b882de
+  test-skill:
+    api_version: skillopt-v2
+    core:
+      name: test-skill
+      version: 2.0.0
+      title: 测试技能文档规范
+      description: 测试技能文档规范
+      author: 未知
+      license: MIT
+      category: devops
+      tags:
+      - test
+      - demo
+    interface:
+      type: skill
+      tools: []
+      inputs:
+      - task
+      - context
+      - config
+      outputs:
+      - message
+      - file
+      - media
+      - skill_result
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+      self_heal_enabled: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.231925'
+    status: skillopt_v2_mapped
+    hash_signature: 29bdeafd11f6f0af83be400b7549f549d4245df5a8b018699184ae1153fbb968
   user-preferences:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: user-preferences
-      version: 1.0.0
+      version: 2.0.0
+      title: 未定义
       description: 未定义
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.233068'
+    status: skillopt_v2_mapped
+    hash_signature: 102b880f846550942bbe67183b59e9a73a14b888c81bf52438b8eae0b7f96b37
   web-content-hunter:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: web-content-hunter
       version: 1.0
+      title: Web Content Hunter - ArXiv & Tech Blog Content Extraction
       description: 从 arXiv 论文、技术博客提取最新 AI/ML 研究和最佳实践
       author: 未知
-      license: 未定义
+      license: MIT
+      category: research
       tags:
       - arxiv
       - research
@@ -1026,47 +1832,86 @@ skills:
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.239692'
+    status: skillopt_v2_mapped
+    hash_signature: 4b8ef593ffb32bd66fc28db5997ba0af21e7793d0d978ed575ea07ef080bb960
   yuanbao:
-    api_version: skillopt-v1
+    api_version: skillopt-v2
     core:
       name: yuanbao
       version: 1.0.0
+      title: 'Yuanbao (元宝) groups: @mention users, query info/members.'
       description: 'Yuanbao (元宝) groups: @mention users, query info/members.'
       author: 未知
-      license: 未定义
+      license: MIT
+      category: null
       tags: []
     interface:
       type: skill
       tools: []
-      inputs: []
+      inputs:
+      - task
+      - context
+      - config
       outputs:
       - message
       - file
       - media
+      - skill_result
     consumption_contract:
       self_probing: true
       loop_auditing: true
       hash_traceable: true
       entropy_reduction: true
+      self_heal_enabled: true
     transformation_rules:
       converge_to_norm: true
       lock_discipline: true
       collaborative_entropy_reduction: true
-    ingestion_timestamp: '2026-06-08T10:00:00Z'
-    status: pending_skillopt_upgrade
+    task_status:
+      enabled: true
+      states:
+      - pending
+      - in_progress
+      - completed
+      - failed
+      - cancelled
+      default_state: pending
+    success_condition:
+      enabled: true
+      default: all_tasks_completed
+    ingestion_timestamp: '2026-06-08T02:59:24.248100'
+    status: skillopt_v2_mapped
+    hash_signature: bf1f46654c4c3c57ae9e32dabaf9e32039174a3c3b5b27e4ea3cd74940034fb6
+total_skills: 39
