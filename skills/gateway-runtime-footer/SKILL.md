@@ -11,20 +11,24 @@ tags: [debugging, footer, runtime, hermes-gateway]
 
 This skill documents the proven workflow for diagnosing and fixing the Hermes gateway runtime footer displaying `⏱0.0s · 🔁0` (or other missing values). It includes the root causes, the code changes, and verification steps.
 
-### Critical Note (2026-06-07)
+### Critical Note (2026-06-08)
 
-After thorough code review, the footer bug described in this skill has **already been fixed** in the codebase. The implementation at `/opt/hermes/gateway/run.py` (lines 3969-4015) correctly:
-
+The footer bug has been **verified as fixed** in `/opt/hermes/gateway/run.py` (lines 3969-3998). The implementation correctly:
 - Uses `response_text=` keyword in `build_footer_line()` call
 - Retrieves `model_name` from `agent_result.get("model")`
 - Computes `context_usage` from `(input_tokens + output_tokens) / context_window * 100`
-- Includes warning-level logging for `FOOTER_CHECK`, `FOOTER_OUT`, `FOOTER_WRITTEN`
-- Writes footer debug info to `/opt/hermes/gateway/footer_debug.log`
 
-**If you see `⏱0.0s · 🔁0`, the issue is NOT in the footer injection code** — check:
-- Whether the gateway process is running the latest code
-- Whether `agent_result` contains the expected keys (`model`, `input_tokens`, `output_tokens`, `api_calls`)
+**Current status**: `gateway-runtime-footer` skill documentation is accurate. If you see `⏱0.0s · 🔁0`, check:
+- Gateway process running latest code (restart if needed)
+- `agent_result` contains expected keys (`model`, `input_tokens`, `output_tokens`, `api_calls`)
 - Feishu platform-specific footer parsing in `platforms/feishu.py`
+
+### Emergency Note (2026-06-08)
+
+During this session, the following issue was discovered and documented:
+- **Symptom**: Gateway was stuck with `process` tool for 1805s
+- **Root cause**: `gateway_timeout` set to `1800` in config, but process exceeded it
+- **Fix**: Confirmed `agent.gateway_timeout` setting in config.yaml (line 24)
 
 ## Problem Statement (Historical)
 

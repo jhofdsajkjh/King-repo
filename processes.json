@@ -1,11 +1,11 @@
 [
   {
-    "session_id": "proc_d9ba2587d8a1",
-    "command": "clash -d /opt/data/.clash 2>&1 &",
-    "pid": 22044,
+    "session_id": "proc_358757abd1b6",
+    "command": "clash -d /opt/data/.clash",
+    "pid": 762,
     "pid_scope": "host",
     "cwd": "/opt/hermes",
-    "started_at": 1780917619.658789,
+    "started_at": 1780932076.348377,
     "task_id": "default",
     "session_key": "agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c",
     "watcher_platform": "",

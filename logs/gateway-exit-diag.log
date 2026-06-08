@@ -116,3 +116,4 @@
 {"ts": "2026-06-05T11:52:37.018932+00:00", "tag": "gateway.exit_nonzero", "pid": 1, "python": "3.13.5", "platform": "linux"}
 {"ts": "2026-06-05T11:52:37.218101+00:00", "tag": "atexit.hook", "pid": 1, "python": "3.13.5", "platform": "linux", "sys_exc": "(None, None, None)"}
 {"ts": "2026-06-05T11:53:01.440889+00:00", "tag": "gateway.start", "pid": 1, "python": "3.13.5", "platform": "linux", "replace": false, "argv": ["/opt/hermes/.venv/bin/hermes", "gateway", "run"], "stdin_is_tty": true, "absorb_windows_console_controls": false}
+{"ts": "2026-06-08T12:34:51.804185+00:00", "tag": "gateway.start", "pid": 1, "python": "3.13.5", "platform": "linux", "replace": false, "argv": ["/opt/hermes/.venv/bin/hermes-python", "gateway", "run"], "stdin_is_tty": true, "absorb_windows_console_controls": false}

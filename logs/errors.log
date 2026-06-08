@@ -2711,3 +2711,192 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 20:25:22,963 ERROR Lark: handle message failed, message_type: event, message_id: 0c476ae7-e575-496b-85c8-83e578116ebf, trace_id: 2114edfdd1f1af2894a9b9a45c7920ac, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
 2026-06-08 20:28:13,354 ERROR Lark: handle message failed, message_type: event, message_id: 55da5d8a-c388-497e-9c64-8214b74c5c0b, trace_id: 4a77b27ba65afe82ef5e8f31d030531a, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
 2026-06-08 20:28:42,002 ERROR Lark: handle message failed, message_type: event, message_id: b7b9f26d-890b-4000-ba90-1566ea02df5f, trace_id: 4542269c076eca6919078a25e0bf96a8, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
+2026-06-08 20:34:56,899 WARNING gateway.run: Process checkpoint recovery: cannot import name '_pid_exists' from 'gateway.status' (/opt/hermes/gateway/status.py)
+2026-06-08 20:37:02,217 ERROR Lark: handle message failed, message_type: event, message_id: c965d2bf-1853-4a65-9ff0-f029545d8e9e, trace_id: 0e2f598798b677ebac5bc623d0380a66, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 20:37:18,108 ERROR Lark: handle message failed, message_type: event, message_id: c5fb42bb-d7ff-42fc-ba77-12387567b5c5, trace_id: 0e2f598798b677ebac5bc623d0380a66, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 20:37:24,586 WARNING tools.registry: Could not import tool module tools.cronjob_tools: cannot import name 'AmbiguousJobReference' from 'cron.jobs' (/opt/hermes/cron/jobs.py)
+2026-06-08 20:37:25,111 WARNING tools.registry: Could not import tool module tools.web_tools: No module named 'plugins.web'
+2026-06-08 20:37:43,023 WARNING gateway.run: FOOTER_CHECK: response_time=30.39 api_calls=1 model=astron-code-latest input_toks=18211 output_toks=109
+2026-06-08 20:37:43,605 WARNING gateway.run: FOOTER_OUT: text='⏱30.4s · astron-code-latest · 14% · 🔁1'
+2026-06-08 20:37:43,609 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 20:42:18,355 ERROR Lark: handle message failed, message_type: event, message_id: f4d1243b-1b9e-4c6b-95ce-200704c52dc0, trace_id: 0e2f598798b677ebac5bc623d0380a66, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 20:44:05,352 ERROR Lark: handle message failed, message_type: event, message_id: 209d5a70-bd83-4d56-a644-0b91b04fb33b, trace_id: f055c34b24baf24c82e9ecf55f312363, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 20:44:20,209 ERROR Lark: handle message failed, message_type: event, message_id: f15f84ca-c329-4de7-a8fb-b29a225fd26a, trace_id: f055c34b24baf24c82e9ecf55f312363, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 20:46:09,497 WARNING gateway.run: FOOTER_CHECK: response_time=80.18 api_calls=1 model=astron-code-latest input_toks=36627 output_toks=211
+2026-06-08 20:46:09,918 WARNING gateway.run: FOOTER_OUT: text='⏱80.2s · astron-code-latest · 29% · 🔁1'
+2026-06-08 20:46:09,922 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 20:46:23,193 ERROR Lark: handle message failed, message_type: event, message_id: bd13c705-b5da-43e7-8097-24234dfe5fff, trace_id: 9b5c742f16d3e261ec72e15ff3ad373c, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 20:49:21,061 ERROR Lark: handle message failed, message_type: event, message_id: a68814ce-3362-49df-872d-526d2606847e, trace_id: f055c34b24baf24c82e9ecf55f312363, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 20:55:55,152 ERROR Lark: handle message failed, message_type: event, message_id: 026470d0-3999-4ffb-9fbc-a07eb1e14138, trace_id: 70bd4faa95ba540f41eb05a5c5666c53, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 20:57:27,955 ERROR Lark: handle message failed, message_type: event, message_id: 0bb2e736-1340-43df-9b42-82c0fffa3d9a, trace_id: dda06a32d5331a1f6e48448d22c65215, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 20:58:29,342 ERROR Lark: handle message failed, message_type: event, message_id: 05616983-d3b4-4414-855e-ffc517d6ad42, trace_id: 85b2e7e4648e635d784482245d1cc09c, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:00:33,598 ERROR Lark: handle message failed, message_type: event, message_id: ef4b8acd-4a43-482f-8fea-9c7b512b234b, trace_id: 95a882803c3ba5f2f1b131d3f642ee5b, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:00:49,741 ERROR Lark: handle message failed, message_type: event, message_id: 044a201f-9d55-47e3-902c-5f7c85af3913, trace_id: 95a882803c3ba5f2f1b131d3f642ee5b, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:05:50,172 ERROR Lark: handle message failed, message_type: event, message_id: 8a9ecdbb-b482-4167-9b0f-3dd1c89afb35, trace_id: 95a882803c3ba5f2f1b131d3f642ee5b, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:06:11,023 ERROR Lark: handle message failed, message_type: event, message_id: b310ba24-38f2-4981-9b65-b6cf815f4d99, trace_id: a19acc1d7f8cde3e1d0fa4859ada94ab, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:08:37,062 ERROR Lark: handle message failed, message_type: event, message_id: e075ccfe-baf5-459f-89fb-1dcaee96b9bb, trace_id: 0e0ad21991755fab3253664870c543ef, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:11:37,101 ERROR Lark: handle message failed, message_type: event, message_id: 5fd9cb82-8fcc-490a-b1e1-62f1b992466a, trace_id: eebccc8a2e76f539237e98ac2207937e, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:17:46,359 ERROR Lark: handle message failed, message_type: event, message_id: 47d4b9a4-62c5-4aa2-a810-6f10fb3d8b77, trace_id: 9ab645d9c5f8cbe5a2fc9e2f692c68fc, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:24:22,067 ERROR Lark: handle message failed, message_type: event, message_id: 11fafb7a-b2fe-4013-a94f-f4abeaa3192b, trace_id: be3d0d5b4a4a6e0ed6c840432c29e6c0, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:25:23,104 ERROR Lark: handle message failed, message_type: event, message_id: b1d9ca52-306c-4e64-831f-d505b955e93e, trace_id: 2114edfdd1f1af2894a9b9a45c7920ac, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:32:30,320 ERROR Lark: handle message failed, message_type: event, message_id: a371cb37-c213-45ac-9a99-2bbe821f8c71, trace_id: bd36655445a7834a260b42ae1064956d, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:32:45,211 ERROR Lark: handle message failed, message_type: event, message_id: 3fe3403d-05a2-4e07-9a81-a51e8f56e712, trace_id: bd36655445a7834a260b42ae1064956d, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:36:57,339 WARNING gateway.run: FOOTER_CHECK: response_time=2157.36 api_calls=36 model=astron-code-latest input_toks=1057365 output_toks=8695
+2026-06-08 21:36:57,903 WARNING gateway.run: FOOTER_OUT: text='⏱2157.4s · astron-code-latest · 833% · 🔁36'
+2026-06-08 21:36:57,908 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 21:37:46,100 ERROR Lark: handle message failed, message_type: event, message_id: f135ff5b-5245-48b5-ab55-34afc78befb7, trace_id: bd36655445a7834a260b42ae1064956d, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:38:22,104 ERROR Lark: handle message failed, message_type: event, message_id: 00728a89-9775-48b8-a9c2-d39819ea11bd, trace_id: 5f8cc626ac9882fd91d269507131d287, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:42:19,258 ERROR Lark: handle message failed, message_type: event, message_id: ab4f9a6f-5039-4fe7-a10f-538d5c03e05e, trace_id: 0e2f598798b677ebac5bc623d0380a66, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:49:22,145 ERROR Lark: handle message failed, message_type: event, message_id: 78589e9b-decd-4759-a83d-7d6e5c969def, trace_id: f055c34b24baf24c82e9ecf55f312363, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 21:59:45,298 ERROR Lark: handle message failed, message_type: event, message_id: 84d939a1-b1ce-4ae9-b9f5-62ff096051d5, trace_id: a0d9fb269a9a30039dc52a7f6600a009, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:01:31,201 ERROR Lark: handle message failed, message_type: event, message_id: 3a6c7713-3d93-4b70-a595-cf8182aa859f, trace_id: a9271e7381cddede88d98e3d221574e6, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:05:50,111 ERROR Lark: handle message failed, message_type: event, message_id: 7e2df487-5c1d-41a2-b079-03f930f14704, trace_id: 95a882803c3ba5f2f1b131d3f642ee5b, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:06:53,573 ERROR Lark: handle message failed, message_type: event, message_id: b9244765-757a-4382-883c-f16ee835cbd3, trace_id: 4e6e33005c010beb812edc96cd104f57, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:07:10,058 ERROR Lark: handle message failed, message_type: event, message_id: 48c691fe-5915-4a57-b2f9-ea2c4b1d1e3f, trace_id: 4e6e33005c010beb812edc96cd104f57, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:08:27,406 ERROR Lark: handle message failed, message_type: event, message_id: 63f64961-265a-4589-98d7-dfa7c1a0d2df, trace_id: 8d8368a81cca48e238366f442ce4fabc, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:08:46,130 ERROR Lark: handle message failed, message_type: event, message_id: 4dc1b8e0-1ce8-49e1-979a-d225a35d8753, trace_id: 2b7f6c9ad2b2e14a7d3af1caca81b2ce, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:08:55,045 ERROR Lark: handle message failed, message_type: event, message_id: c1fe6d53-f3c7-4d2d-871b-dd05f8c6ec34, trace_id: b3becc72e8824751e16f5b5385d7b802, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:09:21,059 ERROR Lark: handle message failed, message_type: event, message_id: 12b4b95c-816e-4d2d-914c-5b8544c56eab, trace_id: f751217cead9f9e9907474118441ecdd, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:09:26,216 ERROR Lark: handle message failed, message_type: event, message_id: 8761256e-6efc-4823-920a-96f5545dab21, trace_id: e6e6a38a2df9c8e5822c7ede3261d320, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:09:32,061 ERROR Lark: handle message failed, message_type: event, message_id: b7d72185-138f-4cb5-83e2-151af94532c0, trace_id: c315147e335c2a7da0fc5f51ae5e4c73, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:10:08,449 ERROR Lark: handle message failed, message_type: event, message_id: 41f32748-1f26-446b-9934-49315bbd7f5b, trace_id: 3438217ec78a2d1a2cae0d24f290ed0b, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:12:05,977 ERROR Lark: handle message failed, message_type: event, message_id: 36aee507-6fd0-4dc3-8a31-5972f6150a24, trace_id: 23eda1488cbc8e2999089058c494b012, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:12:10,708 ERROR Lark: handle message failed, message_type: event, message_id: ebba900b-411b-4695-88e0-5ab314e84382, trace_id: 4e6e33005c010beb812edc96cd104f57, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:12:21,284 ERROR Lark: handle message failed, message_type: event, message_id: 2e459596-899d-48bf-aac7-602ffa76f1dd, trace_id: 23eda1488cbc8e2999089058c494b012, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:12:54,632 WARNING gateway.run: FOOTER_CHECK: response_time=314.58 api_calls=16 model=astron-code-latest input_toks=1654820 output_toks=9798
+2026-06-08 22:12:55,142 WARNING gateway.run: FOOTER_OUT: text='⏱314.6s · astron-code-latest · 1300% · 🔁16'
+2026-06-08 22:12:55,148 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 22:17:21,121 ERROR Lark: handle message failed, message_type: event, message_id: 0f937fed-7307-49d1-bd3a-db7f9d780d47, trace_id: 23eda1488cbc8e2999089058c494b012, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:17:22,975 ERROR [20260608_221255_c2b5d2] tools.registry: Tool skill_manage dispatch error: [Errno 13] Permission denied: '/opt/data/skills/apex-realized/.SKILL.md.tmp.zl4yr_qx'
+Traceback (most recent call last):
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/registry.py", line 404, in dispatch
+    return entry.handler(args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/skill_manager_tool.py", line 1022, in <lambda>
+    handler=lambda args, **kw: skill_manage(
+                               ~~~~~~~~~~~~^
+        action=args.get("action", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        replace_all=args.get("replace_all", False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        absorbed_into=args.get("absorbed_into")),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/skill_manager_tool.py", line 848, in skill_manage
+    result = _patch_skill(name, old_string, new_string, file_path, replace_all)
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/skill_manager_tool.py", line 646, in _patch_skill
+    _atomic_write_text(target, new_content)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/skill_manager_tool.py", line 454, in _atomic_write_text
+    fd, temp_path = tempfile.mkstemp(
+                    ~~~~~~~~~~~~~~~~^
+        dir=str(file_path.parent),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        prefix=f".{file_path.name}.tmp.",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        suffix="",
+        ^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.13/tempfile.py", line 548, in mkstemp
+    return _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+  File "/usr/lib/python3.13/tempfile.py", line 447, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+PermissionError: [Errno 13] Permission denied: '/opt/data/skills/apex-realized/.SKILL.md.tmp.zl4yr_qx'
+2026-06-08 22:26:06,006 ERROR Lark: handle message failed, message_type: event, message_id: 19a1cf6c-e227-40b7-8b4b-9ef1e2eb49da, trace_id: eac7d4644fcbe811456b5f5226be8d54, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:34:04,091 ERROR Lark: handle message failed, message_type: event, message_id: 2dd1e741-768e-4471-a602-9a84aadd8534, trace_id: 24cc4d6f469b890f205d0d6a4b62750b, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:37:47,003 ERROR Lark: handle message failed, message_type: event, message_id: aa1f12ac-326e-40e5-98dc-e0df6f632d6d, trace_id: bd36655445a7834a260b42ae1064956d, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:39:53,761 ERROR Lark: handle message failed, message_type: event, message_id: 47313665-0f1e-4d31-a0d9-735fa1521583, trace_id: 0c964a56ddc331e2dc4f2d4a18f82a54, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:40:03,355 ERROR Lark: handle message failed, message_type: event, message_id: fd1dfbc7-7bf6-4097-8bb2-2f65e691e809, trace_id: 23e4e8306dabeff040b9393b3a55dc7f, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:40:09,132 ERROR Lark: handle message failed, message_type: event, message_id: acf68ba6-e3be-4591-bfc5-b8818a940554, trace_id: 0c964a56ddc331e2dc4f2d4a18f82a54, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:40:11,107 ERROR Lark: handle message failed, message_type: event, message_id: d7aec407-54ea-4254-a78f-a18a0c0ab6a7, trace_id: 47dd103a58d89278aa35646a04c47b27, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:40:11,134 ERROR Lark: handle message failed, message_type: event, message_id: a504e2e8-1939-4fe5-a20c-6b3623d561ea, trace_id: 47dd103a58d89278aa35646a04c47b27, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:42:18,386 ERROR Lark: handle message failed, message_type: event, message_id: b9cf1682-ec0c-40c7-8639-56a57a44d4a1, trace_id: 2d38033bf2e5512c76c3bc099b69cfe8, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:42:34,206 ERROR Lark: handle message failed, message_type: event, message_id: 28bd933d-f22c-4380-99fa-50335812bc36, trace_id: 2d38033bf2e5512c76c3bc099b69cfe8, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:45:09,171 ERROR Lark: handle message failed, message_type: event, message_id: ef80a4b9-59d6-4dd6-8c1e-f98fb98f21eb, trace_id: 0c964a56ddc331e2dc4f2d4a18f82a54, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:46:22,109 ERROR Lark: handle message failed, message_type: event, message_id: 1f877445-cd7b-4207-a5a1-618c7c084730, trace_id: af47be36e010756e589c07b8ac7a061a, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:47:34,211 ERROR Lark: handle message failed, message_type: event, message_id: accdc729-513e-4254-a16d-202f35369513, trace_id: 2d38033bf2e5512c76c3bc099b69cfe8, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 22:53:32,145 WARNING gateway.run: FOOTER_CHECK: response_time=2248.79 api_calls=33 model=astron-code-latest input_toks=3211958 output_toks=14232
+2026-06-08 22:53:32,639 WARNING gateway.run: FOOTER_OUT: text='⏱2248.8s · astron-code-latest · 2520% · 🔁33'
+2026-06-08 22:53:32,645 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 22:57:38,955 ERROR Lark: handle message failed, message_type: event, message_id: 9565cd6b-c66e-40a8-91b7-a050a7e5483c, trace_id: 1ab27e89386f1c2cdeedcfaa1f0cab4b, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:10:53,044 ERROR Lark: handle message failed, message_type: event, message_id: 183e9352-0f9a-4e25-be35-cb52d126d547, trace_id: 1542d0644219c3a9146fe3e606ef9de4, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:12:11,956 ERROR Lark: handle message failed, message_type: event, message_id: 6acedb63-59aa-42df-83db-ed9dfc66f3a9, trace_id: 4e6e33005c010beb812edc96cd104f57, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:13:10,092 ERROR Lark: handle message failed, message_type: event, message_id: e45a76c0-4c86-4634-a610-11a8f93aadb0, trace_id: 646fc14ac29bd4b6913f5351dcdc3c3f, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:13:25,224 ERROR Lark: handle message failed, message_type: event, message_id: 8d93ae50-b80c-4335-be22-df20dacec421, trace_id: 646fc14ac29bd4b6913f5351dcdc3c3f, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:13:51,320 ERROR Lark: handle message failed, message_type: event, message_id: 0dde9316-6164-4814-abf2-0c1c53611fe2, trace_id: 09629702399188b6e4ab7b35aba9467e, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:14:23,454 ERROR Lark: handle message failed, message_type: event, message_id: b5cad0cb-7409-407c-bbfb-66a2a1880a24, trace_id: 057cd902098fd0314c7fa41cb9ae89d4, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:14:40,112 ERROR Lark: handle message failed, message_type: event, message_id: 06df1a80-09ac-42b6-8288-fab142f38b00, trace_id: 057cd902098fd0314c7fa41cb9ae89d4, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:15:49,334 ERROR Lark: handle message failed, message_type: event, message_id: 33487eae-eccb-49ee-8a94-4d39a3dbe033, trace_id: 6e9461bf37f4805e975a10c387a382fc, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:17:21,353 ERROR Lark: handle message failed, message_type: event, message_id: 7990484f-a267-4048-9a26-5280f0af7bb3, trace_id: 23eda1488cbc8e2999089058c494b012, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:18:25,982 ERROR Lark: handle message failed, message_type: event, message_id: 4ff80d1e-942a-4b4a-be58-6274483caa88, trace_id: 646fc14ac29bd4b6913f5351dcdc3c3f, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:19:40,944 ERROR Lark: handle message failed, message_type: event, message_id: ab9c45ed-60ee-4110-a9cd-c9b85d59524d, trace_id: 057cd902098fd0314c7fa41cb9ae89d4, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:25:46,721 WARNING gateway.run: FOOTER_CHECK: response_time=688.78 api_calls=13 model=astron-code-latest input_toks=3909447 output_toks=16763
+2026-06-08 23:25:47,275 WARNING gateway.run: FOOTER_OUT: text='⏱688.8s · astron-code-latest · 3067% · 🔁13'
+2026-06-08 23:25:47,280 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 23:40:35,110 ERROR Lark: handle message failed, message_type: event, message_id: 4fa6187c-ff8d-462f-b429-75070e722abd, trace_id: fb8810212c19b994a8e4e6cdf4f872fe, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:43:52,904 ERROR Lark: handle message failed, message_type: event, message_id: 142bc412-0d1d-4880-a4e8-fe7217c94fe0, trace_id: 23e25dc7f81329d670c5aa70b212e247, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:44:02,115 ERROR Lark: handle message failed, message_type: event, message_id: 09bbdf77-04ff-4b50-a49d-7ac0fafde00f, trace_id: e9bc70c3a3317f96e6c609e7c6beda4d, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:44:09,358 ERROR Lark: handle message failed, message_type: event, message_id: fd1fb3c9-19bc-46e1-8d3d-2282b06f4a02, trace_id: 572b87afc54219839392fadf37fde407, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:45:10,119 ERROR Lark: handle message failed, message_type: event, message_id: 7c403e63-6f53-41e2-92b5-48a036c8e969, trace_id: 0c964a56ddc331e2dc4f2d4a18f82a54, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:47:34,098 ERROR Lark: handle message failed, message_type: event, message_id: 3a0c39ea-33c2-4c83-b9a6-c929daef2644, trace_id: 2d38033bf2e5512c76c3bc099b69cfe8, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:47:36,200 ERROR Lark: handle message failed, message_type: event, message_id: da37859c-5dd9-4b0f-a95d-7ede81e48d0a, trace_id: 376bd0cd168477f7c33e79a679bfd98b, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:47:57,158 ERROR Lark: handle message failed, message_type: event, message_id: e81127b0-e5f9-4869-b670-61b10f331361, trace_id: a2b5af87a52c162c6d5b2bff174ac48d, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:48:12,994 ERROR Lark: handle message failed, message_type: event, message_id: d17e03c9-617b-46ab-87e9-09437bd2fae5, trace_id: a2b5af87a52c162c6d5b2bff174ac48d, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:53:13,895 ERROR Lark: handle message failed, message_type: event, message_id: 36236f00-83dd-4963-9645-0454daa09945, trace_id: a2b5af87a52c162c6d5b2bff174ac48d, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:53:31,259 ERROR Lark: handle message failed, message_type: event, message_id: eef8f31e-a7f1-461f-8cc9-119321b2cffb, trace_id: 78001f0c407de6af9924876af5ebe7b7, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:53:47,024 ERROR Lark: handle message failed, message_type: event, message_id: fe4f69f9-7fdb-417d-88dc-108fced58cd1, trace_id: 78001f0c407de6af9924876af5ebe7b7, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:54:43,098 ERROR Lark: handle message failed, message_type: event, message_id: 63c9eb7e-e6a1-4396-9a32-e2b2c2bea7bb, trace_id: 8485188b387dd3138f9172fd914ccd79, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-08 23:58:47,292 ERROR Lark: handle message failed, message_type: event, message_id: 4756848f-63df-4891-a8c9-74b9959d2f96, trace_id: 78001f0c407de6af9924876af5ebe7b7, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:06:48,153 ERROR Lark: handle message failed, message_type: event, message_id: d93cd380-d7b3-4c2f-b468-edc8e3144c74, trace_id: 5caf0aec5365a43fc179b2ddf3f553d6, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:07:02,138 WARNING gateway.run: FOOTER_CHECK: response_time=1118.03 api_calls=27 model=astron-code-latest input_toks=5607180 output_toks=22270
+2026-06-09 00:07:02,617 WARNING gateway.run: FOOTER_OUT: text='⏱1118.0s · astron-code-latest · 4398% · 🔁27'
+2026-06-09 00:07:02,623 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-09 00:07:51,433 ERROR Lark: handle message failed, message_type: event, message_id: 9963b8b4-220a-4769-a874-6f53ac652538, trace_id: 11f91954decd7f0cb9e9c8bd4bbe401f, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:11:44,254 ERROR Lark: handle message failed, message_type: event, message_id: aee8546f-9f37-4146-ab21-65ecf68ef08f, trace_id: 5087c66be9d9b0a6b01dddd8e2d86724, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:12:02,224 ERROR Lark: handle message failed, message_type: event, message_id: 86ce01f6-57ee-4501-a607-5115f7dd9e04, trace_id: 6325a738cdde499694f64b7bcd63e574, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:12:17,400 ERROR Lark: handle message failed, message_type: event, message_id: 9ce6d808-d60d-435e-9454-a4b560195595, trace_id: 6325a738cdde499694f64b7bcd63e574, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:12:28,287 ERROR Lark: handle message failed, message_type: event, message_id: a992b8df-21f6-4bf2-b268-98299adb5d40, trace_id: f2c51b1f8b70cebd07cb8ea2e3fd61c7, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:12:44,046 ERROR Lark: handle message failed, message_type: event, message_id: 63309fb8-15a8-4b8f-b14a-6f7136d3e527, trace_id: f2c51b1f8b70cebd07cb8ea2e3fd61c7, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:14:04,989 ERROR [20260609_000703_cfd1db] tools.registry: Tool skill_manage dispatch error: [Errno 13] Permission denied: '/opt/data/skills/search-workflow/.SKILL.md.tmp.6gth_hrw'
+Traceback (most recent call last):
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/registry.py", line 404, in dispatch
+    return entry.handler(args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/skill_manager_tool.py", line 1022, in <lambda>
+    handler=lambda args, **kw: skill_manage(
+                               ~~~~~~~~~~~~^
+        action=args.get("action", ""),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+        replace_all=args.get("replace_all", False),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        absorbed_into=args.get("absorbed_into")),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/skill_manager_tool.py", line 848, in skill_manage
+    result = _patch_skill(name, old_string, new_string, file_path, replace_all)
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/skill_manager_tool.py", line 646, in _patch_skill
+    _atomic_write_text(target, new_content)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/tools/skill_manager_tool.py", line 454, in _atomic_write_text
+    fd, temp_path = tempfile.mkstemp(
+                    ~~~~~~~~~~~~~~~~^
+        dir=str(file_path.parent),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        prefix=f".{file_path.name}.tmp.",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        suffix="",
+        ^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.13/tempfile.py", line 548, in mkstemp
+    return _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+  File "/usr/lib/python3.13/tempfile.py", line 447, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+PermissionError: [Errno 13] Permission denied: '/opt/data/skills/search-workflow/.SKILL.md.tmp.6gth_hrw'
+2026-06-09 00:16:43,179 ERROR Lark: handle message failed, message_type: event, message_id: 853c09cd-5c8e-4a00-a536-ca590e25f94e, trace_id: bab5cb73511794bfaf58d332c0137a2e, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:16:51,061 ERROR Lark: handle message failed, message_type: event, message_id: 24c18256-bbe8-4297-9ed5-2c66a1bfae4d, trace_id: 4c6391c938d19201bd481e3ea76c4135, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:17:17,998 ERROR Lark: handle message failed, message_type: event, message_id: d596e0da-f840-4817-bfb4-45d6c34219bc, trace_id: 6325a738cdde499694f64b7bcd63e574, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:17:44,216 ERROR Lark: handle message failed, message_type: event, message_id: 534e71c9-1dbd-49ea-a903-a3a43b4893ba, trace_id: f2c51b1f8b70cebd07cb8ea2e3fd61c7, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:17:46,350 ERROR Lark: handle message failed, message_type: event, message_id: c0f6331d-ed08-4b8d-85f5-021bbdf1bbfc, trace_id: 6786e8320ab9d54b833379ec8579716f, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]
+2026-06-09 00:18:26,896 ERROR Lark: handle message failed, message_type: event, message_id: 142265d8-8e09-4663-880f-233e22f728dc, trace_id: 646fc14ac29bd4b6913f5351dcdc3c3f, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7649002398451240128]

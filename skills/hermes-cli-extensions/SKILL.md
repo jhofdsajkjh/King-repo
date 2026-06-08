@@ -91,3 +91,50 @@ cat /opt/data/.hermes/v16/active.json
 bash /opt/data/.hermes/scripts/hermes-evolve.sh
 ```
 
+### Clash 代理集成
+
+当 GitHub API 速率限制时，启用 Clash 代理绕过限制：
+
+```bash
+# 1. 导入订阅配置
+curl -L "https://qchaq.no-mad-sub.one/link/NzwBZ6o2NnjFjhVE?clash=3&extend=1" \
+  -o /opt/data/.clash/config.yaml
+
+# 2. 启动 Clash
+clash -d /opt/data/.clash
+
+# 3. 配置环境变量使用代理
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+
+# 4. 验证代理
+curl -v https://www.google.com
+```
+
+**或通过 Python 自动配置：**
+
+```python
+import urllib.request
+
+def setup_clash_proxy():
+    proxy_handler = urllib.request.ProxyHandler({
+        'http': '127.0.0.1:7890',
+        'https': '127.0.0.1:7890'
+    })
+    opener = urllib.request.build_opener(proxy_handler)
+    urllib.request.install_opener(opener)
+    print("Clash proxy enabled")
+
+setup_clash_proxy()
+```
+
+## Clash 代理配置检查清单
+
+- [ ] Clash 可执行文件安装 (`which clash`)
+- [ ] 订阅配置下载 (`config.yaml`)
+- [ ] 移除 `GEOIP,CN` 规则（避免 MMDB 下载失败）
+- [ ] Clash 服务启动（`clash -d /opt/data/.clash`）
+- [ ] API 端点验证 (`http://127.0.0.1:9090/version`)
+- [ ] 代理端口监听 (`127.0.0.1:7890`)
+- [ ] 代理测试 (`curl -x http://127.0.0.1:7890 https://www.google.com`)
+

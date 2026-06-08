@@ -1,0 +1,86 @@
+[
+  {
+    "name": "nexu-io/open-design",
+    "stars": 61563,
+    "updated": "2026-06-08",
+    "url": "https://github.com/nexu-io/open-design",
+    "description": "🎨 Local-first, open-source Claude Design alternative. 🖥️ Native desktop app. ⚡ 259+ Skills · ✨ 142+ Design Systems 🖼️ Web · desktop · mobile prototypes · slides · images · videos · HyperFrames 📦 Sandboxed preview · HTML/PDF/PPTX/MP4 export 🤖 Claude Code / OpenClaw / Codex / Cursor / OpenCode / Qwen / Copilot / Hermes / Kimi & 17+ CLIs."
+  },
+  {
+    "name": "kepano/obsidian-skills",
+    "stars": 34925,
+    "updated": "2026-06-08",
+    "url": "https://github.com/kepano/obsidian-skills",
+    "description": "Agent skills for Obsidian. Teach your agent to use Obsidian CLI and open formats including Markdown, Bases, JSON Canvas."
+  },
+  {
+    "name": "OthmanAdi/planning-with-files",
+    "stars": 22896,
+    "updated": "2026-06-08",
+    "url": "https://github.com/OthmanAdi/planning-with-files",
+    "description": "Claude Code skill implementing Manus-style persistent markdown planning — the workflow pattern behind the $2B acquisition."
+  },
+  {
+    "name": "obra/superpowers",
+    "stars": 221232,
+    "updated": "2026-06-08",
+    "url": "https://github.com/obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works."
+  },
+  {
+    "name": "affaan-m/ECC",
+    "stars": 210538,
+    "updated": "2026-06-08",
+    "url": "https://github.com/affaan-m/ECC",
+    "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
+  },
+  {
+    "name": "anthropics/skills",
+    "stars": 147947,
+    "updated": "2026-06-08",
+    "url": "https://github.com/anthropics/skills",
+    "description": "Public repository for Agent Skills"
+  },
+  {
+    "name": "letta-ai/letta",
+    "stars": 23214,
+    "updated": "2026-06-08",
+    "url": "https://github.com/letta-ai/letta",
+    "description": "Letta is the platform for building stateful agents: AI with advanced memory that can learn and self-improve over time."
+  },
+  {
+    "name": "aden-hive/hive",
+    "stars": 10509,
+    "updated": "2026-06-08",
+    "url": "https://github.com/aden-hive/hive",
+    "description": "Multi-Agent Harness for Production AI"
+  },
+  {
+    "name": "MervinPraison/PraisonAI",
+    "stars": 8102,
+    "updated": "2026-06-08",
+    "url": "https://github.com/MervinPraison/PraisonAI",
+    "description": "PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipping autonomous self-improving agents that research, plan, code, and execute tasks. Deployed in 5 lines of code with built-in memory, RAG, and support for 100+ LLMs."
+  },
+  {
+    "name": "TauricResearch/TradingAgents",
+    "stars": 84400,
+    "updated": "2026-06-08",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "description": "TradingAgents: Multi-Agents LLM Financial Trading Framework"
+  },
+  {
+    "name": "FoundationAgents/MetaGPT",
+    "stars": 68644,
+    "updated": "2026-06-08",
+    "url": "https://github.com/FoundationAgents/MetaGPT",
+    "description": "🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming"
+  },
+  {
+    "name": "openai/openai-agents-python",
+    "stars": 26999,
+    "updated": "2026-06-08",
+    "url": "https://github.com/openai/openai-agents-python",
+    "description": "A lightweight, powerful framework for multi-agent workflows"
+  }
+]

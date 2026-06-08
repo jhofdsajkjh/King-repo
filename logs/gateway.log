@@ -2661,3 +2661,89 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 20:19:24,326 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5f7a7490a0c1e94e5c1a10aaa type=command chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='/reset' media=0
 2026-06-08 20:19:27,250 INFO gateway.platforms.base: [Feishu] Sending response (261 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
 2026-06-08 20:19:48,741 INFO [20260608_173755_604cd2] gateway.run: Pre-reset memory flush completed for session 20260608_173755_604cd2
+2026-06-08 20:34:56,754 INFO gateway.run: Starting Hermes Gateway...
+2026-06-08 20:34:56,811 INFO gateway.run: Session storage: /opt/data/sessions
+2026-06-08 20:34:56,899 WARNING gateway.run: Process checkpoint recovery: cannot import name '_pid_exists' from 'gateway.status' (/opt/hermes/gateway/status.py)
+2026-06-08 20:35:58,402 INFO gateway.run: Connecting to feishu...
+2026-06-08 20:36:00,910 INFO gateway.platforms.feishu: [Feishu] Connected in websocket mode (feishu)
+2026-06-08 20:36:00,919 INFO gateway.run: ✓ feishu connected
+2026-06-08 20:36:01,139 INFO gateway.run: Connecting to webhook...
+2026-06-08 20:36:01,279 INFO gateway.platforms.webhook: [webhook] Listening on 0.0.0.0:8644 — routes: (none configured)
+2026-06-08 20:36:01,292 INFO gateway.run: ✓ webhook connected
+2026-06-08 20:36:01,315 INFO gateway.run: 1 hook(s) loaded
+2026-06-08 20:36:01,328 INFO gateway.run: Gateway running with 2 platform(s)
+2026-06-08 20:36:01,438 INFO gateway.run: Channel directory built: 1 target(s)
+2026-06-08 20:36:01,445 INFO gateway.run: Press Ctrl+C to stop
+2026-06-08 20:36:02,358 INFO gateway.run: Cron ticker started (interval=60s)
+2026-06-08 20:37:08,156 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5f39f8e8a4c2441d80e6f8a66
+2026-06-08 20:37:08,160 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5f39f8e8a4c2441d80e6f8a66 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='继续' media=0
+2026-06-08 20:37:09,914 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (2 chars)
+2026-06-08 20:37:12,372 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='继续'
+2026-06-08 20:37:42,766 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=30.4s api_calls=1 response=169 chars
+2026-06-08 20:37:43,023 WARNING gateway.run: FOOTER_CHECK: response_time=30.39 api_calls=1 model=astron-code-latest input_toks=18211 output_toks=109
+2026-06-08 20:37:43,605 WARNING gateway.run: FOOTER_OUT: text='⏱30.4s · astron-code-latest · 14% · 🔁1'
+2026-06-08 20:37:43,609 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 20:37:43,938 INFO gateway.platforms.base: [Feishu] Sending response (246 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 20:44:47,892 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5fdd3f78acc24e9396f8fe2b7
+2026-06-08 20:44:47,898 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5fdd3f78acc24e9396f8fe2b7 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='上一次你卡在这里⏱️ Agent inactive for 30 min — no tool calls or API responses.\nThe agent appears stuck on tool `process` (1805s ' media=0
+2026-06-08 20:44:48,505 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (320 chars)
+2026-06-08 20:44:49,103 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='上一次你卡在这里⏱️ Agent inactive for 30 min — no tool calls or API responses. The agent'
+2026-06-08 20:46:09,286 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=80.2s api_calls=1 response=201 chars
+2026-06-08 20:46:09,497 WARNING gateway.run: FOOTER_CHECK: response_time=80.18 api_calls=1 model=astron-code-latest input_toks=36627 output_toks=211
+2026-06-08 20:46:09,918 WARNING gateway.run: FOOTER_OUT: text='⏱80.2s · astron-code-latest · 29% · 🔁1'
+2026-06-08 20:46:09,922 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 20:46:09,942 INFO gateway.platforms.base: [Feishu] Sending response (278 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 21:00:57,830 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5f9e5db0a0c2d54d3ce1dc1a9
+2026-06-08 21:00:57,835 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5f9e5db0a0c2d54d3ce1dc1a9 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='第一个开始吧' media=0
+2026-06-08 21:00:59,078 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (6 chars)
+2026-06-08 21:00:59,732 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='第一个开始吧'
+2026-06-08 21:32:37,159 INFO gateway.platforms.feishu: Feishu button resolved 1 approval(s) for session agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (choice=always, user=ou_93821698643e56f8c4bf6303b4232715)
+2026-06-08 21:36:57,090 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=2157.4s api_calls=36 response=1121 chars
+2026-06-08 21:36:57,339 WARNING gateway.run: FOOTER_CHECK: response_time=2157.36 api_calls=36 model=astron-code-latest input_toks=1057365 output_toks=8695
+2026-06-08 21:36:57,903 WARNING gateway.run: FOOTER_OUT: text='⏱2157.4s · astron-code-latest · 833% · 🔁36'
+2026-06-08 21:36:57,908 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 21:36:58,072 INFO gateway.platforms.base: [Feishu] Sending response (1202 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 22:07:37,573 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d588447613cc435ac91ae4f2cd
+2026-06-08 22:07:37,579 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d588447613cc435ac91ae4f2cd type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='检查 clash Mate 是否启用' media=0
+2026-06-08 22:07:38,891 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (18 chars)
+2026-06-08 22:07:39,569 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='检查 clash Mate 是否启用'
+2026-06-08 22:12:54,149 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=314.6s api_calls=16 response=494 chars
+2026-06-08 22:12:54,632 WARNING gateway.run: FOOTER_CHECK: response_time=314.58 api_calls=16 model=astron-code-latest input_toks=1654820 output_toks=9798
+2026-06-08 22:12:55,142 WARNING gateway.run: FOOTER_OUT: text='⏱314.6s · astron-code-latest · 1300% · 🔁16'
+2026-06-08 22:12:55,148 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 22:12:55,260 INFO gateway.platforms.base: [Feishu] Sending response (575 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 22:16:01,756 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d58a4c2ccb0c1eea3b15cdaf99
+2026-06-08 22:16:01,762 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d58a4c2ccb0c1eea3b15cdaf99 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='clash -d /opt/data/.clash' media=0
+2026-06-08 22:16:02,374 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (25 chars)
+2026-06-08 22:16:02,985 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='clash -d /opt/data/.clash'
+2026-06-08 22:16:50,139 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d58a3db88b4c1882302d041763
+2026-06-08 22:16:50,146 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d58a3db88b4c1882302d041763 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='订阅 https://qchaq.no-mad-sub.one/link/NzwBZ6o2NnjFjhVE?clash=3&extend=1' media=0
+2026-06-08 22:16:50,762 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (70 chars)
+2026-06-08 22:39:59,885 INFO gateway.platforms.feishu: Feishu button resolved 0 approval(s) for session agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (choice=always, user=ou_93821698643e56f8c4bf6303b4232715)
+2026-06-08 22:53:31,774 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=2248.8s api_calls=33 response=703 chars
+2026-06-08 22:53:32,145 WARNING gateway.run: FOOTER_CHECK: response_time=2248.79 api_calls=33 model=astron-code-latest input_toks=3211958 output_toks=14232
+2026-06-08 22:53:32,639 WARNING gateway.run: FOOTER_OUT: text='⏱2248.8s · astron-code-latest · 2520% · 🔁33'
+2026-06-08 22:53:32,645 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 22:53:32,804 INFO gateway.platforms.base: [Feishu] Sending response (785 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 23:14:15,914 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d598abe78a4c1948f9013758ce
+2026-06-08 23:14:15,922 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d598abe78a4c1948f9013758ce type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='需要按你的建议执行' media=0
+2026-06-08 23:14:17,080 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (9 chars)
+2026-06-08 23:14:17,668 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='需要按你的建议执行'
+2026-06-08 23:25:46,453 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=688.8s api_calls=13 response=580 chars
+2026-06-08 23:25:46,721 WARNING gateway.run: FOOTER_CHECK: response_time=688.78 api_calls=13 model=astron-code-latest input_toks=3909447 output_toks=16763
+2026-06-08 23:25:47,275 WARNING gateway.run: FOOTER_OUT: text='⏱688.8s · astron-code-latest · 3067% · 🔁13'
+2026-06-08 23:25:47,280 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 23:25:47,377 INFO gateway.platforms.base: [Feishu] Sending response (661 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 23:48:21,827 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5a0a9caca0c1b8622ea05ef49
+2026-06-08 23:48:21,835 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5a0a9caca0c1b8622ea05ef49 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='## 🔜 Phase 2: Download (等待 GitHub API 重置)\n由于 GitHub API 速率限制 (60 req/h unauthenticated)，已经启动clash ，我建议：重新测试' media=0
+2026-06-08 23:48:22,984 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (107 chars)
+2026-06-08 23:48:23,570 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='## 🔜 Phase 2: Download (等待 GitHub API 重置) 由于 GitHub API 速率限制 (60 req/h unauthent'
+2026-06-09 00:07:01,601 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1118.0s api_calls=27 response=1000 chars
+2026-06-09 00:07:02,138 WARNING gateway.run: FOOTER_CHECK: response_time=1118.03 api_calls=27 model=astron-code-latest input_toks=5607180 output_toks=22270
+2026-06-09 00:07:02,617 WARNING gateway.run: FOOTER_OUT: text='⏱1118.0s · astron-code-latest · 4398% · 🔁27'
+2026-06-09 00:07:02,623 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-09 00:07:02,772 INFO gateway.platforms.base: [Feishu] Sending response (1082 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-09 00:08:23,162 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5ac1a544a4c429c22b0a8a8a6
+2026-06-09 00:08:23,168 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5ac1a544a4c429c22b0a8a8a6 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='3456 按顺序全部执行' media=0
+2026-06-09 00:08:24,338 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (12 chars)
+2026-06-09 00:08:24,919 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='3456 按顺序全部执行'
