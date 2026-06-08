@@ -2657,3 +2657,7 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 19:50:44,649 WARNING gateway.run: FOOTER_WRITTEN: markers injected
 2026-06-08 19:50:44,652 INFO gateway.run: Skipping transcript persistence for failed request in session 20260608_173755_604cd2 to prevent session growth loop.
 2026-06-08 19:50:44,664 INFO gateway.platforms.base: [Feishu] Sending response (369 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 20:19:24,299 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5f7a7490a0c1e94e5c1a10aaa
+2026-06-08 20:19:24,326 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5f7a7490a0c1e94e5c1a10aaa type=command chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='/reset' media=0
+2026-06-08 20:19:27,250 INFO gateway.platforms.base: [Feishu] Sending response (261 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 20:19:48,741 INFO [20260608_173755_604cd2] gateway.run: Pre-reset memory flush completed for session 20260608_173755_604cd2
