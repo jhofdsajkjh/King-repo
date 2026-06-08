@@ -1,0 +1,181 @@
+# APEX 多智能体有序协同协议（ΔS = 0）
+# 版本:协同熵减协议-v1.0
+# 使命: 消除多 agent 冲突、冗余、无效迭代，实现协同熵减为零
+
+# === 核心协议 ===
+ENTROPY_BALANCE_EQUATION: "ΔS_total = Σ(ΔS_i) + I(mutual) - H(conflict) = 0"
+
+# === 协同契约 ===
+consumption_contract:
+  # 每个 agent 必须声明的角色边界
+  role_boundary:
+    required: true
+    description: "明确 agent 在协同系统中的角色定位"
+    examples:
+      - "代码生成专家"
+      - "架构审查者"
+      - "测试验证器"
+      - "文档撰写员"
+  
+  # 工具集约束（防止工具冲突）
+  toolset_cap:
+    required: true
+    max_tools: 8
+    blacklisted_tools:
+      - "terminal"           # 必须通过 delegated_task 的 terminal
+      - "memory"             # 全局 memory 由父 agent 管理
+      - "skill_manage"       # skill 写操作由主控 agent 执行
+  
+  # 熵减目标（必须量化）
+  entropy_reduction_target:
+    required: true
+    type: float
+    range: [0.0, 1.0]
+    description: "本次协同任务的熵减目标（0=无熵减，1=最大熵减）"
+    examples:
+      - "0.95"  # 高熵减：设计/架构任务
+      - "0.75"  # 中熵减：编码任务
+      - "0.50"  # 低熵减：探索性任务
+
+# === 协同协议字段 ===
+agent_protocol:
+  # 基础信息
+  agent_id: "uuid-v4"
+  role: "string"  # 角色名称
+  role_boundary: "string"  # 角色边界描述
+  
+  # 工具约束
+  toolset: "list[str]"  # 允许的工具列表
+  toolset_cap: 8
+  
+  # 熵减契约
+  entropy_reduction_target: 0.95
+  entropy_sources:
+    - "需求熵减"  # 明确需求、消除模糊
+    - "接口熵减"  # 统一接口、消除歧义
+    - "行为熵减"  # 锁定行为、消除随机
+    - "协同熵减"  # 消除冲突、消除冗余
+  
+  # 通信协议
+  communication_protocol:
+    # 消息格式（必须包含 entropy_reduction 实现）
+    message_format:
+      type: "dict"
+      required_fields:
+        - "entropy_reduction_achieved"  # 本次交互实现的熵减值
+        - "conflict_resolved"  # 是否解决冲突
+        - "redundancy_eliminated"  # 是否消除冗余
+        - "next_entropy_source"  # 下一步熵减目标
+    
+    # 等待确认机制
+    wait_for_ack:
+      enabled: true
+      timeout: 300  # 秒
+      on_timeout:
+        - "log_warning"
+        - "escalate_to_orchestrator"
+  
+  # 自省审计
+  self_audit:
+    enabled: true
+    audit_fields:
+      - "self_probing"
+      - "loop_auditing"
+      - "hash_traceable"
+    report_on_completion: true
+
+# === 协同流程 ===
+coordinated_workflow:
+  phase_1: "角色声明"
+  phase_2: "熵减契约签署"
+  phase_3: "工具集约束锁定"
+  phase_4: "执行协同任务"
+  phase_5: "熵减验证"
+  phase_6: "协议归档（hash 链）"
+
+# === 熵减计算公式 ===
+entropy_reduction_calculation:
+  formula: "ΔS = 1 - (H_final / H_initial)"
+  components:
+    H_initial: "协同开始前的不确定性（需求模糊度、接口歧义数、角色重叠度）"
+    H_final: "协同完成后剩余的不确定性"
+  
+  entropy_sources_map:
+    - source: "需求熵"
+      measurement: "用户故事模糊度评分"
+      reduction_method: "需求澄清会议"
+    - source: "接口熵"
+      measurement: "接口签名歧义数"
+      reduction_method: "接口规范强制校验"
+    - source: "行为熵"
+      measurement: "可预测行为集大小"
+      reduction_method: "纪律锁止 + 预提交校验"
+    - source: "协同熵"
+      measurement: "agent 冲突次数 + 冗余消息数"
+      reduction_method: "角色边界 + 消息压缩协议"
+
+# === 冲突消解规则 ===
+conflict_resolution:
+  priority_1: "角色边界优先"
+  priority_2: "工具集约束优先"
+  priority_3: "熵减目标优先"
+  
+  resolution_methods:
+    - method: "角色重新分配"
+      trigger: "角色边界重叠 > 30%"
+    - method: "工具集裁剪"
+      trigger: "工具冲突数 >= 2"
+    - method: "熵减目标重构"
+      trigger: "协同熵减效率 < 0.5"
+
+# === 协议示例：代码生成协同 ===
+example_coordinated_agents:
+  - name: "CodeGenerator"
+    role: "代码生成专家"
+    role_boundary: "负责根据 spec 生成符合 skillopt 规范的代码，不进行架构决策"
+    toolset: ["terminal", "write_file", "read_file", "search_files"]
+    entropy_reduction_target: 0.75
+    entropy_sources: ["需求熵减", "接口熵减", "行为熵减"]
+    
+  - name: "CodeReviewer"
+    role: "代码审查专家"
+    role_boundary: "负责检查代码是否符合 skillopt 规范和纪律锁止要求，不修改代码"
+    toolset: ["read_file", "search_files", "terminal"]
+    entropy_reduction_target: 0.90
+    entropy_sources: ["接口熵减", "行为熵减", "协同熵减"]
+    
+  - name: "ProtocolAuditor"
+    role: "协同协议审计员"
+    role_boundary: "负责验证整个协同流程是否满足 ΔS ≤ 0.05，生成熵减报告"
+    toolset: ["terminal", "read_file"]
+    entropy_reduction_target: 0.95
+    entropy_sources: ["协同熵减"]
+
+# === 异常处理 ===
+error_handling:
+  - error_type: "role_boundary_violation"
+    action: "raise_alert"
+    escalate_to: "orchestrator"
+  - error_type: "toolset_cap_exceeded"
+    action: "auto_trim"
+    trim_strategy: "least_used_first"
+  - error_type: "entropy_reduction_target_unmet"
+    action: "re_negotiate"
+    max_negotiation_rounds: 3
+
+# === 归档与追溯 ===
+hash_chain_archive:
+  enabled: true
+  archive_path: "/opt/data/skills/_registry/coordinated_agents_hash_chain.jsonl"
+  archive_fields:
+    - "agent_id"
+    - "role_boundary"
+    - "toolset"
+    - "entropy_reduction_target"
+    - "timestamp"
+    - "hash_signature"  # SHA256(agent_id + role_boundary + toolset)
+
+# === 协议版本 ===
+protocol_version: "协同熵减协议-v1.0"
+last_updated: "2026-06-08T10:00:00Z"
+APEX_version_compatible: "自然吞噬版-v2.0"

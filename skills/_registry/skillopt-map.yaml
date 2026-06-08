@@ -1,0 +1,1072 @@
+APEX_version: 自然吞噬版-v2.0
+generated_at: '2026-06-08T10:00:00Z'
+engine_mission: 从模型随机输出到确定性、可审计、可量产的闭环工程交付
+total_skills: 37
+skills:
+  apex-realized:
+    api_version: skillopt-v1
+    core:
+      name: apex-realized
+      version: 1.0.0
+      description: Realizes APEX-AGI concepts (Multi-Agent, Self-Heal) using Hermes
+        native tools.
+      author: Hermes
+      license: MIT
+      tags:
+      - multi-agent
+      - self-heal
+      - orchestration
+    interface:
+      type: skill
+      tools:
+      - feishu
+      - terminal
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  apple:
+    api_version: skillopt-v1
+    core:
+      name: apple
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  auto-pr-submitter:
+    api_version: skillopt-v1
+    core:
+      name: auto-pr-submitter
+      version: 1.0
+      description: 技能更新后自动生成 PR，触发 CI/CD 验证，用户审核后合并
+      author: 未知
+      license: 未定义
+      tags:
+      - github
+      - pr
+      - automation
+      - ci-cd
+      - deployment
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  autonomous-ai-agents:
+    api_version: skillopt-v1
+    core:
+      name: autonomous-ai-agents
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  creative:
+    api_version: skillopt-v1
+    core:
+      name: creative
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  data-science:
+    api_version: skillopt-v1
+    core:
+      name: data-science
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  devops:
+    api_version: skillopt-v1
+    core:
+      name: devops
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  diagramming:
+    api_version: skillopt-v1
+    core:
+      name: diagramming
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  dogfood:
+    api_version: skillopt-v1
+    core:
+      name: dogfood
+      version: 1.0.0
+      description: Systematic exploratory QA testing of web applications — find bugs,
+        capture evidence, and generate structured reports
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  domain:
+    api_version: skillopt-v1
+    core:
+      name: domain
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  email:
+    api_version: skillopt-v1
+    core:
+      name: email
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  feeds:
+    api_version: skillopt-v1
+    core:
+      name: feeds
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  gaming:
+    api_version: skillopt-v1
+    core:
+      name: gaming
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  gateway-runtime-footer:
+    api_version: skillopt-v1
+    core:
+      name: gateway-runtime-footer
+      version: 1.0
+      description: Capture the workflow for fixing footer display issues in Hermes
+        gateway, including code changes, logging, and verification.
+      author: 未知
+      license: 未定义
+      tags:
+      - debugging
+      - footer
+      - runtime
+      - hermes-gateway
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  gifs:
+    api_version: skillopt-v1
+    core:
+      name: gifs
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  github:
+    api_version: skillopt-v1
+    core:
+      name: github
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  github-skill-hunter:
+    api_version: skillopt-v1
+    core:
+      name: github-skill-hunter
+      version: 1.0
+      description: 自动搜索 GitHub 上的趋势 AI Agent 项目、技能和工具，发现最新最佳实践
+      author: 未知
+      license: 未定义
+      tags:
+      - github
+      - search
+      - ai-agents
+      - skills
+      - trending
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  hashpool-evo-skill:
+    api_version: skillopt-v1
+    core:
+      name: hashpool-evo-skill
+      version: 1.0.0
+      description: APEX 引擎的自适应哈希池缓存清洗范式
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  inference-sh:
+    api_version: skillopt-v1
+    core:
+      name: inference-sh
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  leisure:
+    api_version: skillopt-v1
+    core:
+      name: leisure
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  mcp:
+    api_version: skillopt-v1
+    core:
+      name: mcp
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  media:
+    api_version: skillopt-v1
+    core:
+      name: media
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  mlops:
+    api_version: skillopt-v1
+    core:
+      name: mlops
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  note-taking:
+    api_version: skillopt-v1
+    core:
+      name: note-taking
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  openclaw-imports:
+    api_version: skillopt-v1
+    core:
+      name: openclaw-imports
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  productivity:
+    api_version: skillopt-v1
+    core:
+      name: productivity
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  red-teaming:
+    api_version: skillopt-v1
+    core:
+      name: red-teaming
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  research:
+    api_version: skillopt-v1
+    core:
+      name: research
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  search:
+    api_version: skillopt-v1
+    core:
+      name: search
+      version: 1.0.0
+      description: 规范化检索增强框架：SkillBank驱动+Select-Read-Act三段范式，替代大模型随机搜索
+      author: 小马
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  search-workflow:
+    api_version: skillopt-v1
+    core:
+      name: search-workflow
+      version: 1.0.0
+      description: Consolidated search utilities and frameworks.
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  self-evolution-cycle:
+    api_version: skillopt-v1
+    core:
+      name: self-evolution-cycle
+      version: 1.0
+      description: 完整的自进化循环：GitHub 搜索 → Web 抓取 → PR 提交 → 模式更新
+      author: 未知
+      license: 未定义
+      tags:
+      - self-improvement
+      - autonomous
+      - evolution
+      - learning-loop
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  smart-home:
+    api_version: skillopt-v1
+    core:
+      name: smart-home
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  social-media:
+    api_version: skillopt-v1
+    core:
+      name: social-media
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  software-development:
+    api_version: skillopt-v1
+    core:
+      name: software-development
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  user-preferences:
+    api_version: skillopt-v1
+    core:
+      name: user-preferences
+      version: 1.0.0
+      description: 未定义
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  web-content-hunter:
+    api_version: skillopt-v1
+    core:
+      name: web-content-hunter
+      version: 1.0
+      description: 从 arXiv 论文、技术博客提取最新 AI/ML 研究和最佳实践
+      author: 未知
+      license: 未定义
+      tags:
+      - arxiv
+      - research
+      - tech-blogs
+      - content-extraction
+      - learning
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade
+  yuanbao:
+    api_version: skillopt-v1
+    core:
+      name: yuanbao
+      version: 1.0.0
+      description: 'Yuanbao (元宝) groups: @mention users, query info/members.'
+      author: 未知
+      license: 未定义
+      tags: []
+    interface:
+      type: skill
+      tools: []
+      inputs: []
+      outputs:
+      - message
+      - file
+      - media
+    consumption_contract:
+      self_probing: true
+      loop_auditing: true
+      hash_traceable: true
+      entropy_reduction: true
+    transformation_rules:
+      converge_to_norm: true
+      lock_discipline: true
+      collaborative_entropy_reduction: true
+    ingestion_timestamp: '2026-06-08T10:00:00Z'
+    status: pending_skillopt_upgrade

@@ -1,0 +1,1 @@
+{"pid": 1, "kind": "hermes-gateway", "argv": ["/opt/hermes/.venv/bin/hermes", "gateway", "run"], "start_time": 39913666, "scope": "feishu-app-id", "identity_hash": "b58aa4558c6bdbe9", "metadata": {"platform": "feishu"}, "updated_at": "2026-06-05T11:53:22.241312+00:00"}

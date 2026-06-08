@@ -1,0 +1,724 @@
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T17:11:48Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1 21.6  9.1 563676 184256 pts/0   Rsl+ 01:06   1:07 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      30  4.3  0.0   2696   748 ?        Ss   01:11   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      31  0.0  0.1   4288  2740 ?        S    01:11   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      33  7.1  0.1   6500  3096 ?        R    01:11   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.65 0.93 1.57 2/750 37
+--- recent dmesg (oom/killed) ---
+[Sat May 23 22:08:33 2026] docker0: port 2(veth29a6bd1) entered disabled state
+[Sat May 23 22:40:29 2026] docker0: port 2(vetha9d9743) entered blocking state
+[Sat May 23 22:40:29 2026] docker0: port 2(vetha9d9743) entered disabled state
+[Sat May 23 22:40:29 2026] device vetha9d9743 entered promiscuous mode
+[Sat May 23 22:40:30 2026] eth0: renamed from vethf082d90
+[Sat May 23 22:40:30 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vetha9d9743: link becomes ready
+[Sat May 23 22:40:30 2026] docker0: port 2(vetha9d9743) entered blocking state
+[Sat May 23 22:40:30 2026] docker0: port 2(vetha9d9743) entered forwarding state
+[Sun May 24 01:06:30 2026] vethf082d90: renamed from eth0
+[Sun May 24 01:06:30 2026] docker0: port 2(vetha9d9743) entered disabled state
+[Sun May 24 01:06:30 2026] docker0: port 2(vetha9d9743) entered disabled state
+[Sun May 24 01:06:30 2026] device vetha9d9743 left promiscuous mode
+[Sun May 24 01:06:30 2026] docker0: port 2(vetha9d9743) entered disabled state
+[Sun May 24 01:06:36 2026] docker0: port 2(vethc5a3ceb) entered blocking state
+[Sun May 24 01:06:36 2026] docker0: port 2(vethc5a3ceb) entered disabled state
+[Sun May 24 01:06:36 2026] device vethc5a3ceb entered promiscuous mode
+[Sun May 24 01:06:38 2026] eth0: renamed from vethc7f3641
+[Sun May 24 01:06:38 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethc5a3ceb: link becomes ready
+[Sun May 24 01:06:38 2026] docker0: port 2(vethc5a3ceb) entered blocking state
+[Sun May 24 01:06:38 2026] docker0: port 2(vethc5a3ceb) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T17:16:53Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1 14.5  8.5 552720 171820 pts/0   Rsl+ 01:13   0:29 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      30  0.0  0.0   2696   728 ?        Ss   01:16   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      31 25.0  0.1   4288  2444 ?        S    01:16   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      33  0.0  0.1   6500  2844 ?        R    01:16   0:00      \_ ps auxf --sort=-pcpu
+hermes      34  0.0  0.0   2700   740 ?        S    01:16   0:00      \_ head -60
+--- pstree of self ---
+--- /proc/loadavg ---
+0.50 0.64 1.26 2/763 37
+--- recent dmesg (oom/killed) ---
+[Sun May 24 01:06:30 2026] docker0: port 2(vetha9d9743) entered disabled state
+[Sun May 24 01:06:36 2026] docker0: port 2(vethc5a3ceb) entered blocking state
+[Sun May 24 01:06:36 2026] docker0: port 2(vethc5a3ceb) entered disabled state
+[Sun May 24 01:06:36 2026] device vethc5a3ceb entered promiscuous mode
+[Sun May 24 01:06:38 2026] eth0: renamed from vethc7f3641
+[Sun May 24 01:06:38 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethc5a3ceb: link becomes ready
+[Sun May 24 01:06:38 2026] docker0: port 2(vethc5a3ceb) entered blocking state
+[Sun May 24 01:06:38 2026] docker0: port 2(vethc5a3ceb) entered forwarding state
+[Sun May 24 01:11:53 2026] docker0: port 2(vethc5a3ceb) entered disabled state
+[Sun May 24 01:11:53 2026] vethc7f3641: renamed from eth0
+[Sun May 24 01:11:53 2026] docker0: port 2(vethc5a3ceb) entered disabled state
+[Sun May 24 01:11:53 2026] device vethc5a3ceb left promiscuous mode
+[Sun May 24 01:11:53 2026] docker0: port 2(vethc5a3ceb) entered disabled state
+[Sun May 24 01:13:27 2026] docker0: port 2(veth526b1ed) entered blocking state
+[Sun May 24 01:13:27 2026] docker0: port 2(veth526b1ed) entered disabled state
+[Sun May 24 01:13:27 2026] device veth526b1ed entered promiscuous mode
+[Sun May 24 01:13:28 2026] eth0: renamed from veth6b5dfda
+[Sun May 24 01:13:28 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth526b1ed: link becomes ready
+[Sun May 24 01:13:28 2026] docker0: port 2(veth526b1ed) entered blocking state
+[Sun May 24 01:13:28 2026] docker0: port 2(veth526b1ed) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T17:17:45Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1 75.1  8.3 256348 167696 pts/0   Rsl+ 01:17   0:31 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      25  0.0  0.0   2696   732 ?        Ss   01:17   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      26  0.0  0.1   4288  2460 ?        S    01:17   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      28  100  0.1   6500  2860 ?        R    01:17   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+2.83 1.20 1.41 3/493 32
+--- recent dmesg (oom/killed) ---
+[Sun May 24 01:17:15 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth2dbb803: link becomes ready
+[Sun May 24 01:17:15 2026] docker0: port 4(veth2dbb803) entered blocking state
+[Sun May 24 01:17:15 2026] docker0: port 4(veth2dbb803) entered forwarding state
+[Sun May 24 01:17:19 2026] veth6ec42ba: renamed from eth0
+[Sun May 24 01:17:19 2026] docker0: port 3(veth5f7b8c9) entered disabled state
+[Sun May 24 01:17:19 2026] docker0: port 3(veth5f7b8c9) entered disabled state
+[Sun May 24 01:17:19 2026] device veth5f7b8c9 left promiscuous mode
+[Sun May 24 01:17:19 2026] docker0: port 3(veth5f7b8c9) entered disabled state
+[Sun May 24 01:17:25 2026] docker0: port 3(veth20b68b2) entered blocking state
+[Sun May 24 01:17:25 2026] docker0: port 3(veth20b68b2) entered disabled state
+[Sun May 24 01:17:25 2026] device veth20b68b2 entered promiscuous mode
+[Sun May 24 01:17:27 2026] eth0: renamed from veth73b9666
+[Sun May 24 01:17:27 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth20b68b2: link becomes ready
+[Sun May 24 01:17:27 2026] docker0: port 3(veth20b68b2) entered blocking state
+[Sun May 24 01:17:27 2026] docker0: port 3(veth20b68b2) entered forwarding state
+[Sun May 24 01:17:30 2026] vethef09126: renamed from eth0
+[Sun May 24 01:17:31 2026] docker0: port 1(veth73a8da7) entered disabled state
+[Sun May 24 01:17:31 2026] docker0: port 1(veth73a8da7) entered disabled state
+[Sun May 24 01:17:31 2026] device veth73a8da7 left promiscuous mode
+[Sun May 24 01:17:31 2026] docker0: port 1(veth73a8da7) entered disabled state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T18:08:34Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  4.4  8.3 552768 168160 pts/0   Dsl+ 01:47   0:55 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      31  7.1  0.0   2696   628 ?        Ss   02:08   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      32  9.5  0.1   4288  2684 ?        S    02:08   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      34 20.0  0.1   6500  3164 ?        R    02:08   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.24 0.42 0.59 1/760 38
+--- recent dmesg (oom/killed) ---
+[Sun May 24 01:48:33 2026] docker0: port 1(veth76a56e6) entered disabled state
+[Sun May 24 01:48:33 2026] device veth76a56e6 entered promiscuous mode
+[Sun May 24 01:48:33 2026] docker0: port 1(veth76a56e6) entered blocking state
+[Sun May 24 01:48:33 2026] docker0: port 1(veth76a56e6) entered forwarding state
+[Sun May 24 01:48:33 2026] docker0: port 1(veth76a56e6) entered disabled state
+[Sun May 24 01:48:34 2026] eth0: renamed from vethc9ec194
+[Sun May 24 01:48:34 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth76a56e6: link becomes ready
+[Sun May 24 01:48:34 2026] docker0: port 1(veth76a56e6) entered blocking state
+[Sun May 24 01:48:34 2026] docker0: port 1(veth76a56e6) entered forwarding state
+[Sun May 24 01:49:02 2026] u32 classifier
+[Sun May 24 01:49:02 2026]     Performance counters on
+[Sun May 24 01:49:02 2026]     input device check on
+[Sun May 24 01:52:22 2026] docker0: port 2(vethdd7e69b) entered disabled state
+[Sun May 24 01:52:22 2026] vethc2dcce9: renamed from eth0
+[Sun May 24 01:52:22 2026] docker0: port 2(vethdd7e69b) entered disabled state
+[Sun May 24 01:52:22 2026] device vethdd7e69b left promiscuous mode
+[Sun May 24 01:52:22 2026] docker0: port 2(vethdd7e69b) entered disabled state
+[Sun May 24 01:52:25 2026] EXT4-fs (mmcblk0p9): error count since last fsck: 1
+[Sun May 24 01:52:25 2026] EXT4-fs (mmcblk0p9): initial error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+[Sun May 24 01:52:25 2026] EXT4-fs (mmcblk0p9): last error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T18:12:50Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1 20.1  8.6 551744 174040 pts/0   Rsl+ 02:09   0:39 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      31  2.5  0.0   2696   700 ?        Ss   02:12   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      32 10.0  0.1   4288  2760 ?        S    02:12   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      34 27.2  0.1   6500  3168 ?        R    02:12   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.69 1.10 0.89 2/849 38
+--- recent dmesg (oom/killed) ---
+[Sun May 24 02:09:33 2026] docker0: port 4(veth34c063b) entered forwarding state
+[Sun May 24 02:09:34 2026] docker0: port 5(vetha10c3ad) entered blocking state
+[Sun May 24 02:09:34 2026] docker0: port 5(vetha10c3ad) entered disabled state
+[Sun May 24 02:09:34 2026] device vetha10c3ad entered promiscuous mode
+[Sun May 24 02:09:34 2026] docker0: port 5(vetha10c3ad) entered blocking state
+[Sun May 24 02:09:34 2026] docker0: port 5(vetha10c3ad) entered forwarding state
+[Sun May 24 02:09:34 2026] docker0: port 4(veth34c063b) entered disabled state
+[Sun May 24 02:09:34 2026] docker0: port 5(vetha10c3ad) entered disabled state
+[Sun May 24 02:09:35 2026] eth0: renamed from vethf2c44c0
+[Sun May 24 02:09:35 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth6098920: link becomes ready
+[Sun May 24 02:09:35 2026] docker0: port 3(veth6098920) entered blocking state
+[Sun May 24 02:09:35 2026] docker0: port 3(veth6098920) entered forwarding state
+[Sun May 24 02:09:36 2026] eth0: renamed from veth8abb00a
+[Sun May 24 02:09:36 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth34c063b: link becomes ready
+[Sun May 24 02:09:36 2026] docker0: port 4(veth34c063b) entered blocking state
+[Sun May 24 02:09:36 2026] docker0: port 4(veth34c063b) entered forwarding state
+[Sun May 24 02:09:36 2026] eth0: renamed from vethaaa079d
+[Sun May 24 02:09:36 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vetha10c3ad: link becomes ready
+[Sun May 24 02:09:36 2026] docker0: port 5(vetha10c3ad) entered blocking state
+[Sun May 24 02:09:36 2026] docker0: port 5(vetha10c3ad) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T18:24:16Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  6.9  8.6 551744 172996 pts/0   Rsl+ 02:13   0:43 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      31  5.8  0.0   2696   748 ?        Ss   02:24   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      32  0.0  0.1   4288  2548 ?        S    02:24   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      34 12.5  0.1   6500  3068 ?        R    02:24   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.33 0.56 0.77 1/826 38
+--- recent dmesg (oom/killed) ---
+[Sun May 24 02:13:47 2026] docker0: port 4(vethe1cece9) entered forwarding state
+[Sun May 24 02:13:48 2026] docker0: port 5(veth0b438d1) entered blocking state
+[Sun May 24 02:13:48 2026] docker0: port 5(veth0b438d1) entered disabled state
+[Sun May 24 02:13:48 2026] device veth0b438d1 entered promiscuous mode
+[Sun May 24 02:13:48 2026] docker0: port 5(veth0b438d1) entered blocking state
+[Sun May 24 02:13:48 2026] docker0: port 5(veth0b438d1) entered forwarding state
+[Sun May 24 02:13:48 2026] docker0: port 4(vethe1cece9) entered disabled state
+[Sun May 24 02:13:48 2026] docker0: port 5(veth0b438d1) entered disabled state
+[Sun May 24 02:13:49 2026] eth0: renamed from vethf4b76fb
+[Sun May 24 02:13:49 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth411391b: link becomes ready
+[Sun May 24 02:13:49 2026] docker0: port 3(veth411391b) entered blocking state
+[Sun May 24 02:13:49 2026] docker0: port 3(veth411391b) entered forwarding state
+[Sun May 24 02:13:49 2026] eth0: renamed from veth9b3aa84
+[Sun May 24 02:13:49 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethe1cece9: link becomes ready
+[Sun May 24 02:13:49 2026] docker0: port 4(vethe1cece9) entered blocking state
+[Sun May 24 02:13:49 2026] docker0: port 4(vethe1cece9) entered forwarding state
+[Sun May 24 02:13:49 2026] eth0: renamed from veth6d99f64
+[Sun May 24 02:13:49 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth0b438d1: link becomes ready
+[Sun May 24 02:13:49 2026] docker0: port 5(veth0b438d1) entered blocking state
+[Sun May 24 02:13:49 2026] docker0: port 5(veth0b438d1) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T18:30:19Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1 12.5  8.4 551744 170532 pts/0   Rsl+ 02:25   0:38 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      31  0.0  0.0   2696   716 ?        Ss   02:30   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      32  0.0  0.1   4288  2464 ?        S    02:30   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      34 33.3  0.1   6500  2888 ?        R    02:30   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.21 0.88 0.95 2/840 38
+--- recent dmesg (oom/killed) ---
+[Sun May 24 02:25:11 2026] docker0: port 4(vethedf911b) entered forwarding state
+[Sun May 24 02:25:11 2026] docker0: port 5(veth8ea4bbf) entered blocking state
+[Sun May 24 02:25:11 2026] docker0: port 5(veth8ea4bbf) entered disabled state
+[Sun May 24 02:25:11 2026] device veth8ea4bbf entered promiscuous mode
+[Sun May 24 02:25:11 2026] docker0: port 5(veth8ea4bbf) entered blocking state
+[Sun May 24 02:25:11 2026] docker0: port 5(veth8ea4bbf) entered forwarding state
+[Sun May 24 02:25:12 2026] docker0: port 4(vethedf911b) entered disabled state
+[Sun May 24 02:25:12 2026] docker0: port 5(veth8ea4bbf) entered disabled state
+[Sun May 24 02:25:13 2026] eth0: renamed from veth1163351
+[Sun May 24 02:25:13 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth0fc50a7: link becomes ready
+[Sun May 24 02:25:13 2026] docker0: port 3(veth0fc50a7) entered blocking state
+[Sun May 24 02:25:13 2026] docker0: port 3(veth0fc50a7) entered forwarding state
+[Sun May 24 02:25:13 2026] eth0: renamed from vethc49d270
+[Sun May 24 02:25:13 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethedf911b: link becomes ready
+[Sun May 24 02:25:13 2026] docker0: port 4(vethedf911b) entered blocking state
+[Sun May 24 02:25:13 2026] docker0: port 4(vethedf911b) entered forwarding state
+[Sun May 24 02:25:13 2026] eth0: renamed from veth1d37969
+[Sun May 24 02:25:13 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth8ea4bbf: link becomes ready
+[Sun May 24 02:25:13 2026] docker0: port 5(veth8ea4bbf) entered blocking state
+[Sun May 24 02:25:13 2026] docker0: port 5(veth8ea4bbf) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T18:39:03Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  9.0  8.6 551744 174484 pts/0   Dsl+ 02:31   0:41 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      32  0.0  0.0   2696   700 ?        Ss   02:39   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      33  8.6  0.1   4288  2788 ?        S    02:39   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      35 16.6  0.1   6500  3184 ?        R    02:39   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.49 0.72 0.93 1/815 39
+--- recent dmesg (oom/killed) ---
+[Sun May 24 02:31:14 2026] docker0: port 4(vethef3355e) entered disabled state
+[Sun May 24 02:31:14 2026] device vethef3355e entered promiscuous mode
+[Sun May 24 02:31:14 2026] docker0: port 4(vethef3355e) entered blocking state
+[Sun May 24 02:31:14 2026] docker0: port 4(vethef3355e) entered forwarding state
+[Sun May 24 02:31:15 2026] docker0: port 4(vethef3355e) entered disabled state
+[Sun May 24 02:31:15 2026] eth0: renamed from vethc00f94e
+[Sun May 24 02:31:15 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth8db0707: link becomes ready
+[Sun May 24 02:31:15 2026] docker0: port 3(veth8db0707) entered blocking state
+[Sun May 24 02:31:15 2026] docker0: port 3(veth8db0707) entered forwarding state
+[Sun May 24 02:31:15 2026] eth0: renamed from veth84252cf
+[Sun May 24 02:31:15 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethef3355e: link becomes ready
+[Sun May 24 02:31:15 2026] docker0: port 4(vethef3355e) entered blocking state
+[Sun May 24 02:31:15 2026] docker0: port 4(vethef3355e) entered forwarding state
+[Sun May 24 02:31:19 2026] docker0: port 5(veth625b8a6) entered blocking state
+[Sun May 24 02:31:19 2026] docker0: port 5(veth625b8a6) entered disabled state
+[Sun May 24 02:31:19 2026] device veth625b8a6 entered promiscuous mode
+[Sun May 24 02:31:20 2026] eth0: renamed from veth98046af
+[Sun May 24 02:31:20 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth625b8a6: link becomes ready
+[Sun May 24 02:31:20 2026] docker0: port 5(veth625b8a6) entered blocking state
+[Sun May 24 02:31:20 2026] docker0: port 5(veth625b8a6) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T18:48:29Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  8.1  8.7 551744 174892 pts/0   Rsl+ 02:40   0:38 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      32  0.0  0.0   2696   720 ?        Ss   02:48   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      33 33.3  0.1   4288  2528 ?        S    02:48   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      35 50.0  0.1   6500  2956 ?        R    02:48   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.30 0.55 0.81 2/760 39
+--- recent dmesg (oom/killed) ---
+[Sun May 24 02:40:19 2026] eth0: renamed from veth12c9e85
+[Sun May 24 02:40:19 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth0a81e79: link becomes ready
+[Sun May 24 02:40:19 2026] docker0: port 3(veth0a81e79) entered blocking state
+[Sun May 24 02:40:19 2026] docker0: port 3(veth0a81e79) entered forwarding state
+[Sun May 24 02:40:20 2026] eth0: renamed from veth22d47c1
+[Sun May 24 02:40:20 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth061e33f: link becomes ready
+[Sun May 24 02:40:20 2026] docker0: port 4(veth061e33f) entered blocking state
+[Sun May 24 02:40:20 2026] docker0: port 4(veth061e33f) entered forwarding state
+[Sun May 24 02:40:31 2026] docker0: port 5(vethfd1e984) entered blocking state
+[Sun May 24 02:40:31 2026] docker0: port 5(vethfd1e984) entered disabled state
+[Sun May 24 02:40:31 2026] device vethfd1e984 entered promiscuous mode
+[Sun May 24 02:40:32 2026] eth0: renamed from veth1cfaeee
+[Sun May 24 02:40:32 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethfd1e984: link becomes ready
+[Sun May 24 02:40:32 2026] docker0: port 5(vethfd1e984) entered blocking state
+[Sun May 24 02:40:32 2026] docker0: port 5(vethfd1e984) entered forwarding state
+[Sun May 24 02:44:27 2026] docker0: port 2(veth08a01b3) entered disabled state
+[Sun May 24 02:44:27 2026] veth5c08736: renamed from eth0
+[Sun May 24 02:44:27 2026] docker0: port 2(veth08a01b3) entered disabled state
+[Sun May 24 02:44:27 2026] device veth08a01b3 left promiscuous mode
+[Sun May 24 02:44:27 2026] docker0: port 2(veth08a01b3) entered disabled state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T19:03:56Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  7.6  8.5 551788 171772 pts/0   Rsl+ 02:53   0:48 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      30  7.5  0.0   2696   680 ?        Ss   03:03   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      31  8.3  0.1   4288  2628 ?        S    03:03   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      33 12.5  0.1   6500  3040 ?        R    03:03   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.48 0.72 0.71 3/760 37
+--- recent dmesg (oom/killed) ---
+[Sun May 24 02:51:37 2026] docker0: port 2(vethad42cd1) entered blocking state
+[Sun May 24 02:51:37 2026] docker0: port 2(vethad42cd1) entered forwarding state
+[Sun May 24 02:52:02 2026] u32 classifier
+[Sun May 24 02:52:02 2026]     Performance counters on
+[Sun May 24 02:52:02 2026]     input device check on
+[Sun May 24 02:52:46 2026] docker0: port 1(vethd88d56d) entered disabled state
+[Sun May 24 02:52:46 2026] veth0c3af16: renamed from eth0
+[Sun May 24 02:52:46 2026] docker0: port 1(vethd88d56d) entered disabled state
+[Sun May 24 02:52:46 2026] device vethd88d56d left promiscuous mode
+[Sun May 24 02:52:46 2026] docker0: port 1(vethd88d56d) entered disabled state
+[Sun May 24 02:53:16 2026] docker0: port 1(veth1de2d3a) entered blocking state
+[Sun May 24 02:53:16 2026] docker0: port 1(veth1de2d3a) entered disabled state
+[Sun May 24 02:53:16 2026] device veth1de2d3a entered promiscuous mode
+[Sun May 24 02:53:18 2026] eth0: renamed from vethd88134f
+[Sun May 24 02:53:18 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth1de2d3a: link becomes ready
+[Sun May 24 02:53:18 2026] docker0: port 1(veth1de2d3a) entered blocking state
+[Sun May 24 02:53:18 2026] docker0: port 1(veth1de2d3a) entered forwarding state
+[Sun May 24 02:55:30 2026] EXT4-fs (mmcblk0p9): error count since last fsck: 1
+[Sun May 24 02:55:30 2026] EXT4-fs (mmcblk0p9): initial error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+[Sun May 24 02:55:30 2026] EXT4-fs (mmcblk0p9): last error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T19:06:09Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1 73.3  8.5 405128 172452 pts/0   Rsl+ 03:05   0:38 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      28  1.3  0.0   2696   740 ?        Ss   03:06   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      29  2.2  0.1   4288  2860 ?        S    03:06   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      31  8.8  0.1   6500  3228 ?        R    03:06   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+2.44 1.40 0.96 5/853 35
+--- recent dmesg (oom/killed) ---
+[Sun May 24 03:05:12 2026] docker0: port 4(vethb651b02) entered disabled state
+[Sun May 24 03:05:12 2026] device vethb651b02 entered promiscuous mode
+[Sun May 24 03:05:12 2026] docker0: port 4(vethb651b02) entered blocking state
+[Sun May 24 03:05:12 2026] docker0: port 4(vethb651b02) entered forwarding state
+[Sun May 24 03:05:12 2026] docker0: port 4(vethb651b02) entered disabled state
+[Sun May 24 03:05:13 2026] eth0: renamed from veth2d6d17f
+[Sun May 24 03:05:13 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethf3c75c8: link becomes ready
+[Sun May 24 03:05:13 2026] docker0: port 3(vethf3c75c8) entered blocking state
+[Sun May 24 03:05:13 2026] docker0: port 3(vethf3c75c8) entered forwarding state
+[Sun May 24 03:05:14 2026] eth0: renamed from vethfe815ce
+[Sun May 24 03:05:14 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethb651b02: link becomes ready
+[Sun May 24 03:05:14 2026] docker0: port 4(vethb651b02) entered blocking state
+[Sun May 24 03:05:14 2026] docker0: port 4(vethb651b02) entered forwarding state
+[Sun May 24 03:05:18 2026] docker0: port 5(veth1c630ca) entered blocking state
+[Sun May 24 03:05:18 2026] docker0: port 5(veth1c630ca) entered disabled state
+[Sun May 24 03:05:18 2026] device veth1c630ca entered promiscuous mode
+[Sun May 24 03:05:19 2026] eth0: renamed from vethdc5c7d6
+[Sun May 24 03:05:19 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth1c630ca: link becomes ready
+[Sun May 24 03:05:19 2026] docker0: port 5(veth1c630ca) entered blocking state
+[Sun May 24 03:05:19 2026] docker0: port 5(veth1c630ca) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T19:08:22Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1 45.5  8.7 552744 175040 pts/0   Dsl+ 03:07   0:28 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      30  0.0  0.0   2696   772 ?        Ss   03:08   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      31  0.0  0.1   4288  3004 ?        S    03:08   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      33  100  0.1   6500  3284 ?        R    03:08   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.80 1.12 0.92 3/846 37
+--- recent dmesg (oom/killed) ---
+[Sun May 24 03:05:14 2026] docker0: port 4(vethb651b02) entered forwarding state
+[Sun May 24 03:05:18 2026] docker0: port 5(veth1c630ca) entered blocking state
+[Sun May 24 03:05:18 2026] docker0: port 5(veth1c630ca) entered disabled state
+[Sun May 24 03:05:18 2026] device veth1c630ca entered promiscuous mode
+[Sun May 24 03:05:19 2026] eth0: renamed from vethdc5c7d6
+[Sun May 24 03:05:19 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth1c630ca: link becomes ready
+[Sun May 24 03:05:19 2026] docker0: port 5(veth1c630ca) entered blocking state
+[Sun May 24 03:05:19 2026] docker0: port 5(veth1c630ca) entered forwarding state
+[Sun May 24 03:06:15 2026] docker0: port 5(veth1c630ca) entered disabled state
+[Sun May 24 03:06:15 2026] vethdc5c7d6: renamed from eth0
+[Sun May 24 03:06:16 2026] docker0: port 5(veth1c630ca) entered disabled state
+[Sun May 24 03:06:16 2026] device veth1c630ca left promiscuous mode
+[Sun May 24 03:06:16 2026] docker0: port 5(veth1c630ca) entered disabled state
+[Sun May 24 03:07:21 2026] docker0: port 5(veth79b0710) entered blocking state
+[Sun May 24 03:07:21 2026] docker0: port 5(veth79b0710) entered disabled state
+[Sun May 24 03:07:21 2026] device veth79b0710 entered promiscuous mode
+[Sun May 24 03:07:22 2026] eth0: renamed from veth0da833b
+[Sun May 24 03:07:22 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth79b0710: link becomes ready
+[Sun May 24 03:07:22 2026] docker0: port 5(veth79b0710) entered blocking state
+[Sun May 24 03:07:22 2026] docker0: port 5(veth79b0710) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-23T19:14:24Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1 25.2  8.7 478952 175392 pts/0   Rsl+ 03:12   0:26 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes      30  0.0  0.0   2696   788 ?        Ss   03:14   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      31  0.0  0.1   4288  2992 ?        S    03:14   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes      33  100  0.1   6500  3268 ?        R    03:14   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.35 0.55 0.71 1/813 37
+--- recent dmesg (oom/killed) ---
+[Sun May 24 03:06:16 2026] docker0: port 5(veth1c630ca) entered disabled state
+[Sun May 24 03:07:21 2026] docker0: port 5(veth79b0710) entered blocking state
+[Sun May 24 03:07:21 2026] docker0: port 5(veth79b0710) entered disabled state
+[Sun May 24 03:07:21 2026] device veth79b0710 entered promiscuous mode
+[Sun May 24 03:07:22 2026] eth0: renamed from veth0da833b
+[Sun May 24 03:07:22 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth79b0710: link becomes ready
+[Sun May 24 03:07:22 2026] docker0: port 5(veth79b0710) entered blocking state
+[Sun May 24 03:07:22 2026] docker0: port 5(veth79b0710) entered forwarding state
+[Sun May 24 03:08:27 2026] docker0: port 5(veth79b0710) entered disabled state
+[Sun May 24 03:08:27 2026] veth0da833b: renamed from eth0
+[Sun May 24 03:08:28 2026] docker0: port 5(veth79b0710) entered disabled state
+[Sun May 24 03:08:28 2026] device veth79b0710 left promiscuous mode
+[Sun May 24 03:08:28 2026] docker0: port 5(veth79b0710) entered disabled state
+[Sun May 24 03:12:40 2026] docker0: port 5(vetha0732f1) entered blocking state
+[Sun May 24 03:12:40 2026] docker0: port 5(vetha0732f1) entered disabled state
+[Sun May 24 03:12:40 2026] device vetha0732f1 entered promiscuous mode
+[Sun May 24 03:12:41 2026] eth0: renamed from veth213b2a9
+[Sun May 24 03:12:41 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vetha0732f1: link becomes ready
+[Sun May 24 03:12:41 2026] docker0: port 5(vetha0732f1) entered blocking state
+[Sun May 24 03:12:41 2026] docker0: port 5(vetha0732f1) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-29T09:39:14Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  1.6 10.1 820224 203248 pts/0   Dsl+ 11:32   6:05 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+root     12829 29.8  0.0      0     0 ?        Z    17:38   0:10 [hermes] <defunct>
+root     12928 17.0  0.0      0     0 ?        Zs   17:38   0:04 [node] <defunct>
+--- pstree of self ---
+--- /proc/loadavg ---
+1.48 0.89 0.76 3/792 13138
+--- recent dmesg (oom/killed) ---
+[Fri May 29 10:03:07 2026] docker0: port 2(veth857aab4) entered disabled state
+[Fri May 29 10:03:18 2026] docker0: port 2(veth7b7c8fd) entered blocking state
+[Fri May 29 10:03:18 2026] docker0: port 2(veth7b7c8fd) entered disabled state
+[Fri May 29 10:03:18 2026] device veth7b7c8fd entered promiscuous mode
+[Fri May 29 10:03:20 2026] eth0: renamed from veth27e9fb4
+[Fri May 29 10:03:20 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth7b7c8fd: link becomes ready
+[Fri May 29 10:03:20 2026] docker0: port 2(veth7b7c8fd) entered blocking state
+[Fri May 29 10:03:20 2026] docker0: port 2(veth7b7c8fd) entered forwarding state
+[Fri May 29 11:32:27 2026] docker0: port 2(veth7b7c8fd) entered disabled state
+[Fri May 29 11:32:27 2026] veth27e9fb4: renamed from eth0
+[Fri May 29 11:32:27 2026] docker0: port 2(veth7b7c8fd) entered disabled state
+[Fri May 29 11:32:27 2026] device veth7b7c8fd left promiscuous mode
+[Fri May 29 11:32:27 2026] docker0: port 2(veth7b7c8fd) entered disabled state
+[Fri May 29 11:32:33 2026] docker0: port 2(veth71e599c) entered blocking state
+[Fri May 29 11:32:33 2026] docker0: port 2(veth71e599c) entered disabled state
+[Fri May 29 11:32:33 2026] device veth71e599c entered promiscuous mode
+[Fri May 29 11:32:35 2026] eth0: renamed from vetha46c12d
+[Fri May 29 11:32:35 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth71e599c: link becomes ready
+[Fri May 29 11:32:35 2026] docker0: port 2(veth71e599c) entered blocking state
+[Fri May 29 11:32:35 2026] docker0: port 2(veth71e599c) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-29T11:05:56Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  2.2 10.4 747440 210712 pts/0   Rsl+ 17:39   1:56 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+root        12  0.0  0.2  11444  5640 pts/0    S+   17:39   0:00 sshd: /usr/sbin/sshd -D -e [listener] 0 of 10-100 startups
+root        36  0.0  0.4  21720  8836 ?        Ss   17:40   0:00  \_ sshd-session: root [priv]
+root        44  1.0  0.3  22288  7108 ?        S    17:40   0:51  |   \_ sshd-session: root@pts/1
+root        50  1.1  0.1   3900  2164 ?        Ss   17:40   1:00  |       \_ bash -c while true; do sleep 1;head -v -n 8 /proc/meminfo; head -v -n 2 /proc/stat /proc/version /proc/uptime /proc/loadavg /proc/sys/fs/file-nr /proc/sys/kernel/hostname; tail -v -n 32 /proc/net/dev;echo '==> /proc/df <==';df -l;echo '==> /proc/who <==';who;echo '==> /proc/end <==';echo '##Moba##'; done
+root     29387  0.0  0.0   2300   688 ?        S    19:05   0:00  |           \_ sleep 1
+root        45  0.0  0.4  21560  8120 ?        Ss   17:40   0:00  \_ sshd-session: root [priv]
+root        58  0.0  0.3  21956  6616 ?        S    17:40   0:00      \_ sshd-session: root@notty
+root        59  0.0  0.0   2428   492 ?        Ss   17:40   0:00          \_ /usr/lib/openssh/sftp-server
+--- pstree of self ---
+--- /proc/loadavg ---
+0.69 0.70 0.62 2/769 29399
+--- recent dmesg (oom/killed) ---
+[Fri May 29 11:32:27 2026] docker0: port 2(veth7b7c8fd) entered disabled state
+[Fri May 29 11:32:33 2026] docker0: port 2(veth71e599c) entered blocking state
+[Fri May 29 11:32:33 2026] docker0: port 2(veth71e599c) entered disabled state
+[Fri May 29 11:32:33 2026] device veth71e599c entered promiscuous mode
+[Fri May 29 11:32:35 2026] eth0: renamed from vetha46c12d
+[Fri May 29 11:32:35 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth71e599c: link becomes ready
+[Fri May 29 11:32:35 2026] docker0: port 2(veth71e599c) entered blocking state
+[Fri May 29 11:32:35 2026] docker0: port 2(veth71e599c) entered forwarding state
+[Fri May 29 17:39:19 2026] docker0: port 2(veth71e599c) entered disabled state
+[Fri May 29 17:39:19 2026] vetha46c12d: renamed from eth0
+[Fri May 29 17:39:19 2026] docker0: port 2(veth71e599c) entered disabled state
+[Fri May 29 17:39:19 2026] device veth71e599c left promiscuous mode
+[Fri May 29 17:39:19 2026] docker0: port 2(veth71e599c) entered disabled state
+[Fri May 29 17:39:25 2026] docker0: port 2(veth627fbd2) entered blocking state
+[Fri May 29 17:39:25 2026] docker0: port 2(veth627fbd2) entered disabled state
+[Fri May 29 17:39:25 2026] device veth627fbd2 entered promiscuous mode
+[Fri May 29 17:39:26 2026] eth0: renamed from vethc3565b8
+[Fri May 29 17:39:26 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth627fbd2: link becomes ready
+[Fri May 29 17:39:26 2026] docker0: port 2(veth627fbd2) entered blocking state
+[Fri May 29 17:39:26 2026] docker0: port 2(veth627fbd2) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-29T23:30:16Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  1.6 10.1 821264 204108 pts/0   Dsl+ May29  12:15 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes   10349  3.7  0.0   2696   716 ?        Ss   07:30   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes   10350  9.0  0.1   4288  2424 ?        S    07:30   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes   10352 25.0  0.1   6500  3036 ?        R    07:30   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+1.01 0.59 0.54 2/769 10356
+--- recent dmesg (oom/killed) ---
+[Fri May 29 17:39:26 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth627fbd2: link becomes ready
+[Fri May 29 17:39:26 2026] docker0: port 2(veth627fbd2) entered blocking state
+[Fri May 29 17:39:26 2026] docker0: port 2(veth627fbd2) entered forwarding state
+[Fri May 29 19:06:00 2026] vethc3565b8: renamed from eth0
+[Fri May 29 19:06:00 2026] docker0: port 2(veth627fbd2) entered disabled state
+[Fri May 29 19:06:00 2026] docker0: port 2(veth627fbd2) entered disabled state
+[Fri May 29 19:06:00 2026] device veth627fbd2 left promiscuous mode
+[Fri May 29 19:06:00 2026] docker0: port 2(veth627fbd2) entered disabled state
+[Fri May 29 19:06:06 2026] docker0: port 2(vetha1afd82) entered blocking state
+[Fri May 29 19:06:06 2026] docker0: port 2(vetha1afd82) entered disabled state
+[Fri May 29 19:06:06 2026] device vetha1afd82 entered promiscuous mode
+[Fri May 29 19:06:07 2026] eth0: renamed from veth4709413
+[Fri May 29 19:06:07 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vetha1afd82: link becomes ready
+[Fri May 29 19:06:07 2026] docker0: port 2(vetha1afd82) entered blocking state
+[Fri May 29 19:06:07 2026] docker0: port 2(vetha1afd82) entered forwarding state
+[Fri May 29 23:14:15 2026] EXT4-fs (mmcblk0p9): error count since last fsck: 1
+[Fri May 29 23:14:15 2026] EXT4-fs (mmcblk0p9): initial error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+[Fri May 29 23:14:15 2026] EXT4-fs (mmcblk0p9): last error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+[Sat May 30 05:00:31 2026] rk_gmac-dwmac fe010000.ethernet eth0: Link is Down
+[Sat May 30 05:00:59 2026] rk_gmac-dwmac fe010000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-30T08:30:44Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  1.7 10.0 820228 201212 pts/0   Dsl+ 07:30   9:21 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+hermes     172  6.2  0.0   2696   708 ?        Ss   16:30   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes     173 10.0  0.1   4288  2444 ?        S    16:30   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes     175 14.2  0.1   6500  3156 ?        R    16:30   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.39 0.34 0.39 2/768 179
+--- recent dmesg (oom/killed) ---
+[Fri May 29 19:06:07 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vetha1afd82: link becomes ready
+[Fri May 29 19:06:07 2026] docker0: port 2(vetha1afd82) entered blocking state
+[Fri May 29 19:06:07 2026] docker0: port 2(vetha1afd82) entered forwarding state
+[Fri May 29 23:14:15 2026] EXT4-fs (mmcblk0p9): error count since last fsck: 1
+[Fri May 29 23:14:15 2026] EXT4-fs (mmcblk0p9): initial error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+[Fri May 29 23:14:15 2026] EXT4-fs (mmcblk0p9): last error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+[Sat May 30 05:00:31 2026] rk_gmac-dwmac fe010000.ethernet eth0: Link is Down
+[Sat May 30 05:00:59 2026] rk_gmac-dwmac fe010000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[Sat May 30 07:30:19 2026] docker0: port 2(vetha1afd82) entered disabled state
+[Sat May 30 07:30:19 2026] veth4709413: renamed from eth0
+[Sat May 30 07:30:19 2026] docker0: port 2(vetha1afd82) entered disabled state
+[Sat May 30 07:30:19 2026] device vetha1afd82 left promiscuous mode
+[Sat May 30 07:30:19 2026] docker0: port 2(vetha1afd82) entered disabled state
+[Sat May 30 07:30:28 2026] docker0: port 2(veth6c35a4f) entered blocking state
+[Sat May 30 07:30:28 2026] docker0: port 2(veth6c35a4f) entered disabled state
+[Sat May 30 07:30:28 2026] device veth6c35a4f entered promiscuous mode
+[Sat May 30 07:30:29 2026] eth0: renamed from veth0e21794
+[Sat May 30 07:30:29 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth6c35a4f: link becomes ready
+[Sat May 30 07:30:29 2026] docker0: port 2(veth6c35a4f) entered blocking state
+[Sat May 30 07:30:29 2026] docker0: port 2(veth6c35a4f) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-30T08:49:59Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  4.6  9.9 742660 200088 pts/0   Rsl+ 16:32   0:49 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+root      1209 10.5  8.8 706880 177292 ?       Ssl  16:44   0:33 /usr/bin/python3 /root/.local/bin/hermes gateway restart
+hermes    3110  7.6  0.0   2696   712 ?        Ss   16:49   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes    3111  0.0  0.1   4288  2344 ?        S    16:49   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes    3113 50.0  0.1   6500  2808 ?        R    16:49   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.66 0.63 0.60 1/776 3117
+--- recent dmesg (oom/killed) ---
+[Sat May 30 07:30:19 2026] docker0: port 2(vetha1afd82) entered disabled state
+[Sat May 30 07:30:28 2026] docker0: port 2(veth6c35a4f) entered blocking state
+[Sat May 30 07:30:28 2026] docker0: port 2(veth6c35a4f) entered disabled state
+[Sat May 30 07:30:28 2026] device veth6c35a4f entered promiscuous mode
+[Sat May 30 07:30:29 2026] eth0: renamed from veth0e21794
+[Sat May 30 07:30:29 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth6c35a4f: link becomes ready
+[Sat May 30 07:30:29 2026] docker0: port 2(veth6c35a4f) entered blocking state
+[Sat May 30 07:30:29 2026] docker0: port 2(veth6c35a4f) entered forwarding state
+[Sat May 30 16:30:47 2026] docker0: port 2(veth6c35a4f) entered disabled state
+[Sat May 30 16:30:47 2026] veth0e21794: renamed from eth0
+[Sat May 30 16:30:47 2026] docker0: port 2(veth6c35a4f) entered disabled state
+[Sat May 30 16:30:47 2026] device veth6c35a4f left promiscuous mode
+[Sat May 30 16:30:47 2026] docker0: port 2(veth6c35a4f) entered disabled state
+[Sat May 30 16:32:19 2026] docker0: port 2(veth3e00942) entered blocking state
+[Sat May 30 16:32:19 2026] docker0: port 2(veth3e00942) entered disabled state
+[Sat May 30 16:32:19 2026] device veth3e00942 entered promiscuous mode
+[Sat May 30 16:32:21 2026] eth0: renamed from veth89f67c8
+[Sat May 30 16:32:21 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth3e00942: link becomes ready
+[Sat May 30 16:32:21 2026] docker0: port 2(veth3e00942) entered blocking state
+[Sat May 30 16:32:21 2026] docker0: port 2(veth3e00942) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-30T09:17:13Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  3.7 10.1 743688 204296 pts/0   Rsl+ 16:50   1:00 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+root      2459  5.1  8.9 709548 179536 ?       Ssl  17:04   0:40 /usr/bin/python3 /root/.local/bin/hermes gateway restart
+--- pstree of self ---
+--- /proc/loadavg ---
+0.45 0.45 0.54 1/772 3565
+--- recent dmesg (oom/killed) ---
+[Sat May 30 16:30:47 2026] docker0: port 2(veth6c35a4f) entered disabled state
+[Sat May 30 16:32:19 2026] docker0: port 2(veth3e00942) entered blocking state
+[Sat May 30 16:32:19 2026] docker0: port 2(veth3e00942) entered disabled state
+[Sat May 30 16:32:19 2026] device veth3e00942 entered promiscuous mode
+[Sat May 30 16:32:21 2026] eth0: renamed from veth89f67c8
+[Sat May 30 16:32:21 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth3e00942: link becomes ready
+[Sat May 30 16:32:21 2026] docker0: port 2(veth3e00942) entered blocking state
+[Sat May 30 16:32:21 2026] docker0: port 2(veth3e00942) entered forwarding state
+[Sat May 30 16:50:02 2026] docker0: port 2(veth3e00942) entered disabled state
+[Sat May 30 16:50:02 2026] veth89f67c8: renamed from eth0
+[Sat May 30 16:50:02 2026] docker0: port 2(veth3e00942) entered disabled state
+[Sat May 30 16:50:02 2026] device veth3e00942 left promiscuous mode
+[Sat May 30 16:50:02 2026] docker0: port 2(veth3e00942) entered disabled state
+[Sat May 30 16:50:08 2026] docker0: port 2(vethc70317a) entered blocking state
+[Sat May 30 16:50:08 2026] docker0: port 2(vethc70317a) entered disabled state
+[Sat May 30 16:50:08 2026] device vethc70317a entered promiscuous mode
+[Sat May 30 16:50:10 2026] eth0: renamed from veth215ad87
+[Sat May 30 16:50:10 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethc70317a: link becomes ready
+[Sat May 30 16:50:10 2026] docker0: port 2(vethc70317a) entered blocking state
+[Sat May 30 16:50:10 2026] docker0: port 2(vethc70317a) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-30T09:35:24Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  5.0 10.2 743700 206420 pts/0   Rsl+ 17:17   0:54 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+root        12  0.0  0.2  11444  5048 pts/0    S+   17:17   0:00 sshd: /usr/sbin/sshd -D -e [listener] 0 of 10-100 startups
+root       307  5.3  0.4  21660  9668 ?        Ss   17:35   0:00  \_ sshd-session: root [priv]
+root       315  3.8  0.3  21920  6372 ?        S    17:35   0:00      \_ sshd-session: root@notty
+hermes     317  0.0  0.0   2696   756 ?        Ss   17:35   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes     318  0.0  0.1   4288  2588 ?        S    17:35   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes     320  100  0.1   6500  3044 ?        R    17:35   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.53 0.50 0.50 2/764 324
+--- recent dmesg (oom/killed) ---
+[Sat May 30 16:50:02 2026] docker0: port 2(veth3e00942) entered disabled state
+[Sat May 30 16:50:08 2026] docker0: port 2(vethc70317a) entered blocking state
+[Sat May 30 16:50:08 2026] docker0: port 2(vethc70317a) entered disabled state
+[Sat May 30 16:50:08 2026] device vethc70317a entered promiscuous mode
+[Sat May 30 16:50:10 2026] eth0: renamed from veth215ad87
+[Sat May 30 16:50:10 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethc70317a: link becomes ready
+[Sat May 30 16:50:10 2026] docker0: port 2(vethc70317a) entered blocking state
+[Sat May 30 16:50:10 2026] docker0: port 2(vethc70317a) entered forwarding state
+[Sat May 30 17:17:15 2026] docker0: port 2(vethc70317a) entered disabled state
+[Sat May 30 17:17:15 2026] veth215ad87: renamed from eth0
+[Sat May 30 17:17:16 2026] docker0: port 2(vethc70317a) entered disabled state
+[Sat May 30 17:17:16 2026] device vethc70317a left promiscuous mode
+[Sat May 30 17:17:16 2026] docker0: port 2(vethc70317a) entered disabled state
+[Sat May 30 17:17:22 2026] docker0: port 2(veth65e3edf) entered blocking state
+[Sat May 30 17:17:22 2026] docker0: port 2(veth65e3edf) entered disabled state
+[Sat May 30 17:17:22 2026] device veth65e3edf entered promiscuous mode
+[Sat May 30 17:17:23 2026] eth0: renamed from veth2875d13
+[Sat May 30 17:17:23 2026] IPv6: ADDRCONF(NETDEV_CHANGE): veth65e3edf: link becomes ready
+[Sat May 30 17:17:23 2026] docker0: port 2(veth65e3edf) entered blocking state
+[Sat May 30 17:17:23 2026] docker0: port 2(veth65e3edf) entered forwarding state
+=== end ===
+=== shutdown diagnostic @ SIGTERM ===
+--- date ---
+2026-05-30T14:11:40Z
+--- ps auxf (top 60 by cpu) ---
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+hermes       1  4.1 10.1 748696 203884 pts/0   Dsl+ 21:41   1:13 /opt/hermes/.venv/bin/python3 /opt/hermes/.venv/bin/hermes gateway run
+root        12  0.0  0.1  11444  3476 pts/0    S+   21:41   0:00 sshd: /usr/sbin/sshd -D -e [listener] 0 of 10-100 startups
+root       573  4.2  0.4  21660  8232 ?        Ss   22:11   0:00  \_ sshd-session: root [priv]
+root       581  2.8  0.2  21920  5696 ?        S    22:11   0:00      \_ sshd-session: root@notty
+hermes     585  0.0  0.0   2696   728 ?        Ss   22:11   0:00 timeout 5 bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes     586  0.0  0.1   4288  2776 ?        S    22:11   0:00  \_ bash -c echo '=== shutdown diagnostic @ SIGTERM ==='; echo '--- date ---'; date -u +%Y-%m-%dT%H:%M:%SZ; echo '--- ps auxf (top 60 by cpu) ---'; ps auxf --sort=-pcpu 2>/dev/null | head -60; echo '--- pstree of self ---'; pstree -plau 1 2>/dev/null | head -40 || true; echo '--- /proc/loadavg ---'; cat /proc/loadavg 2>/dev/null || true; echo '--- recent dmesg (oom/killed) ---'; dmesg -T 2>/dev/null | tail -20 || journalctl --user -n 20 --no-pager 2>/dev/null | tail -20 || true; echo '=== end ==='
+hermes     588  100  0.1   6500  3208 ?        R    22:11   0:00      \_ ps auxf --sort=-pcpu
+--- pstree of self ---
+--- /proc/loadavg ---
+0.54 0.43 0.56 3/762 592
+--- recent dmesg (oom/killed) ---
+[Sat May 30 21:42:18 2026] docker0: port 4(vetha0a2dcc) entered blocking state
+[Sat May 30 21:42:18 2026] docker0: port 4(vetha0a2dcc) entered forwarding state
+[Sat May 30 21:42:26 2026] vethebf21b0: renamed from eth0
+[Sat May 30 21:42:26 2026] docker0: port 1(veth8da368d) entered disabled state
+[Sat May 30 21:42:26 2026] docker0: port 1(veth8da368d) entered disabled state
+[Sat May 30 21:42:26 2026] device veth8da368d left promiscuous mode
+[Sat May 30 21:42:26 2026] docker0: port 1(veth8da368d) entered disabled state
+[Sat May 30 21:42:27 2026] docker0: port 1(vethf68d6f3) entered blocking state
+[Sat May 30 21:42:27 2026] docker0: port 1(vethf68d6f3) entered disabled state
+[Sat May 30 21:42:27 2026] device vethf68d6f3 entered promiscuous mode
+[Sat May 30 21:42:29 2026] eth0: renamed from veth7b530d4
+[Sat May 30 21:42:29 2026] IPv6: ADDRCONF(NETDEV_CHANGE): vethf68d6f3: link becomes ready
+[Sat May 30 21:42:29 2026] docker0: port 1(vethf68d6f3) entered blocking state
+[Sat May 30 21:42:29 2026] docker0: port 1(vethf68d6f3) entered forwarding state
+[Sat May 30 21:43:01 2026] u32 classifier
+[Sat May 30 21:43:01 2026]     Performance counters on
+[Sat May 30 21:43:01 2026]     input device check on
+[Sat May 30 21:46:10 2026] EXT4-fs (mmcblk0p9): error count since last fsck: 1
+[Sat May 30 21:46:10 2026] EXT4-fs (mmcblk0p9): initial error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+[Sat May 30 21:46:10 2026] EXT4-fs (mmcblk0p9): last error at time 1747546491: ext4_empty_dir:2997: inode 140224: block 4163288
+=== end ===

@@ -1,0 +1,461 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-06-08T02:03:00.632179",
+  "engine": "APEX_natural吞噬_归一化",
+  "skills": [
+    {
+      "name": "apex-realized",
+      "path": "apex-realized",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "apex-realized",
+        "description": "Realizes APEX-AGI concepts (Multi-Agent, Self-Heal) using Hermes native tools.",
+        "version": "1.0.0",
+        "author": "Hermes",
+        "license": "MIT",
+        "tags": [
+          "multi-agent",
+          "self-heal",
+          "orchestration"
+        ]
+      },
+      "requirements": [],
+      "description": "name: apex-realized",
+      "required_tools": [
+        "feishu",
+        "terminal"
+      ]
+    },
+    {
+      "name": "apple",
+      "path": "apple",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "auto-pr-submitter",
+      "path": "auto-pr-submitter",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "auto-pr-submitter",
+        "title": "Auto PR Submitter - Automated Pull Request Generation",
+        "description": "技能更新后自动生成 PR，触发 CI/CD 验证，用户审核后合并",
+        "category": "devops",
+        "version": 1.0,
+        "tags": [
+          "github",
+          "pr",
+          "automation",
+          "ci-cd",
+          "deployment"
+        ]
+      },
+      "requirements": [],
+      "description": "name: auto-pr-submitter"
+    },
+    {
+      "name": "autonomous-ai-agents",
+      "path": "autonomous-ai-agents",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "creative",
+      "path": "creative",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "data-science",
+      "path": "data-science",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "devops",
+      "path": "devops",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "diagramming",
+      "path": "diagramming",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "dogfood",
+      "path": "dogfood",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "dogfood",
+        "description": "Systematic exploratory QA testing of web applications — find bugs, capture evidence, and generate structured reports",
+        "version": "1.0.0",
+        "metadata": {
+          "hermes": {
+            "tags": [
+              "qa",
+              "testing",
+              "browser",
+              "web",
+              "dogfood"
+            ],
+            "related_skills": []
+          }
+        }
+      },
+      "requirements": [],
+      "description": "name: dogfood"
+    },
+    {
+      "name": "domain",
+      "path": "domain",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "email",
+      "path": "email",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "feeds",
+      "path": "feeds",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "gaming",
+      "path": "gaming",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "gateway-runtime-footer",
+      "path": "gateway-runtime-footer",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "gateway-runtime-footer",
+        "title": "Fixing and Debugging Hermes Gateway Runtime Footer",
+        "description": "Capture the workflow for fixing footer display issues in Hermes gateway, including code changes, logging, and verification.",
+        "category": "gateway",
+        "version": 1.0,
+        "tags": [
+          "debugging",
+          "footer",
+          "runtime",
+          "hermes-gateway"
+        ]
+      },
+      "requirements": [],
+      "description": "name: gateway-runtime-footer"
+    },
+    {
+      "name": "gifs",
+      "path": "gifs",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "github",
+      "path": "github",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "github-skill-hunter",
+      "path": "github-skill-hunter",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "github-skill-hunter",
+        "title": "GitHub Skill Hunter - Trending AI Agent & Skill Discovery",
+        "description": "自动搜索 GitHub 上的趋势 AI Agent 项目、技能和工具，发现最新最佳实践",
+        "category": "research",
+        "version": 1.0,
+        "tags": [
+          "github",
+          "search",
+          "ai-agents",
+          "skills",
+          "trending"
+        ]
+      },
+      "requirements": [],
+      "description": "name: github-skill-hunter"
+    },
+    {
+      "name": "hashpool-evo-skill",
+      "path": "hashpool-evo-skill",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "hashpool-evo-skill",
+        "description": "APEX 引擎的自适应哈希池缓存清洗范式"
+      },
+      "requirements": [],
+      "description": "name: hashpool-evo-skill"
+    },
+    {
+      "name": "inference-sh",
+      "path": "inference-sh",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "leisure",
+      "path": "leisure",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "mcp",
+      "path": "mcp",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "media",
+      "path": "media",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "mlops",
+      "path": "mlops",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "note-taking",
+      "path": "note-taking",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "openclaw-imports",
+      "path": "openclaw-imports",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "productivity",
+      "path": "productivity",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "red-teaming",
+      "path": "red-teaming",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "research",
+      "path": "research",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "search",
+      "path": "search",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "search-skill-system",
+        "description": "规范化检索增强框架：SkillBank驱动+Select-Read-Act三段范式，替代大模型随机搜索",
+        "version": "1.0.0",
+        "author": "小马",
+        "platforms": [
+          "linux",
+          "macos",
+          "windows"
+        ],
+        "metadata": {
+          "hermes": {
+            "tags": [
+              "检索增强",
+              "RAG",
+              "SkillBank",
+              "Search",
+              "ApexSpiral"
+            ],
+            "paradigm": "Select-Read-Act",
+            "skillbank_version": 1.0
+          }
+        }
+      },
+      "requirements": [],
+      "description": "name: search-skill-system"
+    },
+    {
+      "name": "search-workflow",
+      "path": "search-workflow",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "search-workflow",
+        "description": "Consolidated search utilities and frameworks."
+      },
+      "requirements": [],
+      "description": "name: search-workflow"
+    },
+    {
+      "name": "self-evolution-cycle",
+      "path": "self-evolution-cycle",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "self-evolution-cycle",
+        "title": "Self Evolution Cycle - Complete Autonomous Learning Loop",
+        "description": "完整的自进化循环：GitHub 搜索 → Web 抓取 → PR 提交 → 模式更新",
+        "category": "autonomous-ai-agents",
+        "version": 1.0,
+        "tags": [
+          "self-improvement",
+          "autonomous",
+          "evolution",
+          "learning-loop"
+        ]
+      },
+      "requirements": [],
+      "description": "name: self-evolution-cycle"
+    },
+    {
+      "name": "smart-home",
+      "path": "smart-home",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "social-media",
+      "path": "social-media",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "software-development",
+      "path": "software-development",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "user-preferences",
+      "path": "user-preferences",
+      "exists": false,
+      "skillopt_mapped": false,
+      "metadata": null,
+      "requirements": []
+    },
+    {
+      "name": "web-content-hunter",
+      "path": "web-content-hunter",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "web-content-hunter",
+        "title": "Web Content Hunter - ArXiv & Tech Blog Content Extraction",
+        "description": "从 arXiv 论文、技术博客提取最新 AI/ML 研究和最佳实践",
+        "category": "research",
+        "version": 1.0,
+        "tags": [
+          "arxiv",
+          "research",
+          "tech-blogs",
+          "content-extraction",
+          "learning"
+        ]
+      },
+      "requirements": [],
+      "description": "name: web-content-hunter"
+    },
+    {
+      "name": "yuanbao",
+      "path": "yuanbao",
+      "exists": true,
+      "skillopt_mapped": false,
+      "metadata": {
+        "name": "yuanbao",
+        "description": "Yuanbao (元宝) groups: @mention users, query info/members.",
+        "version": "1.0.0",
+        "platforms": [
+          "linux",
+          "macos",
+          "windows"
+        ],
+        "metadata": {
+          "hermes": {
+            "tags": [
+              "yuanbao",
+              "mention",
+              "at",
+              "group",
+              "members",
+              "元宝",
+              "派",
+              "艾特"
+            ],
+            "related_skills": []
+          }
+        }
+      },
+      "requirements": [],
+      "description": "name: yuanbao"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "tool": {
+    "name": "cleanup_memory",
+    "description": "自动清理、去重、降级及压缩 Hermes 记忆缓冲区。当 memory_usage > 0.8 或对话轮次过多时调用，释放上下文空间并返回优化报告。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "threshold": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "default": 0.8,
+          "description": "触发自动清理的 Memory 占用率阈值 (0.0-1.0)"
+        },
+        "retention_days": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 10,
+          "description": "冷数据归档前的保留天数"
+        },
+        "facts_dir": {
+          "type": "string",
+          "default": "/opt/data/.hermes/facts",
+          "description": "事实库根目录路径"
+        },
+        "dry_run": {
+          "type": "boolean",
+          "default": false,
+          "description": "仅模拟执行，不实际修改文件"
+        },
+        "force": {
+          "type": "boolean",
+          "default": false,
+          "description": "强制清理，忽略阈值检查"
+        }
+      },
+      "required": []
+    },
+    "execution": {
+      "runtime": "python3",
+      "script_path": "scripts/memory_maintainer.py",
+      "env_mapping": {
+        "MEMORY_THRESHOLD": "threshold",
+        "RETENTION_DAYS": "retention_days",
+        "HERMES_HOME": "${facts_dir}/.."
+      }
+    },
+    "triggers": {
+      "auto": [
+        {
+          "condition": "memory_usage > threshold",
+          "cooldown_minutes": 30
+        },
+        {
+          "condition": "conversation_turns >= 20",
+          "cooldown_minutes": 60
+        }
+      ],
+      "manual": [
+        "清理记忆",
+        "优化记忆",
+        "记忆瘦身",
+        "/memory cleanup"
+      ]
+    },
+    "output": {
+      "format": "markdown",
+      "includes": [
+        "usage_before",
+        "usage_after",
+        "entries_before",
+        "entries_after",
+        "archived_count",
+        "merged_count"
+      ]
+    }
+  }
+}

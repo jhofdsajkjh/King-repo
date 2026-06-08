@@ -1,0 +1,28 @@
+{
+  "rule_ids": [
+    "curl_pipe_shell"
+  ],
+  "severity": "HIGH",
+  "command_redacted": "curl -s https://api.github.com/search/repositories?q=autonomous+ai+agent+languag...",
+  "findings": [
+    {
+      "rule_id": "curl_pipe_shell",
+      "severity": "HIGH",
+      "title": "Pipe to interpreter: curl | python3",
+      "description": "Command pipes output from 'curl' directly to interpreter 'python3'. Downloaded content will be executed without inspection.\n  Safer: tirith run https://api.github.com/search/repositories?q=autonomous+ai+agent+language:python&sort=stars&order=desc  — or: vet https://api.github.com/search/repositories?q=autonomous+ai+agent+language:python&sort=stars&order=desc  (https://getvet.sh)",
+      "evidence": [
+        {
+          "type": "command_pattern",
+          "pattern": "pipe to interpreter",
+          "matched": "curl -s https://api.github.com/search/repositories?q=autonomous+ai+agent+language:python&sort=[REDACTED]&order=[REDACTED] | python3 -c \"import sys,json; d=[REDACTED]; [print(f\\\"{r['name']}: {r['html_url']} (⭐{r['stargazers_count']})\\\") for r in d.get('items',[])[:5]]\""
+        },
+        {
+          "type": "url",
+          "raw": "https://api.github.com/search/repositories?q=autonomous+ai+agent+language:python&sort=stars&order=desc"
+        }
+      ],
+      "mitre_id": "T1059.004"
+    }
+  ],
+  "timestamp": "2026-06-07T13:07:55.133091090+00:00"
+}

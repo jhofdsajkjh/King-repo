@@ -1,0 +1,1 @@
+User has root password access and can execute privileged commands with `su -c "..."` when system permissions are restricted. This is needed for system-level operations like `apt install python3.13-venv` to enable virtual environment creation for package updates.

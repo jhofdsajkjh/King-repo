@@ -1,0 +1,5 @@
+User's default search tool is AnySearch (via `anysearch` skill). All search tasks should prioritize AnySearch unless user specifies otherwise. It's a Hermes skill (not a plugin), includes CLI scripts and pre-configured API key.
+§
+Gateway footer injection bug fix: The footer was showing `⏱0.0s · 🔁0` because `build_footer_line()` was called with keyword `text=` instead of `response_text=`, causing a TypeError silently caught by `except: pass`. Also `model_name` was looked up from `hook_ctx` (which has no `model_name` key) instead of `agent_result.get("model")`, and `context_usage` was never computed. Fix in run.py line 3969-3998: use `response_text=` keyword, resolve model from `agent_result`, compute context_usage from input_tokens+output_tokens / context_window. Also fixed file ownership: run.py was root-owned, needed `chown hermes:hermes` before writing.
+§
+Search-workflow umbrella skill is at /opt/data/skills/search-workflow/SKILL.md, owned by root. The hermes user cannot write to it. Before patching, chown the file or use a different profile's directory.

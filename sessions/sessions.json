@@ -1,0 +1,32 @@
+{
+  "agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c": {
+    "session_key": "agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c",
+    "session_id": "20260608_100043_6e803122",
+    "created_at": "2026-06-08T10:00:43.672129",
+    "updated_at": "2026-06-08T10:45:09.002002",
+    "display_name": "oc_ca8d0e491f4009d7dd2b333b6fa17e9c",
+    "platform": "feishu",
+    "chat_type": "dm",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 53986,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "memory_flushed": false,
+    "suspended": false,
+    "origin": {
+      "platform": "feishu",
+      "chat_id": "oc_ca8d0e491f4009d7dd2b333b6fa17e9c",
+      "chat_name": "oc_ca8d0e491f4009d7dd2b333b6fa17e9c",
+      "chat_type": "dm",
+      "user_id": "ou_93821698643e56f8c4bf6303b4232715",
+      "user_name": "\u8def\u5de5",
+      "thread_id": null,
+      "chat_topic": null,
+      "user_id_alt": "on_4f5242cb512bd7f15285ad68dde0e002"
+    }
+  }
+}
