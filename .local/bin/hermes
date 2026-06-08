@@ -1,0 +1,18 @@
+#!/bin/bash
+# hermes wrapper for extensions
+# Usage: hermes <extension:command> [args...]
+# Example: hermes cli:self-heal-diagnose
+
+set -euo pipefail
+
+COMMAND="$1"
+shift || true
+
+if [[ "$COMMAND" == "cli:"* ]]; then
+    # 调用 CLI 扩展命令
+    EXT_COMMAND="${COMMAND#cli:}"
+    /opt/hermes/.cli_extensions/hermes-cli.sh "$EXT_COMMAND" "$@"
+else
+    # 调用原生 hermes
+    exec hermes "$COMMAND" "$@"
+fi

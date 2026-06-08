@@ -1,0 +1,31 @@
+{
+  "version": "1.6.0",
+  "activated": "2026-06-08T04:28:02.336593",
+  "modules": {
+    "self_heal": {
+      "enabled": true,
+      "priority": 1,
+      "description": "APEX 自愈系统"
+    },
+    "github_integration": {
+      "enabled": true,
+      "priority": 2,
+      "description": "GitHub API 集成"
+    },
+    "mcp_servers": {
+      "enabled": true,
+      "priority": 3,
+      "description": "MCP 服务器集合"
+    },
+    "llm_audit_chain": {
+      "enabled": true,
+      "priority": 4,
+      "description": "多层多源审计链"
+    },
+    "cli_extensions": {
+      "enabled": true,
+      "priority": 5,
+      "description": "CLI 扩展命令"
+    }
+  }
+}

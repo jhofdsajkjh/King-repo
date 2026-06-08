@@ -122,6 +122,23 @@ if agent_result.get("tool_call_count", 0) > 50:
     hermes self-heal heal --error-type tool_call_loop
 ```
 
+### 4. hermes evolve 集成（生产环境）
+
+在 `/opt/data/.hermes/scripts/hermes-evolve.sh` 中添加自愈调用：
+
+```bash
+# 升级技能前先诊断
+hermes self-heal diagnose --quick || {
+    error "❌ 系统自愈诊断失败，终止升级流程"
+    exit 1
+}
+
+# 升级后再次自愈
+hermes self-heal heal --error-type skill_upgrade
+```
+
+**注意：** 完整的 hermes evolve 流程脚本见 `hermes-agent` 技能文档「Hermes CLI 自定义命令扩展」章节。
+
 ---
 
 ## 技术细节
@@ -255,6 +272,7 @@ hermes config set self_heal.tool_call_loop_threshold=3
 | v1.0.0 | 初始版本：诊断/隔离/恢复/审计 | - |
 | v1.1.0 | 增加 gateway 实时自愈集成 | 向后兼容 |
 | v1.2.0 | 增加 task_status 自闭环支持 | 向后兼容 |
+| v1.3.0 | 增加 hermes evolve 集成流程 | 向后兼容 |
 
 ---
 

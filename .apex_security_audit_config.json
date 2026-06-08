@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "description": "APEX \u5b89\u5168\u95ed\u73af\u5ba1\u8ba1\u7cfb\u7edf - \u591a\u5c42+\u591a\u6e90+\u53ef\u8ffd\u6eaf",
+  "layers": [
+    {
+      "name": "cli-layer",
+      "description": "CLI \u547d\u4ee4\u5c42\u5ba1\u8ba1",
+      "enabled": true,
+      "log_path": "/opt/data/.apex_cli_audit.jsonl",
+      "fields": [
+        "timestamp",
+        "command",
+        "exit_code",
+        "user",
+        "session_id"
+      ]
+    },
+    {
+      "name": "mcp-layer",
+      "description": "MCP \u670d\u52a1\u5668\u5c42\u5ba1\u8ba1",
+      "enabled": true,
+      "log_path": "/opt/data/.apex_mcp_audit.jsonl",
+      "fields": [
+        "timestamp",
+        "server",
+        "method",
+        "params",
+        "response_hash"
+      ]
+    },
+    {
+      "name": "github-layer",
+      "description": "GitHub API \u5c42\u5ba1\u8ba1",
+      "enabled": true,
+      "log_path": "/opt/data/.apex_github_audit.jsonl",
+      "fields": [
+        "timestamp",
+        "endpoint",
+        "method",
+        "status",
+        "rate_limit"
+      ]
+    },
+    {
+      "name": "llm-layer",
+      "description": "LLM \u670d\u52a1\u5c42\u5ba1\u8ba1",
+      "enabled": true,
+      "log_path": "/opt/data/.apex_llm_audit.jsonl",
+      "fields": [
+        "timestamp",
+        "provider",
+        "model",
+        "tokens",
+        "response_hash"
+      ]
+    },
+    {
+      "name": "hermes-16-layer",
+      "description": "Hermes .16 \u539f\u751f\u5c42\u5ba1\u8ba1",
+      "enabled": true,
+      "log_path": "/opt/data/.apex_hermes_16_audit.jsonl",
+      "fields": [
+        "timestamp",
+        "module",
+        "status",
+        "error"
+      ]
+    },
+    {
+      "name": "skill-layer",
+      "description": "\u6280\u80fd\u5c42\u5ba1\u8ba1",
+      "enabled": true,
+      "log_path": "/opt/data/.apex_skill_audit.jsonl",
+      "fields": [
+        "timestamp",
+        "skill",
+        "action",
+        "hash"
+      ]
+    }
+  ],
+  "hash_chain": {
+    "enabled": true,
+    "algorithm": "sha256",
+    "link_field": "prev_hash",
+    "verification": "on-read"
+  },
+  "access_control": {
+    "enabled": true,
+    "log_path": "/opt/data/.apex_acl_audit.jsonl",
+    "rules": [
+      {
+        "resource": "cli:evolve",
+        "allowed": true,
+        "reason": "self-evolution"
+      },
+      {
+        "resource": "cli:auto-pr",
+        "allowed": true,
+        "reason": "automation"
+      },
+      {
+        "resource": "mcp:github",
+        "allowed": true,
+        "reason": "integration"
+      },
+      {
+        "resource": "llm:*",
+        "allowed": true,
+        "reason": "processing"
+      }
+    ]
+  },
+  "alerts": {
+    "enabled": true,
+    "log_path": "/opt/data/.apex_alerts.jsonl",
+    "triggers": [
+      {
+        "condition": "error_count > 10",
+        "severity": "critical"
+      },
+      {
+        "condition": "rate_limit < 10",
+        "severity": "warning"
+      },
+      {
+        "condition": "hash_mismatch",
+        "severity": "critical"
+      }
+    ]
+  }
+}

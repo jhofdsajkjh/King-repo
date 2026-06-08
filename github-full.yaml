@@ -1,0 +1,65 @@
+auth:
+  type: oauth2_pat Hybrid
+  oauth2:
+    client_id: ''
+    client_secret: ''
+    redirect_uri: http://localhost:8080/callback
+    scopes:
+    - repo
+    - write:org
+    - write:public_key
+    - admin:repo_hook
+  pat:
+    token: ''
+    expires_at: null
+    permissions:
+      repository:
+      - read
+      - write
+      - admin
+      organization:
+      - read
+      - write
+      issues:
+      - read
+      - write
+      pull_requests:
+      - read
+      - write
+      contents:
+      - read
+      - write
+      metadata:
+      - read
+  token_type: Bearer
+  endpoint: https://api.github.com
+webhook:
+  enabled: true
+  url: https://hermes.apex.local/webhook/github
+  secret: 5b7428a49a9675819dbf3187eefd6c4e081ee090ddbe94f2a90a2bea19f85572
+  events:
+  - push
+  - pull_request
+  - issues
+  - status
+  - release
+repo:
+  owner: apex
+  name: hermes-self-evolution
+  branch: main
+pr:
+  auto_merge: true
+  ci_wait_minutes: 5
+  merge_method: squash
+  required_reviews: 1
+audit:
+  enabled: true
+  log_path: /opt/data/.apex_github_audit.jsonl
+  retention_days: 90
+  fields:
+  - request_id
+  - timestamp
+  - method
+  - endpoint
+  - status
+  - rate_limit

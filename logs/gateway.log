@@ -2237,3 +2237,28 @@ ModuleNotFoundError: No module named 'plugins.browser'
 2026-06-08 11:07:30,334 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5751d98c80c2d573614b99ad3
 2026-06-08 11:07:30,341 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5751d98c80c2d573614b99ad3 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='立即执行' media=0
 2026-06-08 11:07:30,952 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (4 chars)
+2026-06-08 11:19:16,106 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=754.6s api_calls=19 response=2342 chars
+2026-06-08 11:19:16,644 WARNING gateway.run: FOOTER_CHECK: response_time=754.64 api_calls=19 model=astron-code-latest input_toks=6564214 output_toks=35125
+2026-06-08 11:19:17,164 WARNING gateway.run: FOOTER_OUT: text='⏱754.6s · astron-code-latest · 5156% · 🔁19'
+2026-06-08 11:19:17,169 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 11:19:17,291 INFO gateway.platforms.base: [Feishu] Sending response (2423 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 11:20:10,224 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d57005c6484b18ab2d82635dba
+2026-06-08 11:20:10,231 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d57005c6484b18ab2d82635dba type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='cd /opt/data\nhermes evolve' media=0
+2026-06-08 11:20:11,419 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (26 chars)
+2026-06-08 11:20:12,186 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='cd /opt/data hermes evolve'
+2026-06-08 11:20:20,413 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5701f5fcb8b1445b1d3642c7f
+2026-06-08 11:20:20,420 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5701f5fcb8b1445b1d3642c7f type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='# 添加到 crontab\n*/30 * * * * cd /opt/data && bash .hermes/scripts/hermes-evolve.sh >> /tmp/apex-evolve.log 2>&1' media=0
+2026-06-08 11:20:21,030 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (109 chars)
+2026-06-08 11:20:30,774 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d57011634a0b1e8e7efbfbea78
+2026-06-08 11:20:30,781 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d57011634a0b1e8e7efbfbea78 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='hermes self-heal diagnose # 诊断\nhermes self-heal audit # 审计日志' media=0
+2026-06-08 11:20:31,390 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (60 chars)
+2026-06-08 11:48:20,259 INFO [20260608_100043_6e803122] gateway.run: Session split detected: 20260608_100043_6e803122 → 20260608_114256_cb6c55 (compression)
+2026-06-08 11:48:21,354 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1689.2s api_calls=22 response=2718 chars
+2026-06-08 11:48:21,628 WARNING gateway.run: FOOTER_CHECK: response_time=1689.17 api_calls=22 model=astron-code-latest input_toks=8019096 output_toks=43876
+2026-06-08 11:48:22,127 WARNING gateway.run: FOOTER_OUT: text='⏱1689.2s · astron-code-latest · 6299% · 🔁22'
+2026-06-08 11:48:22,135 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 11:48:22,274 INFO gateway.platforms.base: [Feishu] Sending response (2800 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 12:08:28,576 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d504d7670acc35ba17232313ea
+2026-06-08 12:08:28,581 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d504d7670acc35ba17232313ea type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='将 /goal 将自身MCP，CLI与GitHub顶级接口融合，特别是GitHub自身融合，打通并配置token等API，同时通过MCP或CLI接通其它LLM API形成自进化的多层多重审计，安全及逻辑算法闭环，通过激活昨天的hernes模' media=0
+2026-06-08 12:08:30,367 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (173 chars)
+2026-06-08 12:08:31,057 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='将 /goal 将自身MCP，CLI与GitHub顶级接口融合，特别是GitHub自身融合，打通并配置token等API，同时通过MCP或CLI接通其它LLM '

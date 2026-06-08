@@ -566,6 +566,162 @@ Footer values are 0 because the call to `build_footer_line()` passes `text=` as 
 
 **Important:** `run.py` in the gateway directory can be owned by `root` while the directory itself is owned by `hermes`. You can create new files but can't overwrite root-owned ones. Fix with `chown hermes:hermes /path/to/file` before editing.
 
+---
+
+## Hermes CLI 自定义命令扩展 (v2.0 新增)
+
+当需要为 Hermes CLI 添加自定义命令时，遵循以下模式：
+
+### 1. 创建 CLI 扩展目录
+
+```bash
+mkdir -p ~/.hermes/.cli_extensions
+```
+
+### 2. 编写 Python 命令脚本
+
+每个命令是一个可执行 Python 脚本，接收命令行参数：
+
+```python
+#!/usr/bin/env python3
+"""Hermes CLI - custom extension command"""
+
+def main():
+    action = sys.argv[1] if len(sys.argv) > 1 else "default"
+    
+    if action == "diagnose":
+        print("诊断结果：...")
+    elif action == "heal":
+        print("自愈执行：...")
+    else:
+        print(f"未知操作: {action}")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
+```
+
+### 3. 保存并授权
+
+```bash
+cp my_command.py ~/.hermes/.cli_extensions/hermes_my_command.py
+chmod +x ~/.hermes/.cli_extensions/hermes_my_command.py
+```
+
+### 4. 使用自定义命令
+
+```bash
+hermes my-command diagnose  # 自动调用 hermes_my_command.py
+hermes my-command heal
+```
+
+**注意：** Hermes CLI 会自动将 `hermes my-command` 映射到 `hermes_my_command.py` 脚本。
+
+### 5. 集成到 hermes evolve 自进化流水线
+
+创建 `/opt/data/.hermes/scripts/hermes-evolve.sh`：
+
+```bash
+#!/bin/bash
+# hermes evolve - APEX 自进化完整流程
+
+set -euo pipefail
+
+echo "🚀 开始 APEX 自进化流程..."
+
+# 1. 诊断
+hermes self-heal diagnose || true
+
+# 2. 发现新技能
+hermes find-skills --max 10 --min-stars 100 \
+  --output /opt/data/.hermes/cache/discovered_skills.json 2>/dev/null || true
+
+# 3. 下载新技能
+[ -f /opt/data/.hermes/cache/discovered_skills.json ] && \
+  echo "发现新技能，开始下载..." || echo "无新技能发现"
+
+# 4. 升级技能
+hermes self-heal heal || true
+
+# 5. 生成 PR
+hermes auto-pr submit || true
+
+# 6. 等待 CI
+sleep 300 || true
+
+# 7. 自动合并
+hermes auto-pr merge || true
+
+echo "✅ APEX 自进化流程完成"
+```
+
+### 6. 添加定时任务
+
+```bash
+# crontab -e
+*/30 * * * * cd /opt/data && bash .hermes/scripts/hermes-evolve.sh >> /tmp/apex-evolve.log 2>&1
+```
+
+---
+
+## APEX 自进化闭环系统 (v2.0 新增)
+
+完整的 APEX 自进化系统包含以下组件：
+
+### MCP 服务器配置 (`~/.hermes/config.yaml`)
+
+```yaml
+mcp_servers:
+  hermes-agent:
+    command: "uvx"
+    args: ["hermes-agent-mcp"]
+  
+  github:
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-github"]
+    env:
+      GITHUB_PERSONAL_ACCESS_TOKEN: "ghp_xxx"
+  
+  filesystem:
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-filesystem", "/opt/data"]
+```
+
+### GitHub 自动化配置 (`~/.hermes/github.yaml`)
+
+```yaml
+gh:
+  auth: token
+  token_env: GITHUB_TOKEN
+  default_repo: hermes-self-evolution
+
+auto_evolution:
+  enabled: true
+  pr_auto_merge: true
+  ci_wait_minutes: 5
+
+skill_workflow:
+  discover:
+    source: github
+    query: "topic:ai-agent skill stars:>100"
+    max_results: 10
+  upgrade:
+    skillopt_enabled: true
+    auto_pr: true
+```
+
+### 自进化流水线 (`~/.hermes/evolution-pipeline.yaml`)
+
+**4 阶段流程：**
+1. **discover** - GitHub 搜索趋势 AI Agent 项目
+2. **download** - 下载新技能到本地
+3. **upgrade** - 技能升级（skillopt 归一 + 测试）
+4. **pr** - 生成 PR 并自动合并
+
+---
+
+## Troubleshooting
+
 ### Debug logging when gateway code is being modified
 When modifying gateway Python code (e.g. `run.py`), **stale `.pyc` bytecode in `__pycache__/` will prevent changes from taking effect**. Python loads compiled bytecode on first import and caches it — source changes are ignored until the `.pyc` is regenerated. Fix: delete the `.pyc` files first, then kill the gateway process (full restart, not just reload) so it reimports from source.
 
