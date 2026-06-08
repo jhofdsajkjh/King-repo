@@ -7589,3 +7589,5 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 16:58:33,264 WARNING [20260608_114256_cb6c55] agent.auxiliary_client: Auxiliary Nous client unavailable: no Nous authentication found (run: hermes auth).
 2026-06-08 16:58:33,267 WARNING [20260608_114256_cb6c55] agent.auxiliary_client: Auxiliary: marking nous unhealthy for 60s (payment / credit error). Subsequent auxiliary calls will skip it until 16:59:33.
 2026-06-08 16:58:33,459 INFO [20260608_114256_cb6c55] agent.auxiliary_client: Auxiliary flush_memories: connection error on auto — falling back to local/custom (astron-code-latest)
+2026-06-08 17:00:06,300 INFO [20260608_114256_cb6c55] agent.auxiliary_client: Auxiliary auto-detect: using main provider custom (astron-code-latest)
+2026-06-08 17:00:06,308 INFO [20260608_114256_cb6c55] agent.auxiliary_client: Auxiliary compression: using auto (astron-code-latest) at https://maas-coding-api.cn-huabei-1.xf-yun.com/v2/
