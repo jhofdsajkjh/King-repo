@@ -2580,3 +2580,13 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 16:51:11,339 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5c69294cb0c0598d520587eb1 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='你记得写入hermes的md及五层，三层并持续进化代入循环' media=0
 2026-06-08 16:51:12,630 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (29 chars)
 2026-06-08 16:51:13,414 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='你记得写入hermes的md及五层，三层并持续进化代入循环'
+2026-06-08 17:12:49,411 INFO [20260608_114256_cb6c55] gateway.run: Session split detected: 20260608_114256_cb6c55 → 20260608_171210_d9721f (compression)
+2026-06-08 17:12:50,327 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1296.9s api_calls=3 response=606 chars
+2026-06-08 17:12:50,592 WARNING gateway.run: FOOTER_CHECK: response_time=1296.91 api_calls=3 model=astron-code-latest input_toks=13592528 output_toks=80654
+2026-06-08 17:12:51,094 WARNING gateway.run: FOOTER_OUT: text='⏱1296.9s · astron-code-latest · 10682% · 🔁3'
+2026-06-08 17:12:51,099 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 17:12:51,319 INFO gateway.platforms.base: [Feishu] Sending response (688 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 17:18:25,683 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5cc0cb6cb4b1c6c8d69fcdcc0
+2026-06-08 17:18:25,690 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5cc0cb6cb4b1c6c8d69fcdcc0 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='https://github.com/hernandez42/APEX' media=0
+2026-06-08 17:18:26,915 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (35 chars)
+2026-06-08 17:18:27,671 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='https://github.com/hernandez42/APEX'
