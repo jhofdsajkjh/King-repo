@@ -1,2 +1,3 @@
 test
 update: 规范收敛 + 纪律锁止
+update: 闭环审计 + Hash 链
