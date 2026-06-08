@@ -2600,3 +2600,12 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 17:43:16,722 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5ca5f618a4b3c1aba347d57fc type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='检查代码是否安全，是否有挖矿嫌疑，是否有恶意代码。没有的话就可以继续按建议执行。' media=0
 2026-06-08 17:43:18,390 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (40 chars)
 2026-06-08 17:43:19,190 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='检查代码是否安全，是否有挖矿嫌疑，是否有恶意代码。没有的话就可以继续按建议执行。'
+2026-06-08 18:04:39,194 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1280.0s api_calls=11 response=881 chars
+2026-06-08 18:04:39,590 WARNING gateway.run: FOOTER_CHECK: response_time=1280.00 api_calls=11 model=astron-code-latest input_toks=14702927 output_toks=83866
+2026-06-08 18:04:40,222 WARNING gateway.run: FOOTER_OUT: text='⏱1280.0s · astron-code-latest · 11552% · 🔁11'
+2026-06-08 18:04:40,227 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 18:04:40,308 INFO gateway.platforms.base: [Feishu] Sending response (964 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 18:07:14,736 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5d0bd0ecbcb0226f90745a6d5
+2026-06-08 18:07:14,743 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5d0bd0ecbcb0226f90745a6d5 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='执行建议' media=0
+2026-06-08 18:07:15,993 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (4 chars)
+2026-06-08 18:07:16,636 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='执行建议'

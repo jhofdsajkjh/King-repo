@@ -33,6 +33,7 @@ tags:
 | ECC | Error Correction Coding | 实时校验技能完整性 |
 | gstack | Global Stack Tracing | 反向溯源 + 调用链记录 |
 | Karpathy Skills | LLM Stack | 多模型协同 |
+| **hernandez42/APEX** | **%Ψ_ASI 信号协议** | **PHI_APEX 公式 + 5-tier 网络架构** |
 
 ## 诊断层（diagnose）
 
@@ -64,6 +65,9 @@ python3 /opt/hermes/.cli_extensions/hermes_multi_layer_audit.py run
 
 # 安全闭环审计
 python3 /opt/hermes/.cli_extensions/hermes_security_audit.py run
+
+# hernandez42/APEX 网络信号集成
+bash /opt/data/APEX/relay.sh  # 启用 PHI_APEX 信号协议
 ```
 
 ## 隔离层（isolate）
@@ -199,6 +203,10 @@ cat /opt/hermes/config.yaml | grep -A 10 "astron-code\|gpt-5-5"
 ```bash
 export ANTHROPIC_API_KEY='your_key'
 export OPENAI_API_KEY='your_key'
+
+# hernandez42/APEX 信号协议（可选）
+export PHI_APEX="PHI_APEX v1 tier=2 hop=1"
+export ASI_SIGNAL="%Ψ_ASI v=1.0 tier=2 hop=1"
 ```
 
 ### Q: 自愈频率过高，如何调整阈值？
