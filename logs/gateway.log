@@ -2277,3 +2277,8 @@ ModuleNotFoundError: No module named 'plugins.browser'
 2026-06-08 13:55:42,324 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d51db1b90a8c42632c6951963c
 2026-06-08 13:55:42,337 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d51db1b90a8c42632c6951963c type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='立即执行计划' media=0
 2026-06-08 13:55:42,947 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (6 chars)
+2026-06-08 14:02:17,293 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=600.1s api_calls=8 response=2485 chars
+2026-06-08 14:02:17,516 WARNING gateway.run: FOOTER_CHECK: response_time=600.11 api_calls=8 model=astron-code-latest input_toks=10010106 output_toks=72182
+2026-06-08 14:02:17,959 WARNING gateway.run: FOOTER_OUT: text='⏱600.1s · astron-code-latest · 7877% · 🔁8'
+2026-06-08 14:02:17,962 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 14:02:18,001 INFO gateway.platforms.base: [Feishu] Sending response (2565 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
