@@ -2553,3 +2553,21 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 15:56:29,020 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d53140d50b4c149b8a3f1a6e89 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='全部更新最新' media=0
 2026-06-08 15:56:29,631 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (6 chars)
 2026-06-08 15:56:30,442 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='全部更新最新'
+2026-06-08 16:12:50,090 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=979.6s api_calls=7 response=1217 chars
+2026-06-08 16:12:50,334 WARNING gateway.run: FOOTER_CHECK: response_time=979.65 api_calls=7 model=astron-code-latest input_toks=11819753 output_toks=78180
+2026-06-08 16:12:50,791 WARNING gateway.run: FOOTER_OUT: text='⏱979.6s · astron-code-latest · 9295% · 🔁7'
+2026-06-08 16:12:50,794 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 16:12:50,849 INFO gateway.platforms.base: [Feishu] Sending response (1297 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 16:18:34,718 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d53e354b494c3f48ca9895fcb3
+2026-06-08 16:18:34,725 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d53e354b494c3f48ca9895fcb3 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='再看看是不是更新了： https://github.com/hernandez42/omni-fusion 这个项目' media=0
+2026-06-08 16:18:36,034 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (58 chars)
+2026-06-08 16:18:36,912 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='再看看是不是更新了： https://github.com/hernandez42/omni-fusion 这个项目'
+2026-06-08 16:22:56,400 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=259.5s api_calls=2 response=645 chars
+2026-06-08 16:22:56,609 WARNING gateway.run: FOOTER_CHECK: response_time=259.49 api_calls=2 model=astron-code-latest input_toks=12001278 output_toks=78857
+2026-06-08 16:22:57,037 WARNING gateway.run: FOOTER_OUT: text='⏱259.5s · astron-code-latest · 9438% · 🔁2'
+2026-06-08 16:22:57,040 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 16:22:57,068 INFO gateway.platforms.base: [Feishu] Sending response (725 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 16:24:44,507 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d538a755be0c104d9ea67c3788
+2026-06-08 16:24:44,514 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d538a755be0c104d9ea67c3788 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='123 按顺序执行' media=0
+2026-06-08 16:24:45,124 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (9 chars)
+2026-06-08 16:24:45,910 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='123 按顺序执行'

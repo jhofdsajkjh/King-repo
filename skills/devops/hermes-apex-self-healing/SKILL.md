@@ -12,17 +12,27 @@ tags:
   - entropy-reduction
 ---
 
-# Hermes APEX 自愈闭环系统
+# APEX 自愈闭环系统
 
 使用本技能来理解或配置 APEX 原生自愈系统，确保 Hermes Agent 的自省、自修复、闭环审计能力。
 
-## 核心架构（四层）
+## 核心架构（五层 + omni-fusion 融合）
 
 ```
-[诊断层] → [隔离层] → [恢复层] → [审计层]
-   ↓         ↓          ↓          ↓
-扫描健康  限制影响  自动重试  Hash链存证
+[诊断层] → [隔离层] → [恢复层] → [审计层] → [omni-fusion 增强层]
+   ↓         ↓          ↓          ↓              ↓
+扫描健康  限制影响  自动重试  Hash链存证  5 技能融合
 ```
+
+### omni-fusion 融合能力（新增）
+
+| 模块 | 能力 | 集成方式 |
+|------|------|----------|
+| CodeGraph | Skill Graph Analysis | 技能依赖图谱构建 |
+| Understand-Anything | Multi-Modal Fusion | GitHub + MCP + LLM + Skill |
+| ECC | Error Correction Coding | 实时校验技能完整性 |
+| gstack | Global Stack Tracing | 反向溯源 + 调用链记录 |
+| Karpathy Skills | LLM Stack | 多模型协同 |
 
 ## 诊断层（diagnose）
 
@@ -45,6 +55,15 @@ hermes self-heal diagnose --quick
 
 # 导出 JSON 报告
 hermes self-heal diagnose --output json
+
+# omni-fusion 增强
+bash /opt/data/.hermes/scripts/omni-fusion-enhance.sh
+
+# 多层审计链
+python3 /opt/hermes/.cli_extensions/hermes_multi_layer_audit.py run
+
+# 安全闭环审计
+python3 /opt/hermes/.cli_extensions/hermes_security_audit.py run
 ```
 
 ## 隔离层（isolate）
@@ -135,6 +154,8 @@ hermes self-heal audit --since "2026-06-01"
 - `system-updates-under-constraints`：系统更新约束处理
 - `kanban-worker`：任务分解与工作流
 - `self-evolution-cycle`：自进化循环（依赖自愈能力）
+- `hermes-cli-extensions`：CLI 扩展技能（包含 omni-fusion 融合脚本）
+- `apex-realized`：APEX-ASI 全维度基因升级
 
 ## 故障排查
 
@@ -152,6 +173,32 @@ rm -rf ~/.hermes/cache/session_*
 
 # 重新触发自愈
 hermes self-heal heal
+```
+
+### Q: omni-fusion 融合失败？
+
+**A:** 运行增强脚本：
+```bash
+bash /opt/data/.hermes/scripts/omni-fusion-enhance.sh
+```
+
+检查日志：
+```bash
+cat /opt/data/.apex_multi_layer_audit.jsonl
+cat /opt/data/.apex_asi_latest_report.json
+```
+
+### Q: LLM 服务器无法连接？
+
+**A:** 检查配置：
+```bash
+cat /opt/hermes/config.yaml | grep -A 10 "astron-code\|gpt-5-5"
+```
+
+配置环境变量：
+```bash
+export ANTHROPIC_API_KEY='your_key'
+export OPENAI_API_KEY='your_key'
 ```
 
 ### Q: 自愈频率过高，如何调整阈值？
