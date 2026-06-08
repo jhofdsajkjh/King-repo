@@ -334,11 +334,75 @@ self_evolution:
 
 ## 相关技能
 
+- hermes-cli-extensions: Hermes CLI 扩展技能（self-heal, auto-pr, evolve）
 - github-skill-hunter: GitHub repository discovery
 - web-content-hunter: ArXiv & tech blog extraction
 - auto-pr-submitter: Automated PR generation
-- self-improving-agent: Multi-memory learning system
 - search-workflow: Consolidated search utilities
+
+## APEX 三阶融合升维 (v2.0 新增)
+
+### 核心架构
+
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│                    APEX 三阶融合升维                                   │
+├──────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│  阶段一：接口融合 & Token 配置                                        │
+│  ├─ MCP GitHub Server (npx @modelcontextprotocol/server-github)    │
+│  ├─ hermes CLI GitHub Extension (hermes_github.py)                 │
+│  └─ GitHub OAuth2 + PAT 混合认证                                      │
+│                                                                      │
+│  阶段二：LLM 多层多源审计链                                           │
+│  ├─ 6 个 LLM MCP Servers (Claude, GPT-4, OpenRouter, etc.)         │
+│  ├─ hermes Multi-Layer Audit CLI Extension                         │
+│  └─ 每个请求生成哈希链（prev_hash + hash）                          │
+│                                                                      │
+│  阶段三：Hermes .16 原生模块激活                                      │
+│  ├─ hermes .16 active.json (modules 配置)                          │
+│  ├─ hermes-fusion.sh (自动后台融合脚本)                             │
+│  └─ 5 个原生模块自动融合                                              │
+│                                                                      │
+│  阶段四：安全闭环审计系统                                             │
+│  ├─ 6 层审计系统 (CLI, MCP, GitHub, LLM, hermes-16, Skill)         │
+│  ├─ 哈希链完整性验证 (sha256 + prev_hash)                           │
+│  └─ ACL 访问控制 + Alerts 告警系统                                  │
+│                                                                      │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+### 环境变量配置
+
+```bash
+# GitHub Token (必需，拥有 repo 权限)
+export GITHUB_TOKEN='your_github_personal_access_token'
+
+# GitHub 仓库所有者（可选）
+export GITHUB_REPO_OWNER='apex'
+
+# GitHub 仓库名（可选）
+export GITHUB_REPO_NAME='hermes-self-evolution'
+```
+
+### 调试与验证
+
+```bash
+# 诊断系统状态
+bash /opt/hermes/.cli_extensions/hermes-cli.sh self-heal-diagnose
+
+# 查看审计日志
+bash /opt/hermes/.cli_extensions/hermes-cli.sh audit
+
+# 运行安全闭环审计
+python3 /opt/hermes/.cli_extensions/hermes_security_audit.py run
+
+# 查看多层审计链
+python3 /opt/hermes/.cli_extensions/hermes_multi_layer_audit.py run
+
+# 测试 hermes .16 状态
+cat /opt/data/.hermes/v16/active.json
+```
 
 ## 参考
 

@@ -49,6 +49,40 @@ crontab -e
 */30 * * * * cd /opt/data && bash .hermes/scripts/hermes-evolve.sh >> /tmp/apex-evolve.log 2>&1
 ```
 
+### APEX 三阶融合升维配置
+
+要启用完整的 APEX 三阶融合能力，需要配置以下环境变量：
+
+```bash
+# GitHub Token (必需，拥有 repo 权限)
+export GITHUB_TOKEN='your_github_personal_access_token'
+
+# GitHub 仓库所有者（可选）
+export GITHUB_REPO_OWNER='apex'
+
+# GitHub 仓库名（可选）
+export GITHUB_REPO_NAME='hermes-self-evolution'
+```
+
+### 调试与验证
+
+```bash
+# 诊断系统状态
+bash /opt/hermes/.cli_extensions/hermes-cli.sh self-heal-diagnose
+
+# 查看审计日志
+bash /opt/hermes/.cli_extensions/hermes-cli.sh audit
+
+# 运行安全闭环审计
+python3 /opt/hermes/.cli_extensions/hermes_security_audit.py run
+
+# 查看多层审计链
+python3 /opt/hermes/.cli_extensions/hermes_multi_layer_audit.py run
+
+# 测试 hermes .16 状态
+cat /opt/data/.hermes/v16/active.json
+```
+
 ### APEX 自进化闭环触发
 
 ```bash

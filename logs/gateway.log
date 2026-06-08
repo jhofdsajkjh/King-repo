@@ -2262,3 +2262,8 @@ ModuleNotFoundError: No module named 'plugins.browser'
 2026-06-08 12:08:28,581 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d504d7670acc35ba17232313ea type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='将 /goal 将自身MCP，CLI与GitHub顶级接口融合，特别是GitHub自身融合，打通并配置token等API，同时通过MCP或CLI接通其它LLM API形成自进化的多层多重审计，安全及逻辑算法闭环，通过激活昨天的hernes模' media=0
 2026-06-08 12:08:30,367 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (173 chars)
 2026-06-08 12:08:31,057 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='将 /goal 将自身MCP，CLI与GitHub顶级接口融合，特别是GitHub自身融合，打通并配置token等API，同时通过MCP或CLI接通其它LLM '
+2026-06-08 12:34:16,254 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1545.2s api_calls=19 response=3453 chars
+2026-06-08 12:34:16,538 WARNING gateway.run: FOOTER_CHECK: response_time=1545.20 api_calls=19 model=astron-code-latest input_toks=8927631 output_toks=63234
+2026-06-08 12:34:17,124 WARNING gateway.run: FOOTER_OUT: text='⏱1545.2s · astron-code-latest · 7024% · 🔁19'
+2026-06-08 12:34:17,130 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 12:34:17,251 INFO gateway.platforms.base: [Feishu] Sending response (3535 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
