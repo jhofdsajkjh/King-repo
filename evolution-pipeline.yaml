@@ -1,0 +1,41 @@
+version: evolution-pipeline-v1
+name: hermes-self-evolution-pipeline
+trigger:
+  schedule: every 30 minutes
+  manual: hermes evolve
+stages:
+- name: discover
+  description: GitHub 搜索趋势 AI Agent 项目与技能
+  input:
+    query: topic:ai-agent skill stars:>100
+    max_results: 10
+    min_stars: 100
+  output:
+    file: /opt/data/.hermes/cache/discovered_skills.json
+- name: download
+  description: 下载新技能到本地
+  input:
+    source: /opt/data/.hermes/cache/discovered_skills.json
+    destination: /opt/data/skills
+  output:
+    status_file: /opt/data/.hermes/cache/download_status.json
+- name: upgrade
+  description: 技能升级：skillopt 归一 + 测试
+  input:
+    skillopt_enabled: true
+    test_before_upgrade: true
+  output:
+    skillopt_map: /opt/data/skills/_registry/skillopt-map.yaml
+- name: pr
+  description: 生成 PR 并自动合并
+  input:
+    pr_title: 'skill: auto-upgrade from evolution pipeline'
+    pr_body: Auto-generated PR from APEX evolution pipeline
+    auto_merge: true
+    ci_wait_minutes: 5
+  output:
+    pr_url: https://github.com/hermes-agent/hermes-self-evolution/pull/...
+audit:
+  enabled: true
+  log_file: /opt/data/.apex_audit_log.jsonl
+  retention_days: 30

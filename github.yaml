@@ -1,0 +1,25 @@
+gh:
+  auth: token
+  token_env: GITHUB_TOKEN
+  default_owner: hermes-agent
+  default_repo: hermes-self-evolution
+auto_evolution:
+  enabled: true
+  repo: hermes-self-evolution
+  branch: main
+  pr_auto_merge: true
+  ci_wait_minutes: 5
+  merge_delay_minutes: 1
+skill_workflow:
+  discover:
+    source: github
+    search_query: topic:ai-agent skill
+    max_results: 10
+    min_stars: 100
+  download:
+    destination: /opt/data/skills
+    auto_fix: true
+  upgrade:
+    skillopt_enabled: true
+    test_before_upgrade: true
+    auto_pr: true
