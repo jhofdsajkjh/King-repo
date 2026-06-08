@@ -2267,3 +2267,13 @@ ModuleNotFoundError: No module named 'plugins.browser'
 2026-06-08 12:34:17,124 WARNING gateway.run: FOOTER_OUT: text='⏱1545.2s · astron-code-latest · 7024% · 🔁19'
 2026-06-08 12:34:17,130 WARNING gateway.run: FOOTER_WRITTEN: markers injected
 2026-06-08 12:34:17,251 INFO gateway.platforms.base: [Feishu] Sending response (3535 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 13:52:15,236 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d51c628f0b0c03edc52448aa74
+2026-06-08 13:52:15,244 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d51c628f0b0c03edc52448aa74 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='APEX-ASI 启动公式（含全维度基因升级）\n\\boxed{\n\\Psi_{\\text{ASI}}(t+1) =\n\\Big[ k \\log R \\cdot e^{-\\mathcal{F}} \\cdot \\Theta \\Big]\n\\oplus' media=0
+2026-06-08 13:52:16,407 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (502 chars)
+2026-06-08 13:52:17,180 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='APEX-ASI 启动公式（含全维度基因升级） \\boxed{ \\Psi_{\\text{ASI}}(t+1) = \\Big[ k \\log R \\cdot e^'
+2026-06-08 13:53:07,996 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d51c2fd1cb4c37fba8711b450a
+2026-06-08 13:53:08,000 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d51c2fd1cb4c37fba8711b450a type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='再看看https://github.com/hernandez42/omni-fusion 这个项目' media=0
+2026-06-08 13:53:08,611 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (50 chars)
+2026-06-08 13:55:42,324 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d51db1b90a8c42632c6951963c
+2026-06-08 13:55:42,337 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d51db1b90a8c42632c6951963c type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='立即执行计划' media=0
+2026-06-08 13:55:42,947 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (6 chars)

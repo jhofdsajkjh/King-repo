@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "name": "omni-fusion",
+  "description": "Universal AI Agent Integration Layer",
+  "fused_skills": {
+    "CodeGraph": {
+      "enabled": true,
+      "description": "\u4ee3\u7801\u56fe\u8c31\u5206\u6790 - APEX Skill Graph",
+      "integration": "skill_graph_analysis.py"
+    },
+    "Understand-Anything": {
+      "enabled": true,
+      "description": "\u4efb\u4f55\u7406\u89e3\u80fd\u529b - APEX Multi-Modal Fusion",
+      "integration": "multi_modal_fusion.py"
+    },
+    "ECC": {
+      "enabled": true,
+      "description": "\u9519\u8bef\u6821\u9a8c\u7f16\u7801 - APEX Fault Tolerance",
+      "integration": "ecc_fusion.py"
+    },
+    "gstack": {
+      "enabled": true,
+      "description": "\u5168\u5c40\u5806\u6808\u8ffd\u8e2a - APEX Global Trace",
+      "integration": "gstack_fusion.py"
+    },
+    "Karpathy Skills": {
+      "enabled": true,
+      "description": "Karpathy AI \u6280\u80fd - APEX LLM Stack",
+      "integration": "karpathy_skills.py"
+    }
+  },
+  "api": {
+    "endpoint": "https://api.apex.local/omni-fusion",
+    "auth": "Bearer hermes-ASI-token"
+  }
+}
