@@ -3,7 +3,7 @@
     "credential_in_text"
   ],
   "severity": "HIGH",
-  "command_redacted": "cd /opt/data && git remote set-url origin https://hermes:[REDACTED:GitHub PAT]@g...",
+  "command_redacted": "cd /opt/data && git push https://hermes:[REDACTED:GitHub PAT]@github.com/jhofdsa...",
   "findings": [
     {
       "rule_id": "credential_in_text",
@@ -19,5 +19,5 @@
       "mitre_id": "T1552"
     }
   ],
-  "timestamp": "2026-06-08T10:59:38.779498146+00:00"
+  "timestamp": "2026-06-08T11:13:02.539983353+00:00"
 }

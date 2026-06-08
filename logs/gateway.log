@@ -2632,3 +2632,21 @@ requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', 
 2026-06-08 19:00:07,619 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5e45a43080c29e85291d97dd0
 2026-06-08 19:00:07,710 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5e45a43080c29e85291d97dd0 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='# Ubuntu/Debian\napt update && apt install -y gh\n# 或使用官方脚本\ncurl -fsSL https://cli.github.com/packages/githubcli-archive-k' media=0
 2026-06-08 19:00:08,354 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (490 chars)
+2026-06-08 19:04:17,906 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5e55dda0a4c355d862bf5ee9d
+2026-06-08 19:04:17,982 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5e55dda0a4c355d862bf5ee9d type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='gh auth login --with-token <<< "ghp_LT...gmL6"' media=0
+2026-06-08 19:04:18,591 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (73 chars)
+2026-06-08 19:05:18,634 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5e50078088c1ea7c1df6ae8a8
+2026-06-08 19:05:18,931 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5e50078088c1ea7c1df6ae8a8 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='方案 1' media=0
+2026-06-08 19:05:19,584 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (4 chars)
+2026-06-08 19:15:52,400 INFO gateway.run: response ready: platform=feishu chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c time=1021.0s api_calls=6 response=678 chars
+2026-06-08 19:15:52,616 WARNING gateway.run: FOOTER_CHECK: response_time=1020.96 api_calls=6 model=astron-code-latest input_toks=16697316 output_toks=89826
+2026-06-08 19:15:53,086 WARNING gateway.run: FOOTER_OUT: text='⏱1021.0s · astron-code-latest · 13115% · 🔁6'
+2026-06-08 19:15:53,090 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 19:15:53,131 INFO gateway.platforms.base: [Feishu] Sending response (760 chars) to oc_ca8d0e491f4009d7dd2b333b6fa17e9c
+2026-06-08 19:19:05,261 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5e1c4b2ca0c4fcb54102080e0
+2026-06-08 19:19:05,264 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5e1c4b2ca0c4fcb54102080e0 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='启动 vlash' media=0
+2026-06-08 19:19:06,410 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (8 chars)
+2026-06-08 19:19:07,120 INFO gateway.run: inbound message: platform=feishu user=路工 chat=oc_ca8d0e491f4009d7dd2b333b6fa17e9c msg='启动 vlash'
+2026-06-08 19:19:15,897 INFO gateway.platforms.feishu: [Feishu] Received raw message type=text message_id=om_x100b6d5e1dffccacc310f298e1ffe23
+2026-06-08 19:19:15,902 INFO gateway.platforms.feishu: [Feishu] Inbound dm message received: id=om_x100b6d5e1dffccacc310f298e1ffe23 type=text chat_id=oc_ca8d0e491f4009d7dd2b333b6fa17e9c text='启动 clash' media=0
+2026-06-08 19:19:16,519 INFO gateway.platforms.feishu: [Feishu] Flushing text batch agent:main:feishu:dm:oc_ca8d0e491f4009d7dd2b333b6fa17e9c (8 chars)
