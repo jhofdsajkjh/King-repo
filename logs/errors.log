@@ -2189,3 +2189,227 @@ AttributeError: type object 'BasePlatformAdapter' has no attribute 'filter_media
 2026-06-08 14:12:46,235 ERROR Lark: handle message failed, message_type: event, message_id: 570fc47f-7ff4-47d4-9885-5a3280cc3962, trace_id: 9ab645d9c5f8cbe5a2fc9e2f692c68fc, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648761657637047486]
 2026-06-08 14:15:30,218 ERROR Lark: handle message failed, message_type: event, message_id: 1c61d52a-f334-4eb5-8ff5-d7e99bb9f6ef, trace_id: 90b4991ff0255d7d9365d9c1240b461a, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648761657637047486]
 2026-06-08 14:17:46,274 ERROR Lark: handle message failed, message_type: event, message_id: bc97a8e4-b562-4903-8dea-716190ba2316, trace_id: 9ab645d9c5f8cbe5a2fc9e2f692c68fc, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648761657637047486]
+2026-06-08 14:33:03,836 ERROR Lark: handle message failed, message_type: event, message_id: 678d7c61-a2f7-4395-aa52-63ca9eb347ce, trace_id: 5f8cc626ac9882fd91d269507131d287, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648761657637047486]
+2026-06-08 14:33:20,265 ERROR Lark: handle message failed, message_type: event, message_id: 909db156-cdc5-47b3-8a10-f47c1881eaf2, trace_id: 5f8cc626ac9882fd91d269507131d287, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648761657637047486]
+2026-06-08 14:38:20,389 ERROR Lark: handle message failed, message_type: event, message_id: fabc10ff-082e-458a-8511-0045ad521d7b, trace_id: 5f8cc626ac9882fd91d269507131d287, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648761657637047486]
+2026-06-08 14:49:30,415 ERROR Lark: receive message loop exit, err: sent 1011 (internal error) keepalive ping timeout; no close frame received [conn_id=7648761657637047486]
+2026-06-08 14:50:15,465 ERROR Lark: connect failed, err: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /callback/ws/endpoint (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+2026-06-08 14:50:17,802 WARNING gateway.platforms.feishu: [Feishu] Send attempt 1/3 failed for chat oc_ca8d0e491f4009d7dd2b333b6fa17e9c; retrying in 1s: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+2026-06-08 14:50:38,876 WARNING gateway.platforms.feishu: [Feishu] Send attempt 2/3 failed for chat oc_ca8d0e491f4009d7dd2b333b6fa17e9c; retrying in 2s: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+2026-06-08 14:51:00,942 ERROR gateway.platforms.feishu: [Feishu] Send error: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+Traceback (most recent call last):
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/hermes/gateway/platforms/feishu.py", line 1445, in send
+    response = await self._feishu_send_with_retry(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/opt/hermes/gateway/platforms/feishu.py", line 3495, in _feishu_send_with_retry
+    response = await self._send_raw_message(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/opt/hermes/gateway/platforms/feishu.py", line 3366, in _send_raw_message
+    return await asyncio.to_thread(self._client.im.v1.message.create, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/lark_oapi/api/im/v1/resource/message.py", line 58, in create
+    resp: RawResponse = Transport.execute(self.config, request, option)
+                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/lark_oapi/core/http/transport.py", line 30, in execute
+    response = requests.request(
+        str(req.http_method.name),
+    ...<4 lines>...
+        timeout=conf.timeout,
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+2026-06-08 14:51:01,852 WARNING gateway.platforms.feishu: [Feishu] Send attempt 1/3 failed for chat oc_ca8d0e491f4009d7dd2b333b6fa17e9c; retrying in 1s: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+2026-06-08 14:51:22,916 WARNING gateway.platforms.feishu: [Feishu] Send attempt 2/3 failed for chat oc_ca8d0e491f4009d7dd2b333b6fa17e9c; retrying in 2s: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+2026-06-08 14:51:44,985 ERROR gateway.platforms.feishu: [Feishu] Send error: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+Traceback (most recent call last):
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/socket.py", line 977, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 788, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 1106, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/hermes/gateway/platforms/feishu.py", line 1445, in send
+    response = await self._feishu_send_with_retry(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/opt/hermes/gateway/platforms/feishu.py", line 3495, in _feishu_send_with_retry
+    response = await self._send_raw_message(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "/opt/hermes/gateway/platforms/feishu.py", line 3366, in _send_raw_message
+    return await asyncio.to_thread(self._client.im.v1.message.create, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/lark_oapi/api/im/v1/resource/message.py", line 58, in create
+    resp: RawResponse = Transport.execute(self.config, request, option)
+                        ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/lark_oapi/core/http/transport.py", line 30, in execute
+    response = requests.request(
+        str(req.http_method.name),
+    ...<4 lines>...
+        timeout=conf.timeout,
+    )
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "/opt/hermes/.venv/lib/python3.13/site-packages/requests/adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+2026-06-08 14:52:05,658 WARNING gateway.platforms.feishu: [Feishu] Send attempt 1/3 failed for chat oc_ca8d0e491f4009d7dd2b333b6fa17e9c; retrying in 1s: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -3] Temporary failure in name resolution)"))
+2026-06-08 14:52:15,798 WARNING gateway.platforms.feishu: [Feishu] Send attempt 2/3 failed for chat oc_ca8d0e491f4009d7dd2b333b6fa17e9c; retrying in 2s: HTTPSConnectionPool(host='open.feishu.cn', port=443): Max retries exceeded with url: /open-apis/im/v1/messages?receive_id_type=chat_id (Caused by NameResolutionError("HTTPSConnection(host='open.feishu.cn', port=443): Failed to resolve 'open.feishu.cn' ([Errno -2] Name or service not known)"))
+2026-06-08 14:54:29,170 ERROR Lark: handle message failed, message_type: event, message_id: 9786c52f-a47d-477b-958e-dc9c7d3bcf58, trace_id: a0d9fb269a9a30039dc52a7f6600a009, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
+2026-06-08 14:54:44,392 ERROR Lark: handle message failed, message_type: event, message_id: 8a9d7e8c-4419-449d-b28f-a5fe6e02b491, trace_id: a0d9fb269a9a30039dc52a7f6600a009, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
+2026-06-08 14:56:07,607 WARNING gateway.run: FOOTER_CHECK: response_time=501.33 api_calls=2 model=astron-code-latest input_toks=10240215 output_toks=72558
+2026-06-08 14:56:08,114 WARNING gateway.run: FOOTER_OUT: text='⏱501.3s · astron-code-latest · 8057% · 🔁2'
+2026-06-08 14:56:08,121 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 14:56:12,755 ERROR Lark: handle message failed, message_type: event, message_id: dfe08d0d-323a-4c66-a906-6a86c2a20563, trace_id: a9271e7381cddede88d98e3d221574e6, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
+2026-06-08 14:56:29,219 ERROR Lark: handle message failed, message_type: event, message_id: 2af0ffeb-a450-4269-9229-5fb422756862, trace_id: a9271e7381cddede88d98e3d221574e6, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
+2026-06-08 14:57:23,025 WARNING gateway.run: FOOTER_CHECK: response_time=38.57 api_calls=2 model=astron-code-latest input_toks=10395350 output_toks=72775
+2026-06-08 14:57:23,447 WARNING gateway.run: FOOTER_OUT: text='⏱38.6s · astron-code-latest · 8178% · 🔁2'
+2026-06-08 14:57:23,450 WARNING gateway.run: FOOTER_WRITTEN: markers injected
+2026-06-08 14:57:27,435 ERROR Lark: handle message failed, message_type: event, message_id: aed4d099-aca9-4fea-a222-b66d4d0d9909, trace_id: dda06a32d5331a1f6e48448d22c65215, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
+2026-06-08 14:58:29,200 ERROR Lark: handle message failed, message_type: event, message_id: 832ba198-6a45-4af6-8315-7080fdcfb387, trace_id: 85b2e7e4648e635d784482245d1cc09c, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
+2026-06-08 14:59:44,712 ERROR Lark: handle message failed, message_type: event, message_id: 06b281f2-7a27-4ae5-82df-0dd93a1fb0c8, trace_id: a0d9fb269a9a30039dc52a7f6600a009, err: processor not found, type: im.chat.access_event.bot_p2p_chat_entered_v1 [conn_id=7648913805833030844]
