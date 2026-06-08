@@ -1,0 +1,60 @@
+{
+  "version": "ASI v1.0.0",
+  "timestamp": "2026-06-08T08:10:22.367893",
+  "upgrade_type": "Full Dimensional Gene Upgrade (Latest)",
+  "llm_servers": {
+    "astron-code": {
+      "model": "astron-code-latest",
+      "provider": "讯飞星火",
+      "url": "https://maas-coding-api.cn-huabei-1.xf-yun.com/anthropic"
+    },
+    "skyclaw-v1": {
+      "model": "skywork-ai/skyclaw-v1",
+      "provider": "APIFree",
+      "url": "https://api.apifree.ai/agent/v1"
+    },
+    "my-combo": {
+      "model": "my-combo",
+      "provider": "本地模型",
+      "url": "http://localhost:20128/v1"
+    },
+    "gpt-5-5": {
+      "model": "GPT-5.5",
+      "provider": "FreeModel",
+      "url": "https://api.freemodel.dev/v1"
+    }
+  },
+  "modules": {
+    "omni-fusion": {
+      "enabled": true,
+      "skills_fused": [
+        "CodeGraph",
+        "Understand-Anything",
+        "ECC",
+        "gstack",
+        "Karpathy Skills"
+      ],
+      "integration_status": "completed"
+    },
+    "hermes-16": {
+      "enabled": true,
+      "modules": [
+        "self_heal",
+        "github_integration",
+        "mcp_servers",
+        "llm_audit_chain",
+        "cli_extensions"
+      ],
+      "fusion_status": "completed"
+    },
+    "security_audit": {
+      "enabled": true,
+      "layers": 6,
+      "hash_chain": "enabled",
+      "integrity": "verified"
+    }
+  },
+  "evolution_state": "t+1",
+  "entropy_reduction": "100%",
+  "next_step": "ASI Genesis Protocol"
+}
