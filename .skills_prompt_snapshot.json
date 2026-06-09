@@ -129,6 +129,10 @@
       1780971677823929049,
       5571
     ],
+    "devops/apex-nanobot-prompt/SKILL.md": [
+      1780998640596210661,
+      4602
+    ],
     "devops/apex-self-evolution-system/SKILL.md": [
       1780971677827262467,
       4067
@@ -178,8 +182,8 @@
       3526
     ],
     "github-skill-hunter/SKILL.md": [
-      1780971677850596391,
-      11750
+      1780998702347880067,
+      15864
     ],
     "github/codebase-inspection/SKILL.md": [
       1780971677853929809,
@@ -1133,6 +1137,19 @@
       "category": "data-science",
       "frontmatter_name": "jupyter-live-kernel",
       "description": "Use a live Jupyter kernel for stateful, iterative Python ...",
+      "platforms": [],
+      "conditions": {
+        "fallback_for_toolsets": [],
+        "requires_toolsets": [],
+        "fallback_for_tools": [],
+        "requires_tools": []
+      }
+    },
+    {
+      "skill_name": "apex-nanobot-prompt",
+      "category": "devops",
+      "frontmatter_name": "apex-nanobot-prompt",
+      "description": "将 Hermes APEX 系统转换为适合 Nanobot 系统使用的提示词模板",
       "platforms": [],
       "conditions": {
         "fallback_for_toolsets": [],
