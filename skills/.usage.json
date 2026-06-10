@@ -64,6 +64,19 @@
     "use_count": 2,
     "view_count": 2
   },
+  "free-token-hunter": {
+    "archived_at": null,
+    "created_at": "2026-06-09T23:47:24.875840+00:00",
+    "created_by": null,
+    "last_patched_at": "2026-06-09T23:47:32.216417+00:00",
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 2,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "gateway-runtime-footer": {
     "archived_at": null,
     "created_at": "2026-05-30T15:40:40.600310+00:00",
@@ -146,14 +159,14 @@
     "archived_at": null,
     "created_at": "2026-06-08T03:48:35.461253+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-09T03:05:45.935420+00:00",
-    "last_used_at": "2026-06-09T04:43:11.821872+00:00",
-    "last_viewed_at": "2026-06-09T04:43:11.801444+00:00",
-    "patch_count": 6,
+    "last_patched_at": "2026-06-09T23:31:54.862669+00:00",
+    "last_used_at": "2026-06-09T23:41:37.938393+00:00",
+    "last_viewed_at": "2026-06-09T23:41:37.927487+00:00",
+    "patch_count": 7,
     "pinned": false,
     "state": "active",
-    "use_count": 8,
-    "view_count": 8
+    "use_count": 11,
+    "view_count": 11
   },
   "hermes-self-evolution": {
     "archived_at": null,

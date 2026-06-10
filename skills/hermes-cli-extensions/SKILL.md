@@ -25,6 +25,26 @@ tags:
 | `omni-fusion` | omni-fusion 融合增强 | `bash /opt/data/.hermes/scripts/omni-fusion-enhance.sh` |
 | `audit` | 查看审计日志 | `bash /opt/hermes/.cli_extensions/hermes-cli.sh audit` |
 
+## 诊断命令（原生 hermes 命令）
+
+`hermes self-heal` 不是原生命令，需通过技能调用：
+
+```bash
+# 使用 hermes skills call 调用扩展命令
+hermes skills call hermes-cli-extensions self-heal-diagnose
+hermes skills call hermes-cli-extensions self-heal-heal
+hermes skills call hermes-cli-extensions audit
+```
+
+或直接运行脚本：
+
+```bash
+# 诊断脚本路径
+bash /opt/data/.hermes/scripts/self-heal-diagnose.sh
+bash /opt/data/.hermes/scripts/self-heal-heal.sh
+bash /opt/data/.hermes/scripts/audit.sh
+```
+
 ## Usage
 
 ### 基础命令调用
