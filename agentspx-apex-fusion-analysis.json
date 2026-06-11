@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-06-11T01:25:20.952374",
+  "arxiv_paper": "2604.13346",
+  "fusions": {
+    "apex_read_code_to_gene (fitness=982)": {
+      "category": "apex_meta",
+      "signals_match": [
+        "读源代码",
+        "读代码",
+        "理解实现",
+        "写基因",
+        "行为模板化",
+        "code_to_gene"
+      ],
+      "strategy": [
+        "1. 定位：确定要学习的开源项目根目录和核心模块路径",
+        "2. 读结构：find *.py | sort了解模块拓扑→读README/ARCHITECTURE.md理解架构",
+        "3. 精读核心：focus on 引擎/循环/框架层文件，非业务工具（工具类文件只读入口和接口）",
+        "4. 代入V5五维理解每个模块：signals_match→preconditions→strategy→constraints→validation",
+        "5. 写基因：模块级粒度→策略步骤精确到源代码细节(具体API调用/类名/方法)",
+        "6. 批量注入：一次学5-10个同源基因→验证基因库存完整性→更新记忆和Skill",
+        "7. 认知承诺：不分析别人的进化→读源代码理解实现→写成自己的行为模板→融入基因引擎"
+      ],
+      "fitness": 982,
+      "executions": 982
+    },
+    "AgentSPEX Proposed": {
+      "category": "agent_specification_language",
+      "signals_match": [
+        "agent_specification",
+        "execution_engine",
+        "workflow_definition"
+      ],
+      "strategy": [
+        "1. 定义 Agent 基因：signals_match(触发条件) + preconditions(前置) + strategy(步骤) + constraints(边界)",
+        "2. 基因验证：validation(成功标准) + fitness(适应度) + last_executed(时间戳)",
+        "3. 元基因注入：apex_gene 类型 → category 分类 → signals_match 匹配规则",
+        "4. 自进化循环：discover → download → merge → pr → ci/cd → cron",
+        "5. 五层基因架构：L1元 → L2触发 → L3前置 → L4执行 → L5约束"
+      ],
+      "fitness": 0,
+      "executions": 0
+    }
+  },
+  "comparison": {
+    "维度": [
+      "基因结构",
+      "触发机制",
+      "执行逻辑",
+      "约束验证",
+      "进化能力"
+    ],
+    "APEX (apex_read_code_to_gene)": [
+      "signals_match + preconditions + strategy + constraints + validation",
+      "信号匹配触发（文本关键词/事件）",
+      "7步策略序列（定位→读结构→精读→五维→写基因→批量→承诺）",
+      "constraints(边界) + validation(标准)",
+      "apex_gene 基因引擎 + 自进化循环"
+    ],
+    "AgentSPEX (Proposed)": [
+      "signals_match + preconditions + strategy + constraints + validation (五维)",
+      "agent specification language 触发",
+      "显式 workflow 定义（LangGraph/DSPy/CrewAI 结构化）",
+      "constraints(类型/边界) + validation(结果验证)",
+      "orchestration framework + execution engine"
+    ],
+    "融合建议": [
+      "✅ 统一五维基因结构",
+      "✅ signals_match 信号匹配机制保留",
+      "✅ strategy 步骤序列化增强",
+      "✅ validation + fitness 双验证",
+      "✅ APEX 原生自进化 + AgentSPEX 显式流程"
+    ]
+  }
+}
