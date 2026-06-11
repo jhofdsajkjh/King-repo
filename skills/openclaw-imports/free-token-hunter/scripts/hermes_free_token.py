@@ -68,8 +68,10 @@ def search_github(query):
 
 def search_reddit(query):
     """在 Reddit 搜索（简化版）"""
+    import urllib.parse
     try:
-        url = f"https://www.reddit.com/search.json?q={query}&sort=relevance&limit=3"
+        encoded_query = urllib.parse.quote(query)
+        url = f"https://www.reddit.com/search.json?q={encoded_query}&sort=relevance&limit=3"
         req = urllib.request.Request(url, headers={
             'User-Agent': 'Hermes-Agent/1.0'
         })
@@ -188,7 +190,7 @@ def cmd_scan():
 
 def cmd_stats():
     """统计资源"""
-    cache = load_scan()
+    cache = load_cache()
     summary = cache.get('summary', {})
     print(f"📊 统计信息")
     print("=" * 60)
