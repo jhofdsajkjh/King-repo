@@ -1,0 +1,6 @@
+{
+  "timestamp": "2026-06-11T01:58:25.522846",
+  "cron_entry": "0 8 * * * cd /opt/data && hermes skills call free-token-hunter cron >> /tmp/free-token-scan.log 2>&1",
+  "install_script": "/opt/data/.hermes/scripts/install-free-token-cron.sh",
+  "uninstall_script": "/opt/data/.hermes/scripts/uninstall-free-token-cron.sh"
+}

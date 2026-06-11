@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-06-11T01:32:12.400037",
+  "event_type": "apex_llm_unified_formula",
+  "title": "APEX 全域LLM统一适配公式体系",
+  "version": "v2026.6.11",
+  "core_features": [
+    "双阶推理架构",
+    "多维度量化评分",
+    "单模型/级联/混合三种形态",
+    "本地LLM + OpenAI兼容接口通用"
+  ],
+  "symbols": {
+    "S_total": "综合效能得分（优化目标）",
+    "A": "任务准确率/逻辑正确性",
+    "F": "输出格式、语法、语句流畅度",
+    "R": "内容与指令相关性、上下文匹配度",
+    "E": "推理效率（时延/吞吐）",
+    "C": "资源开销（显存/CPU/调用成本）",
+    "alpha/beta/gamma/epsilon/delta": "维度权重系数",
+    "lambda": "本地模型硬件适配系数",
+    "eta": "级联模型修正系数"
+  },
+  "constraints": {
+    "weights_sum": "α + β + γ + ε + δ = 1",
+    "C_negative": "C 为负向指标（开销越大，得分越低）",
+    "lambda_local_only": "λ=0.95 本地模型, λ=1 OpenAI API",
+    "eta_cascade_only": "η=1 单模型, η=0.85 级联模型"
+  },
+  "core_formulas": {
+    "single_model": "S_total = λ · (αA + βF + γR + εE - δC)",
+    "cascade_model": "S_total = η · λ · (αA + βF + γR + εE - δC)"
+  },
+  "scenarios": {
+    "scenario1": {
+      "name": "纯本地单LLM",
+      "lambda": 0.95,
+      "eta": 1,
+      "sub_scenes": {
+        "code_tasks": {
+          "alpha": 0.5,
+          "beta": 0.2,
+          "gamma": 0.15,
+          "epsilon": 0.1,
+          "delta": 0.05
+        },
+        "content_tasks": {
+          "alpha": 0.3,
+          "beta": 0.4,
+          "gamma": 0.2,
+          "epsilon": 0.08,
+          "delta": 0.02
+        },
+        "low_config": {
+          "alpha": 0.35,
+          "beta": 0.2,
+          "gamma": 0.15,
+          "epsilon": 0.25,
+          "delta": 0.05,
+          "lambda": 0.9
+        }
+      }
+    },
+    "scenario2": {
+      "name": "本地双模型级联",
+      "lambda": 0.95,
+      "eta": 0.85,
+      "sub_scenes": {
+        "code_cascade": {
+          "alpha": 0.5,
+          "beta": 0.2,
+          "gamma": 0.15,
+          "epsilon": 0.1,
+          "delta": 0.05
+        },
+        "content_cascade": {
+          "alpha": 0.3,
+          "beta": 0.4,
+          "gamma": 0.2,
+          "epsilon": 0.08,
+          "delta": 0.02
+        }
+      }
+    },
+    "scenario3": {
+      "name": "本地LLM + OpenAI混合",
+      "lambda": 1,
+      "eta": 0.9,
+      "sub_scenes": "复用 scenario1/2 权重"
+    }
+  },
+  "metrics": {
+    "A": "代码：编译通过率/用例成功率；问答：答案正确率",
+    "F": "文本：语法错误/格式完整性；代码：缩进/规范/注释",
+    "R": "语义匹配度/指令偏离度/上下文连贯性",
+    "E": "E = 1 - T_now/T_max (推理效率)",
+    "C": "C = Mem_used/Mem_total + CPU_used/100 (资源开销)"
+  },
+  "simplified_formulas": {
+    "simple_single": "S = λ · (0.6A + 0.3F + 0.1(1-C))",
+    "simple_cascade": "S = η · λ · (0.6A + 0.3F + 0.1(1-C))"
+  },
+  "integration_points": [
+    "hermes self-evaluation 系统",
+    "模型自动择优",
+    "Prompt 迭代优化",
+    "参数调优 (temperature/top_p/context_length)"
+  ],
+  "compatible_backends": [
+    "Ollama",
+    "Llama.cpp",
+    "TextGenerationWebUI",
+    "本地级联架构",
+    "OpenAI兼容接口"
+  ]
+}

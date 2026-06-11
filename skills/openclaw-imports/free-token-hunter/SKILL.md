@@ -53,17 +53,19 @@ crontab -e
 
 | 类型 | 示例 |
 |------|------|
-| GitHub 项目 | fate-zero/openai-api-keys, chatanywhere/GPT_API_v2 |
-| 限时活动 | OpenAI Free Tier, Anthropic Trial |
-| 社区共享 | Reddit r/ChatGPT, V2EX 技术分享 |
-| 官方优惠 | 新用户注册赠金、教育计划 |
+| GitHub 项目 | fate-zero/openai-api-keys, chatanywhere/GPT_API_v2, OpenFreeGPT, freegpt35 |
+| 限时活动 | OpenAI Free Tier, Anthropic Trial, Claude.ai Free |
+| 社区共享 | Reddit r/ChatGPT, V2EX 技术分享, 知乎科技板块 |
+| 官方优惠 | 新用户注册赠金、教育计划、开发者计划 |
+| API服务 | GitHub Copilot Free, Google Gemini API 免费额度 |
 
 ## 扫描策略
 
-1. **GitHub 仓库搜索** - 关键词：`free-gpt`, `openai-api-key`, `chatgpt-free`
-2. **社区论坛爬取** - Reddit, V2EX, 知乎科技板块
-3. **官方新闻订阅** - RSS 订阅 OpenAI/Anthropic 官方博客
+1. **GitHub 仓库搜索** - 关键词：`free-gpt`, `openai-api-key`, `chatgpt-free`, `copilot-free`
+2. **社区论坛爬取** - Reddit (r/ChatGPT), V2EX, 知乎科技板块, 飞书社区
+3. **官方新闻订阅** - RSS 订阅 OpenAI/Anthropic/Claude/Gemini 官方博客
 4. **GitHub Trending** - 每日监控高 Star 新项目
+5. **API 免费额度** - 检查 GitHub Copilot, Google Gemini 等 API 免费额度
 
 ## 输出格式
 

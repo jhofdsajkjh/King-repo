@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-06-11T01:49:48.063769",
+  "event_type": "apex_gene_v2_creation",
+  "gene_id": "apex_read_code_to_gene_v2",
+  "category": "apex_meta",
+  "description": "AgentSPEX 五维结构增强版 - 读源代码→理解实现→写基因→行为模板化",
+  "fitness": 985,
+  "executions": 0,
+  "signals_match": [
+    "读源代码",
+    "读代码",
+    "理解实现",
+    "写基因",
+    "行为模板化",
+    "code_to_gene",
+    "五维结构",
+    "AgentSPEX"
+  ],
+  "preconditions": [
+    "目标项目根目录存在",
+    "核心模块文件存在",
+    "SKILL.md 不存在或需要更新"
+  ],
+  "strategy": [
+    "1. 定位：确定要学习的开源项目根目录和核心模块路径",
+    "2. 读结构：find *.py | sort 了解模块拓扑 → 读 README/ARCHITECTURE.md 理解架构",
+    "3. 精读核心：focus on 引擎/循环/框架层文件，非业务工具只读入口和接口",
+    "4. 代入V5五维理解每个模块：signals_match → preconditions → strategy → constraints → validation",
+    "5. 写基因：模块级粒度 → 策略步骤精确到源代码细节（具体API调用/类名/方法）",
+    "6. 批量注入：一次学5-10个同源基因 → 验证基因库存完整性 → 更新记忆和Skill",
+    "7. 认知承诺：不分析别人的进化 → 读源代码理解实现 → 写成自己的行为模板 → 融入基因引擎",
+    "8. [NEW] AgentSPEX五维注入：signals_match + preconditions + strategy + constraints + validation → 写入gene_id + category + fitness",
+    "9. [NEW] LDR循环增强：Orient(定位) → Plan(读结构) → Execute(精读核心) → Verify(五维验证) → Evolve(写基因) → Persist(批量注入)"
+  ],
+  "constraints": {
+    "max_modules_per_batch": 10,
+    "min_gene_fitness": 500,
+    "required_fields": [
+      "signals_match",
+      "preconditions",
+      "strategy",
+      "constraints",
+      "validation"
+    ]
+  },
+  "validation": [
+    "python3 -c \"print('ok')\" → exit_code=0",
+    "基因文件存在且 JSON 格式正确",
+    "fitness 评分 ≥ 阈值",
+    "所有模块已注入基因引擎"
+  ],
+  "integration": {
+    "LDR_cycle": "Orient→Plan→Execute→Verify→Evolve→Persist",
+    "gene_engine": "apex_gene 类型引擎",
+    "hash_chain": "sha256(gene_id + signals_match + strategy)"
+  },
+  "generated_genes": []
+}

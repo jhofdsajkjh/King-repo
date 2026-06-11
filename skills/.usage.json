@@ -12,6 +12,19 @@
     "use_count": 3,
     "view_count": 3
   },
+  "apex-llm-unified-formula": {
+    "archived_at": null,
+    "created_at": "2026-06-11T01:39:52.365593+00:00",
+    "created_by": null,
+    "last_patched_at": "2026-06-11T01:39:52.365885+00:00",
+    "last_used_at": "2026-06-11T01:53:39.086424+00:00",
+    "last_viewed_at": "2026-06-11T01:53:39.065328+00:00",
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "apex-nanobot-prompt": {
     "archived_at": null,
     "created_at": "2026-06-09T23:27:12.048034+00:00",
@@ -68,14 +81,14 @@
     "archived_at": null,
     "created_at": "2026-06-09T23:47:24.875840+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-09T23:47:32.216417+00:00",
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 2,
+    "last_patched_at": "2026-06-11T01:55:40.828635+00:00",
+    "last_used_at": "2026-06-11T01:55:43.687741+00:00",
+    "last_viewed_at": "2026-06-11T01:55:43.671870+00:00",
+    "patch_count": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 2
   },
   "gateway-runtime-footer": {
     "archived_at": null,
@@ -186,13 +199,13 @@
     "created_at": "2026-06-08T03:19:34.553516+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-08T03:19:34.572659+00:00",
-    "last_viewed_at": "2026-06-08T03:19:34.553650+00:00",
+    "last_used_at": "2026-06-11T01:44:22.919074+00:00",
+    "last_viewed_at": "2026-06-11T01:44:22.909053+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "native-mcp": {
     "archived_at": null,
