@@ -173,6 +173,36 @@
 
 ---
 
+
+## 🆕 新增技能：hermes-free-token-hunter
+
+| 功能 | 状态 | 说明 |
+|------|------|------|
+| ✅ 技能创建 | 完成 | `free-token-hunter` |
+| ✅ Cron 任务 | 完成 | 每天 08:00 自动扫描 |
+| ✅ 来源扩展 | 完成 | GitHub/Reddit/V2EX/知乎/国内平台 |
+| ✅ HashPool 集成 | 完成 | 缓存至 `free_token_latest.json` |
+
+### 扫描来源
+- GitHub 项目 (free-gpt, openai-api-key, copilot-free)
+- 社区论坛 (Reddit r/ChatGPT, V2EX, 知乎科技)
+- 国内平台 (腾讯云AI、阿里云百炼、Kimi AI、通义千问、讯飞星火)
+- API免费额度 (Gemini, Hugging Face, Replicate, Groq, Perplexity)
+
+### 使用方式
+```bash
+# 手动扫描
+hermes skills call free-token-hunter scan
+
+# 查看结果
+cat /opt/data/.hermes/cache/free_token_latest.json
+
+# 查看历史
+crontab -l | grep free-token-hunter
+```
+
+---
+
 ## 📝 评估签名
 
 ```

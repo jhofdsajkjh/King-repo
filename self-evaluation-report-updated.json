@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-06-11T02:02:57.565081",
+  "update_type": "free-token-hunter_integration",
+  "changes": {
+    "new_skill": "free-token-hunter",
+    "cron_job": "0 8 * * * hermes skills call free-token-hunter cron",
+    "scan_sources": [
+      "GitHub",
+      "Reddit",
+      "V2EX",
+      "知乎",
+      "飞书社区",
+      "国内AI平台"
+    ],
+    "output": "/opt/data/.hermes/cache/free_token_latest.json",
+    "log": "/tmp/free-token-scan.log"
+  },
+  "integration_points": [
+    "hermes self-evaluation → 每日免费 Token 资源扫描",
+    "hermes skills call free-token-hunter → CLI 调用",
+    "crontab → 每日 08:00 自动扫描",
+    "HashPool → Token 资源缓存"
+  ],
+  "fitness_impact": {
+    "description": "免费 Token 资源扫描能力增强 → 提升自进化效率",
+    "impact_level": "medium",
+    "rationale": "更多免费资源 = 更多模型测试机会 = 更好模型择优"
+  }
+}

@@ -53,11 +53,12 @@ crontab -e
 
 | 类型 | 示例 |
 |------|------|
-| GitHub 项目 | fate-zero/openai-api-keys, chatanywhere/GPT_API_v2, OpenFreeGPT, freegpt35 |
-| 限时活动 | OpenAI Free Tier, Anthropic Trial, Claude.ai Free |
-| 社区共享 | Reddit r/ChatGPT, V2EX 技术分享, 知乎科技板块 |
-| 官方优惠 | 新用户注册赠金、教育计划、开发者计划 |
-| API服务 | GitHub Copilot Free, Google Gemini API 免费额度 |
+| **GitHub 项目** | fate-zero/openai-api-keys, chatanywhere/GPT_API_v2, OpenFreeGPT, freegpt35, FreeGPT3, gpt4free, gpt4all |
+| **限时活动** | OpenAI Free Tier, Anthropic Trial, Claude.ai Free, Gemini Free, Copilot Free |
+| **社区共享** | Reddit r/ChatGPT, V2EX 技术分享, 知乎科技板块, 飞书社区, GitHub Discussions |
+| **官方优惠** | 新用户注册赠金、教育计划、开发者计划、开源项目计划 |
+| **API免费额度** | GitHub Copilot, Google Gemini API, Hugging Face Inference API, Replicate API, Groq API, Perplexity API |
+| **国内平台** | 腾讯云AI平台、阿里云百炼、火山引擎、Kimi AI、通义千问、讯飞星火 |
 
 ## 扫描策略
 
